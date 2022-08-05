@@ -5,7 +5,7 @@ p {
 }
 
 .colors {
-  background-color: rgb(37, 139, 139);
+  background-color: #008971;
 }
 
 .cursor {
@@ -13,4 +13,8 @@ p {
   position: absolute;
   margin-top: -40px;
   margin-left: 220px;
+}
+
+.rounded-lg {
+  border-radius: 15px !important;
 }

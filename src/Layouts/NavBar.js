@@ -23,12 +23,6 @@ const NavBar = () => {
         <li className="nav-item">
           <a className="nav-link" href="#">Cards</a>
         </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Offers</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Investments</a>
-        </li>
       </ul>
       <ul className="navbar-nav me-5">
         <li className="nav-item mx-2">
@@ -42,7 +36,7 @@ const NavBar = () => {
         </li>
       </ul>
       <Link to="/" className="text-decoration-none text-dark ms-5 me-5">Dorothy Watkins</Link>
-      <Link to="/" className='text-decoration-none text-dark'>Logout</Link>
+      <Link to="/" className='text-decoration-none text-dark'> <MaterialIcon icon="logout" /> </Link>
     </div>
   </div>
 </nav>

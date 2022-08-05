@@ -3,7 +3,7 @@ import MaterialIcon from 'react-google-material-icons';
 
 const BankCard = ({name, no, amount, img, cents}) => {
   return (
-    <div className='col-6 col-lg-3 rounded mx-2 my-3'>
+    <div className='col-6 col-lg-3 rounded mx-2'>
         <div className='card container py-3 border-0'>
             <div className='d-flex'>
                 <div className='me-5'>
