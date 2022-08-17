@@ -8,7 +8,7 @@ const NavBar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/"><img src={logo} /> NevBank</Link>
+    <Link className="navbar-brand" to="/" title='NevBank'><img src={logo} /> NevBank</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -26,17 +26,17 @@ const NavBar = () => {
       </ul>
       <ul className="navbar-nav me-5">
         <li className="nav-item mx-2">
-          <Link to='/' className='text-dark'><MaterialIcon icon="settings" /> </Link>
+          <Link to='/' className='text-dark' title='settings'><MaterialIcon icon="settings" /> </Link>
         </li>
         <li className="nav-item mx-2">
-          <Link to='/' className='text-dark'><MaterialIcon icon="mail" /> </Link>
+          <Link to='/' className='text-dark' title='mail'><MaterialIcon icon="mail" /> </Link>
         </li>
         <li className="nav-item mx-2">
-          <Link to='/' className='text-dark'><MaterialIcon icon="notifications" /> </Link>
+          <Link to='/' className='text-dark' title='notifications'><MaterialIcon icon="notifications" /> </Link>
         </li>
       </ul>
-      <Link to="/" className="text-decoration-none text-dark ms-5 me-5">Dorothy Watkins</Link>
-      <Link to="/" className='text-decoration-none text-dark'> <MaterialIcon icon="logout" /> </Link>
+      <Link to="/" className="text-decoration-none text-dark ms-5 me-5" title="Dorothy Watkins">Dorothy Watkins</Link>
+      <Link to="/" className='text-decoration-none text-dark' title='logout'> <MaterialIcon icon="logout" /> </Link>
     </div>
   </div>
 </nav>
