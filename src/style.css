@@ -15,6 +15,14 @@ p {
   margin-left: 220px;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-disabled {
+  color: rgb(82, 82, 82);
+}
+
 .rounded-lg {
   border-radius: 15px !important;
 }

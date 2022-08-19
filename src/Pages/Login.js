@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import MaterialIcon from 'react-google-material-icons';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -42,7 +43,8 @@ const Login = () => {
       <div className="row">
         <div className="col-12 col-lg-7  mx-auto mt-5">
           <form className="container">
-            <p className="display-4 text-center">Login</p>
+            <p className="display-4 container">Login</p>
+            <p className="text-disabled text-center">Hi there! Nice to see you again.</p>
             {error ? <div className="text-danger alert alert-danger">{error}</div> : null}
             <input
               type="text"
@@ -51,20 +53,31 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
             />
-            <input
-              type={showPwd ? 'text' : 'password'}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="form-control w-100 my-3"
-              placeholder="Password"
-            />
-            <input type="checkbox" onChange={() => setShowPwd(!showPwd)} /> Show Password
+            <div className="input-group my-3">
+              <input
+                type={showPwd ? 'text' : 'password'}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="form-control"
+                placeholder="Password"
+              />
+              <span
+                className="input-group-text cursor-pointer"
+                onClick={() => setShowPwd(!showPwd)}>
+                <MaterialIcon icon={showPwd ? 'visibility_off' : 'visibility'} />
+              </span>
+            </div>
             <button className="btn btn-secondary w-100 my-3" onClick={(e) => login(e)}>
               {isloading ? <span className="spinner-border"></span> : 'Login'}
             </button>
-            <p>
-              Don&apos;t have an account? <Link to="/register">Register</Link>
-            </p>
+            <div className="mx-auto row">
+              <p className="text-disabled col-10">Forgot Password?</p>
+              <p className="col-2">
+                <Link to="/register" className="text-danger text-decoration-none">
+                  Register
+                </Link>
+              </p>
+            </div>
           </form>
         </div>
       </div>

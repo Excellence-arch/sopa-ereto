@@ -64,7 +64,7 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <select onChange={(e) => handleRole(e)} value={role}>
+          <select className="custom-select" onChange={(e) => handleRole(e)} value={role}>
             <option value="" selected disabled hidden>
               Choose your role
             </option>
@@ -85,7 +85,7 @@ const Register = () => {
             {isloading ? <span className="spinner-border"></span> : 'Register'}
           </button>
           <p>
-            Already have an account? <Link to="/login">Log in</Link>
+            Have an account? <Link to="/login">Log in</Link>
           </p>
         </form>
       </div>
