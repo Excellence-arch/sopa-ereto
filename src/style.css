@@ -5,7 +5,8 @@ p {
 }
 
 .colors {
-  background-color: #008971;
+  background-color:
+   #008971;
 }
 
 .cursor {
@@ -31,3 +32,18 @@ p {
   padding: 0 !important;
   margin: 0 !important;
 } */
+
+
+.btn-pink {
+  color: #fff;
+  background-color: #d80b4f;
+  border-color: #d80b4f;
+}
+
+.btn-pink:hover {
+  color: #fff;
+  background-color: #d80b4f;
+  border-color: #d80b4f;
+}
+
+/* 38AEFA */

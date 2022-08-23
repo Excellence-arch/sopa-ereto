@@ -39,10 +39,13 @@ const Login = () => {
     }
   };
   return (
-    <div className="colors w-100 h-100 container-fluid">
-      <div className="row">
-        <div className="col-12 col-lg-7  mx-auto mt-5">
-          <form className="container">
+    <div className="w-100 h-100 container-fluid">
+      <div className="row container pt-5 mx-auto">
+        <div className="col-12 row mt-5 rounded-lg shadow-lg p-5">
+          <div className="col-0 col-lg-6 colors">
+            <img src="" alt="file" />
+          </div>
+          <form className="col-12 col-lg-6">
             <p className="display-4 container">Login</p>
             <p className="text-disabled text-center">Hi there! Nice to see you again.</p>
             {error ? <div className="text-danger alert alert-danger">{error}</div> : null}
@@ -67,7 +70,7 @@ const Login = () => {
                 <MaterialIcon icon={showPwd ? 'visibility_off' : 'visibility'} />
               </span>
             </div>
-            <button className="btn btn-secondary w-100 my-3" onClick={(e) => login(e)}>
+            <button className="btn btn-pink w-100 my-3" onClick={(e) => login(e)}>
               {isloading ? <span className="spinner-border"></span> : 'Login'}
             </button>
             <div className="mx-auto row">

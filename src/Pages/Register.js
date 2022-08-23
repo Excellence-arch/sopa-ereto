@@ -10,7 +10,7 @@ const Register = () => {
   const [name, setName] = useState('');
   const [valid, setValid] = useState(true);
   const [role, setRole] = useState('');
-  const url = '';
+  const url = 'https://sopa-ereto.herokuapp.com/api/register';
 
   const handleRole = (e) => {
     setRole(e.target.value);
@@ -40,12 +40,14 @@ const Register = () => {
     }
   };
   return (
-    <div className="colors w-100 h-100 container-fluid">
-      <div className="row">
-        <form className="col-12 col-lg-7 mx-auto mt-5">
+    <div className="container">
+      <div className="row mt-5 rounded-lg p-5 shadow-lg">
+        <div className="col-0 col-lg-6 colors">
+          <img src="" alt="file" />
+        </div>
+        <form className="col-12 col-lg-6">
           <p className="text-center display-4">Register</p>
           {error ? <div className="text-danger alert alert-danger">{error}</div> : null}
-
           <input
             required
             type="text"
@@ -54,7 +56,6 @@ const Register = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-
           <input
             required
             type="text"
@@ -63,15 +64,17 @@ const Register = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-
-          <select className="custom-select" onChange={(e) => handleRole(e)} value={role}>
+          <input type="radio" name={role} value={'donor'} onChange={(e) => handleRole(e)} />
+          &nbsp;Donor&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name={role} value={'tour operator'} onChange={(e) => handleRole(e)} />
+          &nbsp;Tour Operator
+          {/* <select className="custom-select" onChange={(e) => handleRole(e)} value={role}>
             <option value="" selected disabled hidden>
-              Choose your role
+              Choose status
             </option>
             <option value={'donor'}>Donor</option>
             <option value={'tour operator'}>Tour Operator</option>
-          </select>
-
+          </select> */}
           <input
             required={valid}
             type="text"
@@ -80,12 +83,17 @@ const Register = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-
-          <button className="btn btn-secondary w-100 my-3 shadow" onClick={(e) => register(e)}>
-            {isloading ? <span className="spinner-border"></span> : 'Register'}
+          <button
+            className="btn btn-pink w-100 my-3 shadow"
+            disabled={isloading ? true : false}
+            onClick={(e) => register(e)}>
+            {isloading ? <span className="spinner-border"></span> : 'Create Account'}
           </button>
-          <p>
-            Have an account? <Link to="/login">Log in</Link>
+          <p className="text-center">
+            Have an account?{' '}
+            <Link to="/login" className="text-danger text-decoration-none">
+              Log in
+            </Link>
           </p>
         </form>
       </div>
