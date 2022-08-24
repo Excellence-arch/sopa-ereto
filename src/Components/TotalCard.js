@@ -7,7 +7,7 @@ const TotalCard = () => {
     <div className="col-12 container border rounded shadow-sm position bg-white">
       <div className="row">
         <div className="col-8">
-          <div className="row">
+          <div className="d-flex flex-wrap flex-column flex-lg-row">
             <EachCard name={'Donations'} amount={'1,594.01 KES'} />
             <EachCard name={'Disbursed'} amount={'1,636.36M KES'} />
             <EachCard name={'Beneficiaries'} amount={'191,594'} />
