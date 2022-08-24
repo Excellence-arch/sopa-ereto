@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import MaterialIcon from 'react-google-material-icons';
+import MaterialIcon from 'react-google-material-icons';
 import logo from '../assets/NevBank.png';
 
-const NavBar = () => {
+const Nav = () => {
   return (
-    <>
+    <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/" title="NevBank">
@@ -21,16 +21,13 @@ const NavBar = () => {
             aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div
-            className="collapse navbar-collapse"
-            id="navbarScroll"
-            style={{ float: 'right !important' }}>
+          <div className="collapse navbar-collapse" id="navbarScroll">
             <ul
               className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
               style={{ '--bs-scroll-height': '100px' }}>
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">
-                  Home
+                  My Account
                 </a>
               </li>
               <li className="nav-item">
@@ -38,13 +35,13 @@ const NavBar = () => {
                   Transactions
                 </a>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <a className="nav-link" href="#">
                   Cards
                 </a>
-              </li> */}
+              </li>
             </ul>
-            {/* <ul className="navbar-nav me-5">
+            <ul className="navbar-nav me-5">
               <li className="nav-item mx-2">
                 <Link to="/" className="text-dark" title="settings">
                   <MaterialIcon icon="settings" />{' '}
@@ -60,22 +57,22 @@ const NavBar = () => {
                   <MaterialIcon icon="notifications" />{' '}
                 </Link>
               </li>
-            </ul> */}
-            {/* <Link
+            </ul>
+            <Link
               to="/"
               className="text-decoration-none text-dark ms-5 me-5"
               title="Dorothy Watkins">
               Dorothy Watkins
-            </Link> */}
-            <Link to="/login" className="text-decoration-none text-dark" title="Sign in">
-              {'Sign in'}
-              {/* <MaterialIcon icon="login" />{' '} */}
+            </Link>
+            <Link to="/" className="text-decoration-none text-dark" title="logout">
+              {' '}
+              <MaterialIcon icon="logout" />{' '}
             </Link>
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
-export default NavBar;
+export default Nav;
