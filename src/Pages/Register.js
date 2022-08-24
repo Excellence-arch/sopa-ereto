@@ -50,9 +50,9 @@ const Register = ({ baseUrl }) => {
           <h4 className="display-6 text-white container mt-5">
             A few clicks away from creating your Lottery Display
           </h4>
-          <img src={logos} alt="file" width={'400px'} />
+          <img src={logos} alt="file" width={'400px'} className="w-100" />
         </div>
-        <form className="col-12 col-lg-8 pt-5 px-5 mt-5">
+        <form className="col-12 col-lg-8 px-5 ">
           <p className="display-5">Register</p>
           <p className="fw-bold">Manage all your lottery efficiently</p>
           <p className="col-8 text-muted">

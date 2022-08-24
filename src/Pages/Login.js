@@ -46,10 +46,10 @@ const Login = ({ baseUrl }) => {
       <div className="row mx-auto">
         <div className="col-12 row">
           <div className="col-12 col-lg-4 new-color full-height">
-            <p className="my-4 pt-4 text-white display-6 col-10 container">
+            <p className="pt-4 text-white display-6 col-10 container">
               Make everything simple by using Sopa Ereto
             </p>
-            <img src={logos} alt="file" width={'300px'} />
+            <img src={logos} alt="file" width={'300px'} className="w-100" />
           </div>
           <form className="col-12 col-lg-7 mx-5 mt-5 pt-5">
             <p className="display-5 mb-3 container">Login</p>
