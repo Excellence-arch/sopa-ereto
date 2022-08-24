@@ -4,7 +4,7 @@ import MaterialIcon from 'react-google-material-icons';
 
 const LatestTransactions = ({ data }) => {
   return (
-    <div className="mx-auto col-12 col-lg-6">
+    <div className="col-12 col-lg-5 mx-auto">
       <div>
         <p>
           {' '}

@@ -2,8 +2,80 @@ import React from 'react';
 import NavBar from '../Layouts/NavBar';
 import MaterialIcon from 'react-google-material-icons';
 import TotalCard from '../Components/TotalCard';
+import LatestTransactions from '../Components/LatestTransactions';
+import LatestBlocks from '../Components/LatestBlocks';
+import pics from '../assets/Deutsche.png';
 
 const NewHome = () => {
+  const test = [
+    {
+      picture: pics,
+      id: 193892,
+      amount: 723890
+    },
+    {
+      picture: pics,
+      id: 193892,
+      amount: 723890
+    },
+    {
+      picture: pics,
+      id: 193892,
+      amount: 723890
+    },
+    {
+      picture: pics,
+      id: 193892,
+      amount: 723890
+    },
+    {
+      picture: pics,
+      id: 193892,
+      amount: 723890
+    },
+    {
+      picture: pics,
+      id: 193892,
+      amount: 723890
+    }
+  ];
+  const all = [
+    {
+      day: 'Today',
+      acc_no: '2194071585',
+      phone_no: '08135654346',
+      name: 'Michael Oladipupo',
+      amount: '-15.00 $'
+    },
+    {
+      day: 'Today',
+      acc_no: '2194071585',
+      phone_no: '08135654346',
+      name: 'Michael Oladipupo',
+      amount: '-15.00 $'
+    },
+    {
+      day: 'Today',
+      acc_no: '2194071585',
+      phone_no: '08135654346',
+      name: 'Michael Oladipupo',
+      amount: '-15.00 $'
+    },
+    {
+      day: 'Today',
+      acc_no: '2194071585',
+      phone_no: '08135654346',
+      name: 'Michael Oladipupo',
+      amount: '-15.00 $'
+    },
+    {
+      day: 'Today',
+      acc_no: '2194071585',
+      phone_no: '08135654346',
+      name: 'Michael Oladipupo',
+      amount: '-15.00 $'
+    }
+  ];
   return (
     <div className="">
       <NavBar />
@@ -16,6 +88,10 @@ const NewHome = () => {
         </div>
       </div>
       <TotalCard />
+      <div className="d-flex flex-column flex-lg-row">
+        <LatestBlocks data={test} />
+        <LatestTransactions data={all} />
+      </div>
     </div>
   );
 };

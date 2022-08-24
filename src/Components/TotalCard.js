@@ -4,7 +4,7 @@ import Graph from './Graph';
 
 const TotalCard = () => {
   return (
-    <div className="col-12 container border rounded shadow-sm position bg-white">
+    <div className="col-12 container border rounded shadow-sm position bg-white mb-4">
       <div className="row">
         <div className="col-8">
           <div className="d-flex flex-wrap flex-column flex-lg-row">
