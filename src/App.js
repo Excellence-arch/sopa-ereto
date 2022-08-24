@@ -4,8 +4,8 @@ import Home from './Pages/Home';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
-import Transactions from './Routes/Transactions';
 import NewHome from './Pages/NewHome';
+import Transactions from './Pages/Transactions';
 
 export default function App() {
   const baseUrl = 'https://sopa-ereto.herokuapp.com/';
