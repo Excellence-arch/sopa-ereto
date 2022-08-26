@@ -4,7 +4,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import MaterialIcon from 'react-google-material-icons';
 import logos from '../assets/register.gif';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { login as logins } from '../actions/index';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -15,6 +16,7 @@ const Login = () => {
   const url = `${useSelector((state) => state.urlReducer.baseUrl)}api/login`;
   // const url = `${baseUrl}api/login`;
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const login = (e) => {
     e.preventDefault();
@@ -29,6 +31,7 @@ const Login = () => {
         .then((res) => {
           isloading(false);
           console.log(res);
+          dispatch(logins({ status: true, id: res.id }));
           if (res.data.status == false) {
             setError(res.data.message);
           } else {

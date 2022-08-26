@@ -1,5 +1,5 @@
 const initState = {
-  status: true,
+  status: false,
   id: ''
 };
 
@@ -8,7 +8,6 @@ const online = (state = initState, action) => {
     case 'STATUS':
       return {
         ...state,
-        status: true,
         id: action.payload
       };
     case 'LOGOUT':
@@ -19,7 +18,8 @@ const online = (state = initState, action) => {
       };
     default:
       return {
-        ...state
+        ...state,
+        ...action.payload
       };
   }
 };

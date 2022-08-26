@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import MaterialIcon from 'react-google-material-icons';
 import logo from '../assets/NevBank.png';
 import { useDispatch } from 'react-redux';
-import { logout } from '../Actions/index';
+import { logout } from '../actions/index';
 
 const Nav = () => {
   const dispatch = useDispatch();
@@ -70,7 +70,7 @@ const Nav = () => {
             <p
               className="text-decoration-none text-dark cursor-pointer mt-3"
               title="logout?"
-              onClick={() => dispatch(logout)}>
+              onClick={() => dispatch(logout({ status: false, id: '' }))}>
               {' '}
               <MaterialIcon icon="logout" />{' '}
             </p>

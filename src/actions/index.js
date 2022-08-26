@@ -5,9 +5,10 @@ const login = (status) => {
   };
 };
 
-const logout = () => {
+const logout = (stat) => {
   return {
-    type: 'LOGOUT'
+    type: 'LOGOUT',
+    payload: stat
   };
 };
 
