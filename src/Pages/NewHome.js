@@ -11,7 +11,7 @@ const NewHome = () => {
   const status = useSelector((state) => state.onlineReducer.status);
   return (
     <div className="">
-      {status ? <Nav /> : <NavBar />}
+      {status == true ? <Nav /> : <NavBar />}
       <div className="height w-100 colors container-fluid">
         <div className="input-group py-5 w-50 container">
           <input type="search" placeholder="Search by ID" className="form-control" />

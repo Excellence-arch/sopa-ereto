@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MaterialIcon from 'react-google-material-icons';
 import logo from '../assets/NevBank.png';
+import { useDispatch } from 'react-redux';
+import { logout } from '../Actions/index';
 
 const Nav = () => {
+  const dispatch = useDispatch();
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,19 +29,19 @@ const Nav = () => {
               className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
               style={{ '--bs-scroll-height': '100px' }}>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link active" aria-current="page" to="#">
                   My Account
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="transactions">
+                <Link className="nav-link" to="transactions">
                   Transactions
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="#">
                   Cards
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className="navbar-nav me-5">
@@ -64,10 +67,13 @@ const Nav = () => {
               title="Dorothy Watkins">
               Dorothy Watkins
             </Link>
-            <Link to="/" className="text-decoration-none text-dark" title="logout">
+            <p
+              className="text-decoration-none text-dark cursor-pointer mt-3"
+              title="logout?"
+              onClick={() => dispatch(logout)}>
               {' '}
               <MaterialIcon icon="logout" />{' '}
-            </Link>
+            </p>
           </div>
         </div>
       </nav>
