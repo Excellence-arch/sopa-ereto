@@ -3,9 +3,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import MaterialIcon from 'react-google-material-icons';
 import logos from '../assets/register.gif';
+import { useSelector } from 'react-redux';
 
-// eslint-disable-next-line react/prop-types
-const Register = ({ baseUrl }) => {
+const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isloading, setIsloading] = useState(false);
@@ -15,7 +15,8 @@ const Register = ({ baseUrl }) => {
   // const [role, setRole] = useState('');
   const [type, setType] = useState('');
   const [showPwd, setShowPwd] = useState(false);
-  const url = `${baseUrl}api/register`;
+  const url = `${useSelector((state) => state.urlReducer.baseUrl)}api/register`;
+  // const url = `${baseUrl}api/register`;
 
   // const handleRole = (e) => {
   //   setRole(e.target.value);

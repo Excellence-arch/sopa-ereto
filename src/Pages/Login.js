@@ -4,15 +4,16 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import MaterialIcon from 'react-google-material-icons';
 import logos from '../assets/register.gif';
+import { useSelector } from 'react-redux';
 
-// eslint-disable-next-line react/prop-types
-const Login = ({ baseUrl }) => {
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPwd, setShowPwd] = useState(false);
   const [error, setError] = useState(false);
   const [isloading, setIsloading] = useState(false);
-  const url = `${baseUrl}api/login`;
+  const url = `${useSelector((state) => state.urlReducer.baseUrl)}api/login`;
+  // const url = `${baseUrl}api/login`;
   const navigate = useNavigate();
 
   const login = (e) => {

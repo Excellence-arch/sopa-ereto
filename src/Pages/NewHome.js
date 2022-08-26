@@ -4,81 +4,14 @@ import MaterialIcon from 'react-google-material-icons';
 import TotalCard from '../Components/TotalCard';
 import LatestTransactions from '../Components/LatestTransactions';
 import LatestBlocks from '../Components/LatestBlocks';
-import pics from '../assets/Deutsche.png';
+import { useSelector } from 'react-redux';
+import Nav from '../Layouts/Nav';
 
 const NewHome = () => {
-  const test = [
-    {
-      picture: pics,
-      id: 193892,
-      amount: 723890
-    },
-    {
-      picture: pics,
-      id: 193892,
-      amount: 723890
-    },
-    {
-      picture: pics,
-      id: 193892,
-      amount: 723890
-    },
-    {
-      picture: pics,
-      id: 193892,
-      amount: 723890
-    },
-    {
-      picture: pics,
-      id: 193892,
-      amount: 723890
-    },
-    {
-      picture: pics,
-      id: 193892,
-      amount: 723890
-    }
-  ];
-  const all = [
-    {
-      day: 'Today',
-      acc_no: '2194071585',
-      phone_no: '08135654346',
-      name: 'Michael Oladipupo',
-      amount: '-15.00 $'
-    },
-    {
-      day: 'Today',
-      acc_no: '2194071585',
-      phone_no: '08135654346',
-      name: 'Michael Oladipupo',
-      amount: '-15.00 $'
-    },
-    {
-      day: 'Today',
-      acc_no: '2194071585',
-      phone_no: '08135654346',
-      name: 'Michael Oladipupo',
-      amount: '-15.00 $'
-    },
-    {
-      day: 'Today',
-      acc_no: '2194071585',
-      phone_no: '08135654346',
-      name: 'Michael Oladipupo',
-      amount: '-15.00 $'
-    },
-    {
-      day: 'Today',
-      acc_no: '2194071585',
-      phone_no: '08135654346',
-      name: 'Michael Oladipupo',
-      amount: '-15.00 $'
-    }
-  ];
+  const status = useSelector((state) => state.onlineReducer.status);
   return (
     <div className="">
-      <NavBar />
+      {status ? <Nav /> : <NavBar />}
       <div className="height w-100 colors container-fluid">
         <div className="input-group py-5 w-50 container">
           <input type="search" placeholder="Search by ID" className="form-control" />
@@ -89,8 +22,8 @@ const NewHome = () => {
       </div>
       <TotalCard />
       <div className="d-flex flex-column flex-lg-row">
-        <LatestBlocks data={test} />
-        <LatestTransactions data={all} />
+        <LatestBlocks />
+        <LatestTransactions />
       </div>
     </div>
   );

@@ -8,14 +8,13 @@ import NewHome from './Pages/NewHome';
 import Transactions from './Pages/Transactions';
 
 export default function App() {
-  const baseUrl = 'https://sopa-ereto.herokuapp.com/';
   return (
     <div>
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/" element={<NewHome />} />
-        <Route path="/login" element={<Login baseUrl={baseUrl} />} />
-        <Route path="/register" element={<Register baseUrl={baseUrl} />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/transactions" element={<Transactions />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

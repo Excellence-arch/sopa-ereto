@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import MaterialIcon from 'react-google-material-icons';
+import { useSelector } from 'react-redux';
 
-const LatestTransactions = ({ data }) => {
+const LatestTransactions = () => {
+  const data = useSelector((state) => state.latestReducer.transactions);
   return (
     <div className="col-12 col-lg-5 mx-auto">
       <div>
