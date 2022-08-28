@@ -5,8 +5,7 @@ p {
 }
 
 .colors {
-  background-color:
-   #008971;
+  background-color: #008971;
 }
 
 .cursor {
@@ -32,7 +31,6 @@ p {
   padding: 0 !important;
   margin: 0 !important;
 } */
-
 
 .btn-pink {
   color: #fff;
@@ -62,4 +60,9 @@ p {
 
 .position {
   margin-top: -50px;
+}
+
+.borders {
+  border: 2px solid #0071ff;
+  border-radius: 13px;
 }
