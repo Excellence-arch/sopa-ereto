@@ -1,11 +1,12 @@
 import React from 'react';
 import './style.css';
 import Home from './Pages/Home';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import NewHome from './Pages/NewHome';
-import Transactions from './Pages/Transactions';
+import User from './Routes/User';
+import PageNotFound from './Pages/PageNotFound';
 
 export default function App() {
   return (
@@ -15,8 +16,8 @@ export default function App() {
         <Route path="/" element={<NewHome />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/transactions" element={<Transactions />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/users" element={<User />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );

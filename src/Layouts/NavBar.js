@@ -29,14 +29,14 @@ const NavBar = () => {
               className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
               style={{ '--bs-scroll-height': '100px' }}>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="transactions">
+                <Link className="nav-link" to="/users">
                   Transactions
-                </a>
+                </Link>
               </li>
               {/* <li className="nav-item">
                 <a className="nav-link" href="#">

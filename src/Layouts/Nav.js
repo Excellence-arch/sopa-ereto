@@ -34,15 +34,15 @@ const Nav = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="transactions">
+                <Link className="nav-link" to="/users">
                   Transactions
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="#">
                   Cards
                 </Link>
-              </li>
+              </li> */}
             </ul>
             <ul className="navbar-nav me-5">
               <li className="nav-item mx-2">

@@ -66,6 +66,16 @@ p {
   border: 2px solid #0071ff;
   cursor: pointer;
   border-radius: 13px;
-  height: 150px;
-  width: 120px;
+  height: 150px !important;
+  width: 390px !important;
 }
+
+/* .control {
+} */
+
+/* @media (max-width: 500px) {
+  .borders {
+    height: 120px !important;
+    width: 300px !important;
+  }
+} */
