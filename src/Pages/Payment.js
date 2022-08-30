@@ -23,7 +23,7 @@ const Payment = () => {
     if (cardNo == '' || selectedDate == '' || selectedMonth == '') {
       setError('All inputs are required');
     } else {
-      axios.post(url).then((res) => {
+      axios.post(url, { cardNo, selectedDate, cvv }).then((res) => {
         if (res.data.status == false) setError(res.data.message);
         else {
           navigate('/users');
