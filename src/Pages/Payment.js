@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
+import card from '../assets/another card.gif';
+import cards from '../assets/card.gif';
 
 const Payment = () => {
   const [dates, setDates] = useState('');
@@ -42,12 +44,14 @@ const Payment = () => {
   return (
     <div>
       <div className="row p-5 m-5 container">
-        <div className="col-12 col-lg-4">Hi</div>
+        <div className="col-12 col-lg-4">
+          <img src={cards} alt="Card" width={'300px'} className="mt-1 mt-lg-5" />
+        </div>
         <div className="col-12 col-lg-8">
           {error ? <div className="alert alert-danger text-danger">{error}</div> : null}
           <p className="text-blue h5">Last Step!</p>
           <p className="text-blue">Enter your payment info below</p>
-          <img src={'hi'} alt="Credit Card" />
+          <img src={card} width="150px" alt="Credit Card" /> <br />
           <label className="text-blue">Card Number</label>
           <input
             type={'text'}
@@ -56,7 +60,6 @@ const Payment = () => {
             value={cardNo}
             onChange={(e) => changeNo(e)}
           />
-
           <label>Exipration Date</label>
           <div className="d-flex flex-row">
             <div className="date-field me-2 my-2">
@@ -113,7 +116,6 @@ const Payment = () => {
               />
             </div>
           </div>
-
           <button className="btn btn-color w-50 mt-3" onClick={pay}>
             Pay Now
           </button>
