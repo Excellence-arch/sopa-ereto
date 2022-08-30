@@ -43,7 +43,7 @@ const Payment = () => {
   };
   return (
     <div>
-      <div className="row p-5 m-5 container">
+      <div className="row m-5 container">
         <div className="col-12 col-lg-4">
           <img src={cards} alt="Card" width={'300px'} className="mt-1 mt-lg-5" />
         </div>
@@ -101,20 +101,19 @@ const Payment = () => {
                 <option value={dates + 3}>{dates + 3}</option>
               </select>
             </div>
-
-            <div className="m-2">
-              <input
-                type={'text'}
-                maxLength={3}
-                placeholder="CVV"
-                className="w-50 form-control fw-bold fs-5"
-                onInput={() => {
-                  if (cvv.length > this.maxLength) setCvv(cvv.slice(0, this.maxLength));
-                }}
-                value={cvv}
-                onChange={(e) => setCvv(e.target.value)}
-              />
-            </div>
+          </div>
+          <div className="my-2">
+            <input
+              type={'text'}
+              maxLength={3}
+              placeholder="CVV"
+              className="w-50 form-control fw-bold fs-5"
+              onInput={() => {
+                if (cvv.length > this.maxLength) setCvv(cvv.slice(0, this.maxLength));
+              }}
+              value={cvv}
+              onChange={(e) => setCvv(e.target.value)}
+            />
           </div>
           <button className="btn btn-color w-50 mt-3" onClick={pay}>
             Pay Now
