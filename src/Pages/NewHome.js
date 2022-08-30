@@ -13,7 +13,7 @@ const NewHome = () => {
     <div className="">
       {status == true ? <Nav /> : <NavBar />}
       <div className="height w-100 colors container-fluid">
-        <div className="input-group py-5 w-50 container">
+        <div className="input-group py-5 w-100 w-lg-50 container">
           <input type="search" placeholder="Search by ID" className="form-control" />
           <span className="input-group-text cursor-pointer colors text-white">
             <MaterialIcon icon="search" />

@@ -32,6 +32,18 @@ p {
   margin: 0 !important;
 } */
 
+.btn-color {
+  color: #fff;
+  background-color: #0071ff;
+  border-color: #0071ff;
+}
+
+.btn-pink:hover {
+  color: #fff;
+  background-color: #0059ff;
+  border-color: #0059ff;
+}
+
 .btn-pink {
   color: #fff;
   background-color: #d80b4f;
@@ -48,6 +60,10 @@ p {
 
 .new-color {
   background-color: #0071ff !important;
+}
+
+.text-blue {
+  color: #0071ff;
 }
 
 .full-height {
@@ -79,3 +95,15 @@ p {
     width: 300px !important;
   }
 } */
+
+.month select,
+.year select {
+  width: 145px;
+  padding: 10px;
+  border: 2px solid #e1e8ee;
+  border-radius: 6px;
+  /* background: url('caret.png') no-repeat; */
+  background-position: 85% 50%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
