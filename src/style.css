@@ -102,10 +102,55 @@ p {
 .year select {
   width: 145px;
   padding: 10px;
-  border: 2px solid #e1e8ee;
+  /* border: 2px solid rgb(214, 214, 214); */
   border-radius: 6px;
   /* background: url('caret.png') no-repeat; */
   background-position: 85% 50%;
   -moz-appearance: none;
   -webkit-appearance: none;
+}
+
+.months {
+  background-color: #ebebeb;
+  color: #707070;
+}
+
+.fonts {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.bg-pay {
+  margin-top: -50px;
+  background-color: #f6f5fe;
+  width: 100vw;
+  height: 107vh;
+}
+
+.w-60 {
+  width: 53%;
+}
+
+.checks::placeholder {
+  color: #b6b6b6;
+  /* text-align: center; */
+}
+
+.checks {
+  border: 0;
+}
+
+.widths {
+  margin: 0 !important;
+  width: 170px !important;
+  height: 170px !important;
+}
+
+.bg-pays {
+  background-color: #f6f5fe;
+  /* width: 100vw !important; */
+}
+
+.ms-6 {
+  margin-left: 100px !important;
 }

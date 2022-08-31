@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import card from '../assets/another card.gif';
-import cards from '../assets/card.gif';
+import cards from '../assets/Rectangle.png';
 
 const Payment = () => {
   const [dates, setDates] = useState('');
@@ -42,30 +42,33 @@ const Payment = () => {
     setCardNo(nums);
   };
   return (
-    <div>
-      <div className="row m-5 container">
+    <div className="bg-pay">
+      <div className="row p-5 container">
         <div className="col-12 col-lg-4">
-          <img src={cards} alt="Card" width={'300px'} className="mt-1 mt-lg-5" />
+          <img src={cards} alt="Card" width={'300px'} className="mt-1 mt-lg-5 ms-4" />
         </div>
-        <div className="col-12 col-lg-8">
+        <div className="col-12 col-lg-7 pt-5 ms-5">
           {error ? <div className="alert alert-danger text-danger">{error}</div> : null}
-          <p className="text-blue h5">Last Step!</p>
-          <p className="text-blue">Enter your payment info below</p>
-          <img src={card} width="150px" alt="Credit Card" /> <br />
-          <label className="text-blue">Card Number</label>
+          <p className="text-blue h4 fw-bold ms-4">Last Step!</p>
+          <p className="text-blue fonts ms-4">Enter your payment info below</p>
+          <div className="widths">
+            <img src={card} width="190px" alt="Credit Card" className="zoom" />
+          </div>
+          <label className="text-blue fonts ms-4">Card Number</label>
           <input
             type={'text'}
             placeholder="123 4567 8912 3456"
-            className="w-75 form-control fw-bold fs-5"
+            className="w-60 form-control fs-6 mt-1 mb-3 checks ms-4"
             value={cardNo}
             onChange={(e) => changeNo(e)}
           />
-          <label>Exipration Date</label>
-          <div className="d-flex flex-row">
+          <label className="fonts text-blue ms-4">Exipration Date</label>
+          <div className="d-flex flex-row ms-4">
             <div className="date-field me-2 my-2">
               <div className="month">
                 <select
                   name="Month"
+                  className="checks months"
                   value={selectedMonth}
                   defaultValue="Month"
                   onChange={(e) => setSelectedMonth(e.target.value)}>
@@ -90,6 +93,7 @@ const Payment = () => {
             <div className="year m-2">
               <select
                 name="Year"
+                className="checks months"
                 value={selectedDate}
                 onChange={(e) => setSelectedDate(e.target.value)}>
                 <option hidden value={''} disabled>
@@ -102,12 +106,13 @@ const Payment = () => {
               </select>
             </div>
           </div>
-          <div className="my-2">
+          <div className="mt-3 ms-4">
+            <label className="fonts text-blue">CVV</label>
             <input
               type={'text'}
               maxLength={3}
-              placeholder="CVV"
-              className="w-50 form-control fw-bold fs-5"
+              placeholder="123"
+              className="w-25 checks form-control"
               onInput={() => {
                 if (cvv.length > this.maxLength) setCvv(cvv.slice(0, this.maxLength));
               }}
@@ -115,7 +120,7 @@ const Payment = () => {
               onChange={(e) => setCvv(e.target.value)}
             />
           </div>
-          <button className="btn btn-color w-50 mt-3" onClick={pay}>
+          <button className="btn btn-color w-50 mt-5 ms-4" onClick={pay}>
             Pay Now
           </button>
         </div>
