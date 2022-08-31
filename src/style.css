@@ -48,14 +48,14 @@ p {
 
 .btn-pink {
   color: #fff;
-  background-color: #d80b4f;
-  border-color: #d80b4f;
+  background-color: #0071ff;
+  border-color: #0071ff ;
 }
 
 .btn-pink:hover {
   color: #fff;
-  background-color: #d80b4f;
-  border-color: #d80b4f;
+  background-color: #0071ff ;
+  border-color: #0071ff ;
 }
 
 /* 38AEFA */
@@ -152,5 +152,21 @@ p {
 }
 
 .ms-6 {
-  margin-left: 100px !important;
+  margin-left: 130px !important;
+}
+
+.w-70 {
+  width: 50% !important;
+}
+.center {
+  margin-left: 65px;
+}
+
+.check-weight {
+  font-size: 12;
+  font-weight: 300 !important;
+}
+
+.check-color {
+  background-color: transparent;
 }

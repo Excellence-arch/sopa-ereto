@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import MaterialIcon from 'react-google-material-icons';
+// import MaterialIcon from 'react-google-material-icons';
 import logos from '../assets/register.gif';
 import { useSelector } from 'react-redux';
+import Input from '../Components/Input';
+import Password from '../Components/Password';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -45,60 +47,50 @@ const Register = () => {
     }
   };
   return (
-    <div className="container-fluid">
+    <div className="container-fluid bg-pays">
       <div className="row">
         <div className="col-12 col-lg-4 new-color full-height">
-          <h4 className="display-6 text-white container mt-5">
+          <h4 className="h2 text-white container mt-5">
             A few clicks away from creating your Lottery Display
           </h4>
           <img src={logos} alt="file" width={'400px'} className="w-100" />
         </div>
         <form className="col-12 col-lg-8 px-5 ">
-          <p className="display-5">Register</p>
-          <p className="fw-bold">Manage all your lottery efficiently</p>
-          <p className="col-8 text-muted">
+          <p className="h1 fw-bold text-blue">Register</p>
+          <p className="">Manage all your lottery efficiently</p>
+          <p className="col-8 text-muted" style={{ fontSize: '12' }}>
             Let&rsquo;s get you all set up so you can verify your personal account and begin setting
             up your profile
           </p>
           {error ? <div className="text-danger alert alert-danger">{error}</div> : null}
-          <label>Email</label>
-          <input
-            required
-            type="text"
-            className="form-control w-100 my-3"
-            // placeholder="Email"
+          <label className="fonts text-blue">Email</label>
+          <Input
+            placeholder={'Email'}
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            handleChange={(e) => setEmail(e.target.value)}
           />
-          <label>Password</label>
-          <div className="input-group my-3">
-            <input
-              type={showPwd ? 'text' : 'password'}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="form-control"
-              // placeholder="Password"
-            />
-            <span className="input-group-text cursor-pointer" onClick={() => setShowPwd(!showPwd)}>
-              <MaterialIcon icon={showPwd ? 'visibility_off' : 'visibility'} />
-            </span>
-          </div>
+          <label className="fonts text-blue">Password</label>
+          <Password
+            value={password}
+            handleChange={(e) => setPassword(e.target.value)}
+            clicked={() => setShowPwd(!showPwd)}
+          />
           <div>
-            <p>Type of Donor</p>
+            <p className="fonts">Type of Donor</p>
             <input
               type="radio"
               name="type"
               value={'individual'}
               onChange={(e) => setType(e.target.value)}
             />
-            &nbsp;Individual&nbsp;&nbsp;&nbsp;&nbsp;
+            <span className="fonts">&nbsp;Individual&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <input
               type="radio"
               name="type"
               value={'organization'}
               onChange={(e) => setType(e.target.value)}
             />
-            &nbsp;Organization
+            <span className="fonts">&nbsp;Organization</span>
           </div>
           {/* <select className="custom-select" onChange={(e) => handleRole(e)} value={role}>
             <option value="" selected disabled hidden>
@@ -108,12 +100,12 @@ const Register = () => {
             <option value={'tour operator'}>Tour Operator</option>
           </select> */}
           <button
-            className="btn btn-pink px-4 my-3 shadow"
+            className="btn btn-pink px-4 mt-5 mb-2 shadow"
             disabled={isloading ? true : false}
             onClick={(e) => register(e)}>
             {isloading ? <span className="spinner-border"></span> : 'Create Account'}
           </button>
-          <p className="">
+          <p className="text-muted" style={{ fontSize: '14' }}>
             Already have an account?{' '}
             <Link to="/login" className="text-danger text-decoration-none">
               Log in
