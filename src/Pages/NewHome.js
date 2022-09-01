@@ -11,12 +11,16 @@ import '../assets/Styles/Home.css';
 const NewHome = () => {
   const status = useSelector((state) => state.onlineReducer.status);
   return (
-    <div className="">
+    <div className="bg-pays">
       {status == true ? <Nav /> : <NavBar />}
-      <div className="height w-100 colors container-fluid">
+      <div className="height w-100 new-color container-fluid">
         <div className="input-group py-5 w-100 w-lg-50 container">
-          <input type="search" placeholder="Search by ID" className="form-control" />
-          <span className="input-group-text cursor-pointer colors text-white">
+          <input
+            type="search"
+            placeholder="Search by ID"
+            className="form-control bg-pays border-0"
+          />
+          <span className="input-group-text cursor-pointer new-color text-white">
             <MaterialIcon icon="search" />
           </span>
         </div>

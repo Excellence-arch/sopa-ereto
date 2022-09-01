@@ -58,7 +58,7 @@ const Register = () => {
         <form className="col-12 col-lg-7 px-5 mt-4" style={{ marginLeft: '70px' }}>
           <p className="h1 fw-bold text-blue">Register</p>
           {/* <p className="">Manage all your lottery efficiently</p> */}
-          <p className="col-8 text-muted" style={{ fontSize: '12' }}>
+          <p className="col-8 text-muted mb-5" style={{ fontSize: '12' }}>
             Let&rsquo;s get you all set up so you can verify your personal account and begin setting
             up your profile
           </p>

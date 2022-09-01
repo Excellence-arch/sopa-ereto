@@ -11,7 +11,7 @@ const LatestTransactions = () => {
         <p>
           {' '}
           <span>Latest Transactions</span>
-          <span className="float-end btn colors text-white">View onchain</span>
+          <span className="float-end btn new-color text-white">View onchain</span>
         </p>
         <div>
           <table className="table table-bordered mt-5">
