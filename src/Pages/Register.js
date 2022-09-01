@@ -17,7 +17,7 @@ const Register = () => {
   // const [role, setRole] = useState('');
   const [type, setType] = useState('');
   const [showPwd, setShowPwd] = useState(false);
-  const url = `${useSelector((state) => state.urlReducer.baseUrl)}api/register`;
+  const url = `${useSelector((state) => state.urlReducer.baseUrl)}register-donor`;
   // const url = `${baseUrl}api/register`;
 
   // const handleRole = (e) => {

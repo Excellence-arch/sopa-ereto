@@ -1,5 +1,5 @@
 const initState = {
-  baseUrl: 'https://sopa-ereto.herokuapp.com/'
+  baseUrl: 'https://sopa-ereto-diam.herokuapp.com/'
 };
 
 const url = (state = initState, action) => {

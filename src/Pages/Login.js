@@ -15,7 +15,7 @@ const Login = () => {
   const [showPwd, setShowPwd] = useState(false);
   const [error, setError] = useState(false);
   const [isloading, setIsloading] = useState(false);
-  const url = `${useSelector((state) => state.urlReducer.baseUrl)}api/login`;
+  const url = `${useSelector((state) => state.urlReducer.baseUrl)}login-donor`;
   // const url = `${baseUrl}api/login`;
   const navigate = useNavigate();
   const dispatch = useDispatch();
