@@ -7,14 +7,15 @@ const LatestTransactions = () => {
   const data = useSelector((state) => state.latestReducer.transactions);
   return (
     <div className="col-12 col-lg-5 mx-auto">
-      <div>
-        <p>
-          {' '}
-          <span>Latest Transactions</span>
-          <span className="float-end btn new-color text-white">View onchain</span>
+      <div className="">
+        <p className="">
+          <span className="position-relative mt-2">Latest Transactions</span>
+          <span className="float-end btn new-color text-white" style={{ marginTop: '-6px' }}>
+            View onchain
+          </span>
         </p>
         <div>
-          <table className="table table-bordered mt-5">
+          <table className="table mt-4">
             {data.map((val, ind) => (
               <tr key={ind} className="p-4">
                 <td className="fw-bold p-3">{val.day}</td>
