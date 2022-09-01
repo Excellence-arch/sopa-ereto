@@ -5,7 +5,7 @@ import MaterialIcon from 'react-google-material-icons';
 const Password = ({ password, handleChange, showPwd, clicked }) => {
   //   const [showPwd, setShowPwd] = useState(false);
   return (
-    <div className="input-group my-3 w-75">
+    <div className="input-group mb-3 w-75">
       <input
         type={showPwd ? 'text' : 'password'}
         value={password}

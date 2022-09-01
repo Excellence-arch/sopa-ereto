@@ -6,6 +6,7 @@ import LatestTransactions from '../Components/LatestTransactions';
 import LatestBlocks from '../Components/LatestBlocks';
 import { useSelector } from 'react-redux';
 import Nav from '../Layouts/Nav';
+import '../assets/Styles/Home.css';
 
 const NewHome = () => {
   const status = useSelector((state) => state.onlineReducer.status);

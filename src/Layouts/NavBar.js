@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import MaterialIcon from 'react-google-material-icons';
 import logo from '../assets/NevBank.png';
+import '../assets/Styles/Navbar.css';
 
 const NavBar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light bg-pays">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/" title="NevBank">
             <img src={logo} /> Sopa-Ereto

@@ -46,7 +46,7 @@ const QuickTransactions = () => {
           <p className="my-3">{data[i + 3].name}</p>
         </div>
         <button
-          className="btn control bg-light mx-2"
+          className="btn control mx-2"
           onClick={next}
           disabled={i + 4 >= data.length ? true : false}>
           <MaterialIcon icon="arrow_forward_ios" />

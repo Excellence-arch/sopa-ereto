@@ -4,12 +4,13 @@ import MaterialIcon from 'react-google-material-icons';
 import logo from '../assets/NevBank.png';
 import { useDispatch } from 'react-redux';
 import { logout } from '../actions/index';
+import '../assets/Styles/Navbar.css';
 
 const Nav = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light bg-pays">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/" title="NevBank">
             <img src={logo} /> Sopa-Ereto

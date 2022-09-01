@@ -55,42 +55,49 @@ const Register = () => {
           </h4>
           <img src={logos} alt="file" width={'400px'} className="w-100" />
         </div>
-        <form className="col-12 col-lg-8 px-5 ">
+        <form className="col-12 col-lg-7 px-5 mt-4" style={{ marginLeft: '70px' }}>
           <p className="h1 fw-bold text-blue">Register</p>
-          <p className="">Manage all your lottery efficiently</p>
+          {/* <p className="">Manage all your lottery efficiently</p> */}
           <p className="col-8 text-muted" style={{ fontSize: '12' }}>
             Let&rsquo;s get you all set up so you can verify your personal account and begin setting
             up your profile
           </p>
           {error ? <div className="text-danger alert alert-danger">{error}</div> : null}
-          <label className="fonts text-blue">Email</label>
-          <Input
-            placeholder={'Email'}
-            value={email}
-            handleChange={(e) => setEmail(e.target.value)}
-          />
-          <label className="fonts text-blue">Password</label>
-          <Password
-            value={password}
-            handleChange={(e) => setPassword(e.target.value)}
-            clicked={() => setShowPwd(!showPwd)}
-          />
+          <div className="w-75">
+            <label className="fonts text-blue">Email</label>
+            <Input
+              placeholder={'Email'}
+              value={email}
+              handleChange={(e) => setEmail(e.target.value)}
+            />
+            <label className="fonts text-blue">Password</label>
+            <Password
+              value={password}
+              handleChange={(e) => setPassword(e.target.value)}
+              clicked={() => setShowPwd(!showPwd)}
+            />
+          </div>
+
           <div>
-            <p className="fonts">Type of Donor</p>
+            <p className="fonts text-blue" style={{ marginBottom: '0' }}>
+              Type of Donor
+            </p>
             <input
+              className="radios"
               type="radio"
               name="type"
               value={'individual'}
               onChange={(e) => setType(e.target.value)}
             />
-            <span className="fonts">&nbsp;Individual&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span className="fonts text-muted">&nbsp;Individual&nbsp;&nbsp;&nbsp;</span>
             <input
+              className="radios"
               type="radio"
               name="type"
               value={'organization'}
               onChange={(e) => setType(e.target.value)}
             />
-            <span className="fonts">&nbsp;Organization</span>
+            <span className="fonts text-muted">&nbsp;Organization</span>
           </div>
           {/* <select className="custom-select" onChange={(e) => handleRole(e)} value={role}>
             <option value="" selected disabled hidden>
@@ -105,9 +112,9 @@ const Register = () => {
             onClick={(e) => register(e)}>
             {isloading ? <span className="spinner-border"></span> : 'Create Account'}
           </button>
-          <p className="text-muted" style={{ fontSize: '14' }}>
+          <p className="text-muted fw-light" style={{ fontSize: '14' }}>
             Already have an account?{' '}
-            <Link to="/login" className="text-danger text-decoration-none">
+            <Link to="/login" className="text-danger text-decoration-none fw-bold">
               Log in
             </Link>
           </p>

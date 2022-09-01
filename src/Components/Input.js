@@ -8,7 +8,7 @@ const Input = ({ placeholder, value, handleChange }) => {
       placeholder={placeholder}
       value={value}
       onChange={handleChange}
-      className="form-control w-75 my-3 border-0 checks check-weight py-2"
+      className="form-control w-75 mb-3 border-0 checks check-weight py-2"
     />
   );
 };
