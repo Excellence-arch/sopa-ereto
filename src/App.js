@@ -7,6 +7,7 @@ import Register from './Pages/Register';
 import NewHome from './Pages/NewHome';
 import User from './Routes/User';
 import PageNotFound from './Pages/PageNotFound';
+import Admin from './Routes/Admin';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/users/*" element={<User />} />
+        <Route path="/admin/*" element={<Admin />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
