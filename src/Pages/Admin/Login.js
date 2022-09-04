@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 // import MaterialIcon from 'react-google-material-icons';
-import logos from '../assets/register.gif';
+import logos from '../../assets/register.gif';
 import { useDispatch, useSelector } from 'react-redux';
 import { login as logins } from '../../actions/index';
 import Input from '../../Components/Input';
@@ -74,10 +74,10 @@ const Login = () => {
             />
             {/* <div className="input-group my-3 w-75"> */}
             <Password
-              value={password}
+              password={password}
               handleChange={(e) => setPassword(e.target.value)}
               showPwd={showPwd}
-              clicked={() => setShowPwd}
+              clicked={() => setShowPwd(!showPwd)}
             />
             {/* <div> */}
             <input
@@ -103,7 +103,7 @@ const Login = () => {
               <p style={{ marginLeft: '80px', fontSize: '14' }} className="text-muted">
                 {' '}
                 Don&rsquo;t have an account?&nbsp;
-                <Link to="/register" className="text-danger text-decoration-none">
+                <Link to="/admin/register" className="text-danger text-decoration-none">
                   Register
                 </Link>
               </p>

@@ -74,10 +74,10 @@ const Login = () => {
             />
             {/* <div className="input-group my-3 w-75"> */}
             <Password
-              value={password}
+              password={password}
               handleChange={(e) => setPassword(e.target.value)}
               showPwd={showPwd}
-              clicked={() => setShowPwd}
+              clicked={() => setShowPwd(!showPwd)}
             />
             {/* <div> */}
             <input

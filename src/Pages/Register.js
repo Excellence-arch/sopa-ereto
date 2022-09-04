@@ -72,8 +72,9 @@ const Register = () => {
             />
             <label className="fonts text-blue">Password</label>
             <Password
-              value={password}
+              password={password}
               handleChange={(e) => setPassword(e.target.value)}
+              showPwd={showPwd}
               clicked={() => setShowPwd(!showPwd)}
             />
           </div>
