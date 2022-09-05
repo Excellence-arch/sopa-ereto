@@ -82,7 +82,7 @@ const Login = () => {
               style={{ marginTop: '3px' }}
             />
             <span className="text-dark fonts" style={{ marginLeft: '12px' }}>
-              &nbsp;Remember me
+              <span className="text-muted">&nbsp;Remember me</span>
             </span>
             <p className="text-danger fonts" style={{ marginLeft: '320px', marginTop: '-17px' }}>
               Forgot Password?
@@ -98,8 +98,8 @@ const Login = () => {
             <div className="mx-auto row">
               <p style={{ marginLeft: '80px', fontSize: '14' }} className="text-muted">
                 {' '}
-                Don&rsquo;t have an account?&nbsp;
-                <Link to="/admin/register" className="text-danger text-decoration-none">
+                <span className="text-muted fw-light">Don&rsquo;t have an account?&nbsp;</span>
+                <Link to="/admin/register" className="text-danger fw-bold text-decoration-none">
                   Register
                 </Link>
               </p>

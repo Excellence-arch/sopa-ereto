@@ -77,9 +77,9 @@ const Register = () => {
             onClick={(e) => register(e)}>
             {isloading ? <span className="spinner-border"></span> : 'Create Account'}
           </button>
-          <p className="text-muted fw-light" style={{ fontSize: '14' }}>
-            Already have an account?{' '}
-            <Link to="/login" className="text-danger text-decoration-none fw-bold">
+          <p style={{ fontSize: '14' }}>
+            <span className="text-muted fw-light">Already have an account?</span>{' '}
+            <Link to="/admin/login" className="text-danger text-decoration-none fw-bold">
               Log in
             </Link>
           </p>

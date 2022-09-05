@@ -59,7 +59,7 @@ const Login = () => {
           </div>
           <form className="col-12 col-lg-6 mx-5 mt-5 pt-5 w-50 ms-6">
             <p className="h1 mb-2 container text-blue">Login</p>
-            <p className="mb-5 text-muted" style={{ marginLeft: '28px' }}>
+            <p className="mb-5 text-muted" style={{ marginLeft: '20px' }}>
               Login to your account
             </p>
             {/* <p className="text-muted col-7 fonts" style={{ marginLeft: '50px' }}>
@@ -102,8 +102,8 @@ const Login = () => {
             <div className="mx-auto row">
               <p style={{ marginLeft: '80px', fontSize: '14' }} className="text-muted">
                 {' '}
-                Don&rsquo;t have an account?&nbsp;
-                <Link to="/register" className="text-danger text-decoration-none">
+                <span className="text-muted fw-light">Don&rsquo;t have an account?&nbsp;</span>
+                <Link to="/register" className="text-danger fw-bold text-decoration-none">
                   Register
                 </Link>
               </p>
