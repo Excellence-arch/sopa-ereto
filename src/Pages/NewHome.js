@@ -4,26 +4,30 @@ import MaterialIcon from 'react-google-material-icons';
 import TotalCard from '../Components/TotalCard';
 import LatestTransactions from '../Components/LatestTransactions';
 import LatestBlocks from '../Components/LatestBlocks';
-import { useSelector } from 'react-redux';
-import Nav from '../Layouts/Nav';
+// import { useSelector } from 'react-redux';
+// import Nav from '../Layouts/Nav';
 import '../assets/Styles/Home.css';
 
 const NewHome = () => {
-  const status = useSelector((state) => state.onlineReducer.status);
+  // const status = useSelector((state) => state.onlineReducer.status);
   return (
     <div className="bg-pays">
-      {status == true ? <Nav /> : <NavBar />}
-      <div className="height w-100 new-color container-fluid">
-        <div className="input-group py-5 w-100 w-lg-50 container">
+      <NavBar />
+      <div className="height w-100 bg-pa container-fluid">
+        <div className="input-group py-5 w-50 w-lg-50 rounds">
           <input
             type="search"
             placeholder="Search by ID"
-            className="form-control bg-pays border-0"
+            className="form-control bg-pays border-0 rounds-start"
           />
-          <span className="input-group-text cursor-pointer new-color text-white">
+          <span className="input-group-text cursor-pointer new-color text-white rounds-end">
             <MaterialIcon icon="search" />
           </span>
         </div>
+        <p className="bgs py-2 px-3 rounded" style={{ maxWidth: 'max-content' }}>
+          <span className="text-white">Sponsored</span> by your love for giving and your passion for{' '}
+          <span className="text-success">wildlife</span>
+        </p>
       </div>
       <TotalCard />
       <div className="d-flex flex-column flex-lg-row">

@@ -86,7 +86,7 @@ const Login = () => {
               style={{ marginTop: '3px' }}
             />
             <span className="text-dark fonts" style={{ marginLeft: '12px' }}>
-              &nbsp;Remember me
+              <span className="text-muted">&nbsp;Remember me</span>
             </span>
             <p className="text-danger fonts" style={{ marginLeft: '320px', marginTop: '-17px' }}>
               Forgot Password?

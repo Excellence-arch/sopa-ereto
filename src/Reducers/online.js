@@ -1,5 +1,5 @@
 const initState = {
-  status: false,
+  status: true,
   id: ''
 };
 

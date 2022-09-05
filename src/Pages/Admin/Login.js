@@ -59,13 +59,9 @@ const Login = () => {
           </div>
           <form className="col-12 col-lg-6 mx-5 mt-5 pt-5 w-50 ms-6">
             <p className="h1 mb-2 container text-blue">Login</p>
-            <p className="mb-5 text-muted" style={{ marginLeft: '28px' }}>
+            <p className="mb-5 text-muted" style={{ marginLeft: '20px' }}>
               Login to your account
             </p>
-            {/* <p className="text-muted col-7 fonts" style={{ marginLeft: '50px' }}>
-              Thank you for getting back to Sopa Ereto, let&rsquo;s access the best recommendations
-              for you
-            </p> */}
             {error ? <div className="text-danger alert alert-danger">{error}</div> : null}
             <Input
               placeholder={'Email'}

@@ -1,4 +1,4 @@
-import pics from '../assets/Deutsche.png';
+import pics from '../assets/Michael.jpg';
 const initState = {
   blocks: [
     {

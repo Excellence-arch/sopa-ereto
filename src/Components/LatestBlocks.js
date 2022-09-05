@@ -10,7 +10,7 @@ const LatestBlocks = () => {
         {data.map((val, i) => (
           <tr key={i} className="p-1">
             <td>
-              <img src={val.picture} alt={'Picture'} width="40px" className="rounded-circle" />
+              <img src={val.picture} alt={'Picture'} width="50px" className="rounded-circle" />
             </td>
             <td>{val.id}</td>
             <td>{val.amount} KES</td>

@@ -147,7 +147,7 @@ p {
 }
 
 .bg-pays {
-  background-color: #f6f5fe !important;
+  background-color: #f6f5fe;
   /* width: 100vw !important; */
 }
 
@@ -174,4 +174,31 @@ p {
 .radios {
   width: 10px;
   height: 10px;
+}
+
+.rounds-start {
+  border-top-left-radius: 7px !important;
+  border-bottom-left-radius: 7px !important;
+  border-color: transparent;
+}
+
+.rounds-end {
+  border-top-right-radius: 7px !important;
+  border-bottom-right-radius: 7px !important;
+  border-color: transparent;
+}
+
+.bgs {
+  background-color: #f0f0f0;
+}
+
+.bg-pa {
+  background: linear-gradient(to bottom, rgba(28, 52, 82, 0.7), rgba(28, 52, 82, 0.7)),
+    url('./assets/unnamed.jpg');
+    /* width: fit-content; */
+  background-repeat: repeat-x;
+  background-position-y: center;
+  background-size:contain;
+  /* background-clip: ; */
+  /* background-color: #1c3452; */
 }

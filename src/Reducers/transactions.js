@@ -1,4 +1,4 @@
-import img from '../assets/Citi.svg.png';
+import img from '../assets/Michael.jpg';
 
 const initState = {
   quickTransactions: [
