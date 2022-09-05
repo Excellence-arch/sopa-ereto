@@ -12,7 +12,8 @@ const NavBar = () => {
           <Link className="navbar-brand" to="/" title="NevBank">
             <img src={logo} />{' '}
             <span className="text-muted" style={{ fontSize: '15' }}>
-              Sopa-Ereto
+              <span className="text-danger">Sopa-</span>
+              <span className="text-blue">Ereto</span>
             </span>
           </Link>
           <button
