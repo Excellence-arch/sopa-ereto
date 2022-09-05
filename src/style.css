@@ -206,3 +206,9 @@ p {
 .shadow-blue {
   box-shadow: 0 0 25px 5px #0069e931;
 }
+
+@media (max-width: 500px) {
+  .bord {
+    display: none;
+  }
+}
