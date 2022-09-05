@@ -1,14 +1,16 @@
 import React from 'react';
-import { Routes, Route } from 'react-router';
+import { useSelector } from 'react-redux';
+import { Routes, Route, Navigate } from 'react-router';
+import Dashboard from '../Pages/Admin/Dashboard';
 import Login from '../Pages/Admin/Login';
-import NewHome from '../Pages/NewHome';
 import PageNotFound from '../Pages/PageNotFound';
 
 const Admin = () => {
+  const status = useSelector((state) => state.adminReducer.status);
   return (
     <div>
       <Routes>
-        <Route path="" element={<NewHome />} />
+        <Route path="" element={status ? <Dashboard /> : <Navigate to="/admin/login" />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
