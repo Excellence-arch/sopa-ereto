@@ -9,11 +9,11 @@ const NavBar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light bg-pays">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/" title="NevBank">
+          <Link className="navbar-brand ms-3" to="/" title="NevBank">
             <img src={logo} />{' '}
-            <span className="text-muted" style={{ fontSize: '15' }}>
-              <span className="text-danger">Sopa-</span>
-              <span className="text-blue">Ereto</span>
+            <span className="text-muted" style={{ fontSize: '15', fontWeight: '500' }}>
+              <span className="text-blue">Sopa-</span>
+              <span className="text-danger">Ereto</span>
             </span>
           </Link>
           <button

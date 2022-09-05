@@ -195,10 +195,14 @@ p {
 .bg-pa {
   background: linear-gradient(to bottom, rgba(28, 52, 82, 0.7), rgba(28, 52, 82, 0.7)),
     url('./assets/unnamed.jpg');
-    /* width: fit-content; */
+  /* width: fit-content; */
   background-repeat: repeat-x;
   background-position-y: center;
-  background-size:contain;
+  background-size: contain;
   /* background-clip: ; */
   /* background-color: #1c3452; */
+}
+
+.shadow-blue {
+  box-shadow: 0 0 25px 5px #0069e931;
 }

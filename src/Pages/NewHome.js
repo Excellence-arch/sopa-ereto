@@ -14,7 +14,7 @@ const NewHome = () => {
     <div className="bg-pays">
       <NavBar />
       <div className="height w-100 bg-pa container-fluid">
-        <div className="input-group py-5 w-50 w-lg-50 rounds">
+        <div className="input-group ms-3 py-5 w-50 w-lg-50 rounds">
           <input
             type="search"
             placeholder="Search by ID"
@@ -24,7 +24,7 @@ const NewHome = () => {
             <MaterialIcon icon="search" />
           </span>
         </div>
-        <p className="bgs py-2 px-3 rounded" style={{ maxWidth: 'max-content' }}>
+        <p className="bgs py-2 px-3 rounded ms-3" style={{ maxWidth: 'max-content' }}>
           <span className="text-white">Sponsored</span> by your love for giving and your passion for{' '}
           <span className="text-success">wildlife</span>
         </p>
