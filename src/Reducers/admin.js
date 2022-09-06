@@ -1,4 +1,4 @@
-import pix from '../assets/san-logo.webp';
+import pix from '../assets/Michael.jpg';
 
 const initState = {
   status: true,

@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import admin from './admin';
+import allUsers from './allUsers';
 import latest from './latest';
 import online from './online';
 import transactions from './transactions';
@@ -12,7 +13,8 @@ const allReducers = combineReducers({
   onlineReducer: online,
   urlReducer: url,
   transactionReducer: transactions,
-  adminReducer: admin
+  adminReducer: admin,
+  allUsersReducer: allUsers
 });
 
 export default allReducers;

@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import MaterialIcon from 'react-google-material-icons';
+// import MaterialIcon from 'react-google-material-icons';
 import logo from '../assets/NevBank.png';
-import { useDispatch } from 'react-redux';
-import { logout } from '../actions/index';
+// import { useDispatch } from 'react-redux';
+// import { logout } from '../../actions/index';
 import '../assets/Styles/Navbar.css';
 
-const Nav = () => {
-  const dispatch = useDispatch();
+// eslint-disable-next-line react/prop-types
+const Nav = ({ name, pix }) => {
+  //   const dispatch = useDispatch();
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light bg-pays">
+      <nav className="navbar navbar-expand-lg navbar-light bg-pays colorss">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/" title="NevBank">
             <img src={logo} />{' '}
@@ -30,7 +31,7 @@ const Nav = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarScroll">
-            <ul
+            {/* <ul
               className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
               style={{ '--bs-scroll-height': '100px' }}>
               <li className="nav-item">
@@ -48,8 +49,8 @@ const Nav = () => {
                   Cards
                 </Link>
               </li> */}
-            </ul>
-            <ul className="navbar-nav me-5">
+            {/* </ul> */}
+            {/* <ul className="navbar-nav me-5">
               <li className="nav-item mx-2">
                 <Link to="/" className="text-dark" title="settings">
                   <MaterialIcon icon="settings" />{' '}
@@ -65,20 +66,25 @@ const Nav = () => {
                   <MaterialIcon icon="notifications" />{' '}
                 </Link>
               </li>
-            </ul>
-            <Link
-              to="/"
-              className="text-decoration-none text-dark ms-5 me-5"
-              title="Dorothy Watkins">
-              Dorothy Watkins
-            </Link>
-            <p
+            </ul> */}
+            <p style={{ float: 'right' }}>
+              <img src={pix} alt={name} width="40px" className="rounded-circle" />
+              <Link
+                to="/"
+                className="text-decoration-none text-white ms-2 me-5"
+                title={name}
+                style={{ fontSize: '14' }}>
+                {name}
+              </Link>
+            </p>
+
+            {/* <p
               className="text-decoration-none text-dark cursor-pointer mt-3"
               title="logout?"
               onClick={() => dispatch(logout({ status: false, id: '' }))}>
               {' '}
               <MaterialIcon icon="logout" />{' '}
-            </p>
+            </p> */}
           </div>
         </div>
       </nav>
