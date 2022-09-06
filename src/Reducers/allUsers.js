@@ -9,16 +9,16 @@ const initState = {
       email: 'oladipopomichael9@gmail.com'
     },
     {
-      name: 'Oladipupo Oluwayimika',
+      name: 'Nancy Amandi',
       role: 'Land Owner',
       img: michael,
-      email: 'oladipopomichael9@gmail.com'
+      email: 'nancy9ce@gmail.com'
     },
     {
-      name: 'Oladipupo Oluwayimika',
+      name: 'Ayo Solomon',
       role: 'Tour Operator',
       img: michael,
-      email: 'oladipopomichael9@gmail.com'
+      email: 'ayosolomon@gmail.com'
     },
     {
       name: 'Oladipupo Oluwayimika',
