@@ -3,10 +3,10 @@ import '../assets/Styles/search.css';
 
 const Search = () => {
   return (
-    <div>
+    <div className="mb-3">
       <div className="d-flex searches">
-        <input type="text" className="form-control" placeholder={`Search User`} />
-        <button className="btn btn-warning mx-3 py-2" style={{ width: '120px' }}>
+        <input type="text" className="form-control input" placeholder={`Search User`} />
+        <button className="btn btn-danger mx-3" style={{ width: '120px' }}>
           Add User
         </button>
       </div>

@@ -1,4 +1,4 @@
-input {
+.input {
   background-image: url('../search.png');
   background-repeat: no-repeat;
   /* background-size: contain; */
@@ -10,7 +10,7 @@ input {
 input::placeholder {
   font-size: 13;
   color: rgb(212, 211, 211);
-  font-weight: 500;
+  font-weight: 200;
 }
 
 .searches {
