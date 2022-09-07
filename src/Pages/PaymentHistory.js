@@ -9,7 +9,7 @@ const PaymentHistory = () => {
         <p className="col-4">Recent Activity</p>
         <p className="btn btn-light col-4">Show All</p>
       </div>
-      <table className="able col-8 mx-auto">
+      <table className="col-8 mx-auto bg-white">
         {data.map((val, i) => (
           <tr key={i}>
             <td>

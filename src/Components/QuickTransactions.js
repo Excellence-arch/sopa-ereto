@@ -30,19 +30,19 @@ const QuickTransactions = () => {
           Manual
         </div>
         <div key={i} className="borders mx-2">
-          <img src={data[i].img} width="40px" className="border-circle text-center" />
+          <img src={data[i].img} width="40px" className="rounded-circle text-center" />
           <p className="my-3">{data[i].name}</p>
         </div>
         <div key={i + 1} className="borders mx-2">
-          <img src={data[i + 1].img} width="40px" className="border-circle text-center" />
+          <img src={data[i + 1].img} width="40px" className="rounded-circle text-center" />
           <p className="my-3">{data[i + 1].name}</p>
         </div>
         <div key={i + 2} className="borders mx-2">
-          <img src={data[i + 2].img} width="40px" className="border-circle text-center" />
+          <img src={data[i + 2].img} width="40px" className="rounded-circle text-center" />
           <p className="my-3">{data[i + 2].name}</p>
         </div>
         <div key={i + 3} className="borders mx-2">
-          <img src={data[i + 3].img} width="40px" className="border-circle text-center" />
+          <img src={data[i + 3].img} width="40px" className="rounded-circle text-center" />
           <p className="my-3">{data[i + 3].name}</p>
         </div>
         <button

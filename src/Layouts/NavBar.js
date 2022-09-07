@@ -49,7 +49,7 @@ const NavBar = () => {
             </Link>
             {/* </li> */}
             {/* <li className="nav-item"> */}
-            <Link className="nav-link text-muted me-5" to="/users" style={{ fontSize: '15' }}>
+            <Link className="nav-link text-muted me-5" to="/donor" style={{ fontSize: '15' }}>
               Transactions
             </Link>
             {/* </li> */}
