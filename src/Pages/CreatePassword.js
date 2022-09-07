@@ -30,7 +30,7 @@ const CreatePassword = () => {
               type={showPwd ? 'text' : 'password'}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="form-control checks check-weight"
+              className="form-control check-weight"
               placeholder="Enter your password"
             />
             <span className="input-group-text cursor-pointer" onClick={() => setShowPwd(!showPwd)}>
