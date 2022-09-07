@@ -35,21 +35,21 @@ p {
 } */
 
 .btn-color {
-  color: #fff;
-  background-color: #0071ff;
-  border-color: #0071ff;
+  color: #fff !important;
+  background-color: #0071ff !important;
+  border-color: #0071ff Im !important;
 }
 
 .btn-pink {
-  color: #fff;
-  background-color: #0071ff;
-  border-color: #0071ff;
+  color: #fff !important;
+  background-color: #0071ff !important;
+  border-color: #0071ff !important;
 }
 
 .btn-pink:hover {
-  color: #fff;
-  background-color: #0071ff;
-  border-color: #0071ff;
+  color: #fff !important;
+  background-color: #0071ff !important;
+  border-color: #0071ff !important;
 }
 
 /* 38AEFA */
