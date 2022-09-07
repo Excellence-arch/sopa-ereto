@@ -5,18 +5,16 @@ import { Link } from 'react-router-dom';
 import logos from '../assets/register.gif';
 import { useSelector } from 'react-redux';
 import Input from '../Components/Input';
-import Password from '../Components/Password';
 
 const Register = () => {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [confEmail, setConfEmail] = useState('');
   const [isloading, setIsloading] = useState(false);
   const [error, setError] = useState(false);
   // const [name, setName] = useState('');
   // const [valid, setValid] = useState(true);
   // const [role, setRole] = useState('');
   const [type, setType] = useState('');
-  const [showPwd, setShowPwd] = useState(false);
   const url = `${useSelector((state) => state.urlReducer.baseUrl)}register-donor`;
   // const url = `${baseUrl}api/register`;
 
@@ -28,11 +26,11 @@ const Register = () => {
 
   const register = (e) => {
     e.preventDefault();
-    if (email == '' || password == '' || type == '') setError('All Fields are required');
+    if (email == '' || confEmail == '' || type == '') setError('All Fields are required');
     else {
       setIsloading(true);
       setError(false);
-      const details = { email, password, type };
+      const details = { email, type };
       axios
         .post(url, details)
         .then((res) => {
@@ -70,12 +68,11 @@ const Register = () => {
               value={email}
               handleChange={(e) => setEmail(e.target.value)}
             />
-            <label className="fonts text-blue">Password</label>
-            <Password
-              password={password}
-              handleChange={(e) => setPassword(e.target.value)}
-              showPwd={showPwd}
-              clicked={() => setShowPwd(!showPwd)}
+            <label className="fonts text-blue">Confirm Email</label>
+            <Input
+              placeholder={'Confirm your email'}
+              value={confEmail}
+              handleChange={(e) => setConfEmail(e.target.value)}
             />
           </div>
 
@@ -111,11 +108,11 @@ const Register = () => {
             className="btn btn-pink px-4 mt-5 mb-2 shadow"
             disabled={isloading ? true : false}
             onClick={(e) => register(e)}>
-            {isloading ? <span className="spinner-border"></span> : 'Create Account'}
+            {isloading ? <span className="spinner-border"></span> : 'Get Started'}
           </button>
           <p className="text-muted fw-light" style={{ fontSize: '14' }}>
             <span>Already have an account?</span>{' '}
-            <Link to="/login" className="text-danger text-decoration-none fw-bold">
+            <Link to="/accounts/login" className="text-danger text-decoration-none fw-bold">
               Log in
             </Link>
           </p>

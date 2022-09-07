@@ -102,7 +102,7 @@ const Login = () => {
               <p style={{ marginLeft: '80px', fontSize: '14' }} className="text-muted">
                 {' '}
                 <span className="text-muted fw-light">Don&rsquo;t have an account?&nbsp;</span>
-                <Link to="/register" className="text-danger fw-bold text-decoration-none">
+                <Link to="/accounts/register" className="text-danger fw-bold text-decoration-none">
                   Register
                 </Link>
               </p>

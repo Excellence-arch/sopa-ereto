@@ -81,7 +81,7 @@ const NavBar = () => {
                 <MaterialIcon icon="account_circle" />
               </span>
               <Link
-                to="/login"
+                to="/accounts/login"
                 className="text-decoration-none text-muted ms-5"
                 style={{ fontSize: '15' }}
                 title="Sign in">
