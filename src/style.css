@@ -40,12 +40,6 @@ p {
   border-color: #0071ff;
 }
 
-.btn-pink:hover {
-  color: #fff;
-  background-color: #0059ff;
-  border-color: #0059ff;
-}
-
 .btn-pink {
   color: #fff;
   background-color: #0071ff;
@@ -87,16 +81,6 @@ p {
   height: 150px !important;
   width: 390px !important;
 }
-
-/* .control {
-} */
-
-/* @media (max-width: 500px) {
-  .borders {
-    height: 120px !important;
-    width: 300px !important;
-  }
-} */
 
 .month select,
 .year select {
