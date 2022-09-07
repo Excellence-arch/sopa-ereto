@@ -11,7 +11,7 @@ const Password = ({ password, handleChange, showPwd, clicked }) => {
         value={password}
         onChange={handleChange}
         className="form-control border-0 checks check-weight"
-        placeholder="Password"
+        placeholder="Enter your password"
       />
       <span className="input-group-text cursor-pointer border-0" onClick={clicked}>
         <MaterialIcon icon={showPwd ? 'visibility_off' : 'visibility'} />

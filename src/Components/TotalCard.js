@@ -2,6 +2,8 @@ import React from 'react';
 import EachCard from './EachCard';
 import Graph from './Graph';
 import donation from '../assets/donations.png';
+import beneficiary from '../assets/beneficiary.png';
+import paidBeneficiary from '../assets/paid beneficiary.png';
 import recievedDonations from '../assets/recieved_donations.png';
 
 const TotalCard = () => {
@@ -48,8 +50,8 @@ const TotalCard = () => {
                 marginTop: '60px',
                 marginLeft: '430px'
               }}></p>
-            <EachCard name={'Beneficiaries'} amount={'191,594'} />
-            <EachCard name={'Paid Beneficiaries'} amount={'11,736'} />
+            <EachCard name={'Beneficiaries'} amount={'191,594'} img={beneficiary} />
+            <EachCard name={'Paid Beneficiaries'} amount={'11,736'} img={paidBeneficiary} />
           </div>
         </div>
         <div className="col-4">

@@ -31,12 +31,11 @@ const Login = () => {
       axios
         .post(url, { email, password })
         .then((res) => {
-          isloading(false);
-          console.log(res);
-          dispatch(logins({ status: true, id: res.id }));
-          if (res.data.status == false) {
-            setError(res.data.message);
+          setIsloading(false);
+          if (res.data.status == 404) {
+            setError(res.data.error);
           } else {
+            dispatch(logins({ status: true, id: res.id }));
             navigate('/home');
           }
         })
@@ -68,7 +67,7 @@ const Login = () => {
             </p> */}
             {error ? <div className="text-danger alert alert-danger">{error}</div> : null}
             <Input
-              placeholder={'Email'}
+              placeholder={'Enter your email'}
               handleChange={(e) => setEmail(e.target.value)}
               value={email}
             />
