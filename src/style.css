@@ -136,6 +136,10 @@ p {
   /* text-align: center; */
 }
 
+.text-ash {
+  color: #b6b6b6 !important;
+}
+
 .checks {
   border: 0;
 }
