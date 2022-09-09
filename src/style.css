@@ -225,7 +225,7 @@ p {
 .bg-images {
   /* background: linear-gradient(rgba(28, 52, 82, 0.3), rgba(28, 52, 82, 0.3)),
     url('./assets/animals.jpg'); */
-  background-image: url('./assets/animals.jpg');
+  background-image: url('./assets/edited_animals.jpg');
   background-size: 215px;
   background-repeat: no-repeat;
   background-position-x: 223px;
