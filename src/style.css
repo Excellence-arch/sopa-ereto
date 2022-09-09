@@ -124,6 +124,10 @@ p {
   color: #b6b6b6 !important;
 }
 
+.bg-ash {
+  background-color: #d4d4d4 !important;
+}
+
 .checks {
   border: 0;
 }
@@ -197,6 +201,34 @@ p {
 
 .colorss {
   background-color: #0048cf96;
+}
+
+/* .h-autos {
+  max-height: 110px !important;
+} */
+
+.glassmorphism {
+  /* other styles */
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.widthss {
+  width: 800px;
+}
+
+.margins {
+  margin-top: -50px;
+}
+
+.bg-images {
+  /* background: linear-gradient(rgba(28, 52, 82, 0.3), rgba(28, 52, 82, 0.3)),
+    url('./assets/animals.jpg'); */
+  background-image: url('./assets/animals.jpg');
+  background-size: 215px;
+  background-repeat: no-repeat;
+  background-position-x: 223px;
 }
 
 @media (max-width: 500px) {
