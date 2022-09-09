@@ -47,7 +47,7 @@ const Payment = () => {
   //   setCardNo(nums);
   // };
   return (
-    <div className="bg-p">
+    <div className="bg-pays">
       <NewNav />
       <div className="row p-5 container">
         <div className="col-12 col-lg-4">

@@ -25,7 +25,9 @@ const Rows = ({ i, img, name, email, role }) => {
         {' '}
         <p
           className={
-            role == 'Tour Operator' ? 'bg-warning rounded-pill p-2' : 'bg-success rounded-pill p-2'
+            role == 'Tour Operator'
+              ? 'bg-warning rounded-pill p-2 mt-3'
+              : 'bg-success rounded-pill p-2 mt-3'
           }
           style={{ maxWidth: 'max-content' }}>
           {role}

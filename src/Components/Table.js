@@ -24,7 +24,7 @@ const Table = () => {
     }
   };
   return (
-    <div className="container col-12 mt-5">
+    <div className="container col-12 col-lg-12 mt-5">
       <table className="bg-white table rounds-start rounds-end">
         <thead>
           <tr>

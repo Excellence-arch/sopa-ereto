@@ -67,7 +67,7 @@ const Nav = ({ name, pix }) => {
                 </Link>
               </li>
             </ul> */}
-            <p style={{ float: 'right' }}>
+            <p className="profile">
               <img src={pix} alt={name} width="40px" className="rounded-circle" />
               <Link
                 to="/"

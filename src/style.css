@@ -256,6 +256,9 @@ p {
   margin-left: 230px;
 }
 
+.profile {
+  margin-left: 970px;
+}
 
 @media (max-width: 500px) {
   .bord {
@@ -265,5 +268,8 @@ p {
     position: absolute;
     margin-top: 10px !important;
     margin-left: 200px;
+  }
+  .profile {
+    margin-left: 100px;
   }
 }

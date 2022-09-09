@@ -5,7 +5,7 @@ import logo from '../assets/NevBank.png';
 const NewNav = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light bg-pays">
+      <nav className="navbar navbar-expand-lg navbar-light bg-pays">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/" title="NevBank">
             <img src={logo} />{' '}
