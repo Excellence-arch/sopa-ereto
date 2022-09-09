@@ -1,22 +1,38 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import done from '../assets/done.png';
 
 const LatestBlocks = () => {
   const data = useSelector((state) => state.latestReducer.blocks);
   return (
     <div className="col-lg-5 col-12 mx-auto bg-white p-3 rounds-start rounds-end border">
-      <p className="my-2 border-bottom">Latest Blocks</p>
-      <table className="table">
+      <p className="my-2 mb-4">Rangers</p>
+      <p className="position shift" style={{ marginLeft: '420px' }}>
+        <button className="btn btn-light text-danger">{'<'}</button>{' '}
+        <span className="btn btn-light">1</span>{' '}
+        <button className="btn btn-light text-danger">{'>'}</button>
+      </p>
+      <div className="">
         {data.map((val, i) => (
-          <tr key={i} className="p-1 border-bottom">
-            <td>
-              <img src={val.picture} alt={'Picture'} width="50px" className="rounded-circle" />
+          <div key={i}>
+            <td className="fw-bold pe-3">Today</td>
+            <td className="ms-3 me-5">
+              <img src={val.picture} alt={'Picture'} width="40px" className="rounded-circle" />
             </td>
-            <td>{val.id}</td>
-            <td>{val.amount} KES</td>
-          </tr>
+            <p className=""></p>
+            <span className="moves text-muted fw-light">
+              <span className="">ID:</span> <span className="text-blue">{val.id}</span>
+            </span>
+            <span className="recieved fw-light text-muted">
+              {' '}
+              Recieved <img src={done} width={'10px'} />
+            </span>
+            <span className="amounts p-2" style={{ fontWeight: '200' }}>
+              {val.amount} KES
+            </span>
+          </div>
         ))}
-      </table>
+      </div>
     </div>
   );
 };

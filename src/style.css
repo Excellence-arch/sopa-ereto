@@ -134,8 +134,8 @@ p {
 
 .widths {
   margin: 0 !important;
-  width: 170px !important;
-  height: 170px !important;
+  width: 100px !important;
+  /* height: 170px !important; */
 }
 
 .bg-pays {
@@ -231,8 +231,39 @@ p {
   background-position-x: 223px;
 }
 
+.moves {
+  position: absolute;
+  margin-top: -40px !important;
+  margin-left: 110px;
+}
+
+.amounts {
+  position: absolute;
+  margin-top: -46px !important;
+  margin-left: 420px;
+  color: #000000;
+  background-color: #f5f5f5;
+}
+
+.shift {
+  position: absolute;
+  margin-top: -40px;
+}
+
+.recieved {
+  position: absolute;
+  margin-top: -40px !important;
+  margin-left: 230px;
+}
+
+
 @media (max-width: 500px) {
   .bord {
     display: none;
+  }
+  .amounts {
+    position: absolute;
+    margin-top: 10px !important;
+    margin-left: 200px;
   }
 }

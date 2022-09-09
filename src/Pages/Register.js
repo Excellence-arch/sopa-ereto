@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-// import MaterialIcon from 'react-google-material-icons';
+import MaterialIcon from 'react-google-material-icons';
 import logos from '../assets/register.gif';
 import { useSelector } from 'react-redux';
 import Input from '../Components/Input';
+import Password from '../Components/Password';
 
 const Register = () => {
   const [email, setEmail] = useState('');
-  const [confEmail, setConfEmail] = useState('');
   const [isloading, setIsloading] = useState(false);
   const [error, setError] = useState(false);
-  // const [name, setName] = useState('');
-  // const [valid, setValid] = useState(true);
-  // const [role, setRole] = useState('');
+  const [password, setPassword] = useState();
+  const [showPwd, setShowPwd] = useState(false);
   const [type, setType] = useState('');
+  const [confPassword, setConfPassword] = useState();
   const url = `${useSelector((state) => state.urlReducer.baseUrl)}register-donor`;
   // const url = `${baseUrl}api/register`;
 
@@ -26,7 +26,7 @@ const Register = () => {
 
   const register = (e) => {
     e.preventDefault();
-    if (email == '' || confEmail == '' || type == '') setError('All Fields are required');
+    if (email == '' || password == '' || type == '') setError('All Fields are required');
     else {
       setIsloading(true);
       setError(false);
@@ -68,12 +68,42 @@ const Register = () => {
               value={email}
               handleChange={(e) => setEmail(e.target.value)}
             />
-            <label className="fonts text-blue">Confirm Email</label>
-            <Input
-              placeholder={'Confirm your email'}
-              value={confEmail}
-              handleChange={(e) => setConfEmail(e.target.value)}
+            <label className="fonts text-blue">Password</label>
+            <Password
+              password={password}
+              handleChange={(e) => setPassword(e.target.password)}
+              showPwd={showPwd}
+              clicked={() => setShowPwd(!showPwd)}
             />
+            <label className="fonts text-blue">Confirm Password</label>
+            <div className="input-group mb-3 w-75">
+              <input
+                type={showPwd ? 'text' : 'password'}
+                value={confPassword}
+                onChange={(e) => setConfPassword(e.target.value)}
+                className="form-control border-0 checks check-weight"
+                placeholder="Confirm your password"
+              />
+              <span
+                className="input-group-text cursor-pointer border-0"
+                onClick={() => setShowPwd(!showPwd)}>
+                <MaterialIcon icon={showPwd ? 'visibility_off' : 'visibility'} />
+              </span>
+            </div>
+            {/* <div className="input-group mb-3 w-75">
+              <input
+                type={showPwd ? 'text' : 'password'}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="form-control check-weight"
+                placeholder="Enter your password"
+              />
+              <span
+                className="input-group-text cursor-pointer"
+                onClick={() => setShowPwd(!showPwd)}>
+                <MaterialIcon icon={showPwd ? 'visibility_off' : 'visibility'} />
+              </span>
+            </div> */}
           </div>
 
           <div>

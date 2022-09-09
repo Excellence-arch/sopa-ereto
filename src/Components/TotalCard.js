@@ -22,7 +22,7 @@ const TotalCard = () => {
                 width: '1px',
                 height: '80px',
                 marginTop: '10px',
-                marginLeft: '405px'
+                marginLeft: '403px'
               }}></p>
             <p
               className="bord bg-ash"

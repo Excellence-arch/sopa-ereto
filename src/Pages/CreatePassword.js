@@ -1,56 +1,50 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router';
-import MaterialIcon from 'react-google-material-icons';
+// import { useNavigate } from 'react-router';
 
 const CreatePassword = () => {
-  const [password, setPassword] = useState();
-  const [showPwd, setShowPwd] = useState(false);
-  const navigate = useNavigate();
+  const [name, setName] = useState();
+  const [location, setLocation] = useState();
+  // const navigate = useNavigate();
   return (
     <div className="bg-white">
       <div className="row">
         <div className="col-12 col-lg-4 bg-pays full-height">
-          <p className="ms-5 mt-4">Step 2/2: password creation</p>
+          <p className="ms-5 mt-4 text-dark">Step 2/2: Bio Data</p>
           <div className="" style={{ marginTop: '150px', marginLeft: '50px' }}>
             <p className="h2">Password recommendations</p>
             <p className="text-ash mb-0 mt-4">Must contain an uppercase letter</p>
             <p className="text-ash mb-0">Must contain a lowercase letter</p>
             <p className="text-ash mb-0">Must contain a number</p>
             <p className="text-ash mb-0">Must contain a special character</p>
+            <button className="btn btn-pink mt-2">Choose to be anonymous</button>
           </div>
         </div>
         <form className="col-12 col-lg-6 mx-5 mt-5 pt-5 w-50 ms-6">
           <div className="mb-5 mt-4">
-            <p className="h3">Create a password</p>
+            <p className="h3">Let&rsquo;s meet you</p>
           </div>
-
-          <label className="fonts text-blue">Your Password</label>
-          <div className="input-group mb-3 w-75">
-            <input
-              type={showPwd ? 'text' : 'password'}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="form-control check-weight"
-              placeholder="Enter your password"
-            />
-            <span className="input-group-text cursor-pointer" onClick={() => setShowPwd(!showPwd)}>
-              <MaterialIcon icon={showPwd ? 'visibility_off' : 'visibility'} />
-            </span>
-          </div>
-          <p className="fonts text-blue">
-            Don&rsquo;t recieve an email? Please check your spam folder
-          </p>
-          <p className="fonts text-blue">or try to resend the email</p>
+          <label className="fonts text-blue">Name</label>
+          <input
+            type="text"
+            placeholder={'Enter your name'}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="form-control w-75 mb-3 check-weight py-2"
+          />
+          Address <br />
+          Phone Number <br />
+          <label className="fonts text-blue">Country</label>
+          <input
+            type="text"
+            placeholder={'Enter your Location'}
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            className="form-control w-75 mb-3 check-weight py-2"
+          />
           <div className="" style={{ marginTop: '190px' }}>
-            <button
-              className="btn border"
-              onClick={() => {
-                navigate('/accounts/login');
-              }}>
-              Back
-            </button>
+            {/* <span className="nav-link">Choose to be anonymous</span> */}
             <button className="btn new-color text-white" style={{ marginLeft: '490px' }}>
-              Resend Email
+              Continue
             </button>
           </div>
         </form>
