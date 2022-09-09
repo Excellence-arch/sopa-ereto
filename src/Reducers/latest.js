@@ -67,6 +67,13 @@ const initState = {
       phone_no: '08135654346',
       name: 'Michael Oladipupo',
       amount: '-15.00 $'
+    },
+    {
+      day: 'Today',
+      acc_no: '2194071585',
+      phone_no: '08135654346',
+      name: 'Michael Oladipupo',
+      amount: '-15.00 $'
     }
   ]
 };

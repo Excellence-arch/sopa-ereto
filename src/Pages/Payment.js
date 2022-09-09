@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router';
 import card from '../assets/card.gif';
 import bitcoin from '../assets/bitcoin.gif';
 import cards from '../assets/Rectangle.png';
-import Nav from '../Layouts/Nav';
+import NewNav from '../Layouts/NewNav';
 
 const Payment = () => {
   const [amount, setAmount] = useState();
@@ -48,7 +48,7 @@ const Payment = () => {
   // };
   return (
     <div className="bg-p">
-      <Nav />
+      <NewNav />
       <div className="row p-5 container">
         <div className="col-12 col-lg-4">
           <img src={cards} alt="Card" width={'300px'} className="mt-1 mt-lg-5 ms-4" />

@@ -1,5 +1,6 @@
-import React from 'react'
-import Link from 'react-rounter-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../assets/NevBank.png';
 
 const NewNav = () => {
   return (
@@ -13,11 +14,10 @@ const NewNav = () => {
               <span className="text-danger">Ereto</span>
             </span>
           </Link>
-          </div>
         </div>
       </nav>
     </div>
   );
-}
+};
 
-export default NewNav
+export default NewNav;

@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import MaterialIcon from 'react-google-material-icons';
 import { useSelector } from 'react-redux';
 
 const LatestTransactions = () => {
@@ -8,32 +7,49 @@ const LatestTransactions = () => {
   return (
     <div className="col-12 col-lg-5 mx-auto border rounds-start rounds-end p-3 bg-white">
       <div className="">
-        <p className="border-bottom">
-          <span className="position-relative mt-2">Latest Transactions</span>
-          <span className="float-end text-blue" style={{ marginTop: '-6px' }}>
-            View all
-          </span>
+        <p className="my-2 mb-4">
+          <span className="position-relative mt-2">Land Owners</span>
+          <p className="" style={{ marginLeft: '420px', marginTop: '-25px' }}>
+            <button className="btn btn-light text-danger">{'<'}</button>{' '}
+            <span className="btn btn-light">1</span>{' '}
+            <button className="btn btn-light text-danger">{'>'}</button>
+          </p>
         </p>
-        <div>
-          <table className="table mt-4">
-            {data.map((val, ind) => (
-              <tr key={ind} className="p-4 border-bottom">
-                <td className="fw-bold p-3">{val.day}</td>
-                <td className="text-secondary">{val.acc_no}</td>
-                <td className="">{val.phone_no}</td>
-                <td className="">{val.name}</td>
-                <td className="fw-bold">{val.amount}</td>
-              </tr>
-            ))}
-            <tr>
-              <td colSpan={5} className="fw-bold text-center p-3">
-                See more{' '}
-                <span className="btn colors">
-                  <MaterialIcon icon="arrow_forward" />
-                </span>
-              </td>
-            </tr>
-          </table>
+        <div className="">
+          {data.map((val, i) => (
+            <div key={i}>
+              <td className="fw-bold pe-3">{val.day}</td>
+              <p
+                className="me-5 fw-light text-muted"
+                style={{ height: '40px', marginTop: '-17px', marginLeft: '50px' }}>
+                <span>{val.acc_no}</span>
+                {/* <img src={val.acc_no} alt={'Picture'} width="40px" className="rounded-circle" /> */}
+              </p>
+              {/* <p className=""></p> */}
+              <span
+                className="text-muted fw-light"
+                style={{ marginTop: '-52px', position: 'absolute', marginLeft: '130px' }}>
+                <span className="text-blue">{val.phone_no}</span>
+              </span>
+              <span
+                className="fw-light text-muted"
+                style={{ position: 'absolute', marginTop: '-52px', marginLeft: '230px' }}>
+                {val.name}
+              </span>
+              <span
+                className="p-2"
+                style={{
+                  marginTop: '-52px',
+                  position: 'absolute',
+                  fontWeight: '200',
+                  marginLeft: '410px',
+                  color: 'black',
+                  backgroundColor: '#f5f5f5'
+                }}>
+                {val.amount} KES
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
