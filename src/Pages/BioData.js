@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import { useNavigate } from 'react-router';
 
-const CreatePassword = () => {
+const BioData = () => {
   const [name, setName] = useState();
   const [location, setLocation] = useState();
   const [address, setAddress] = useState();
@@ -71,4 +71,4 @@ const CreatePassword = () => {
   );
 };
 
-export default CreatePassword;
+export default BioData;

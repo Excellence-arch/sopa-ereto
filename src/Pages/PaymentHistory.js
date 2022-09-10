@@ -5,14 +5,14 @@ const PaymentHistory = () => {
   const data = useSelector((state) => state.transactionReducer.recentActivities);
   return (
     <div className="mt-5">
-      <div className="row mx-auto col-8 bg-white p-3 rounds-start rounds-end">
+      <div className="row mx-auto col-8 bg-pays p-3 rounds-start rounds-end">
         <p className="col-4">Recent Activity</p>
         <p className="btn" style={{ marginTop: '-39px', marginLeft: '350px' }}>
           Show All
         </p>
       </div>
       <table
-        className="col-8 mx-auto bg-white rounds-start rounds-end"
+        className="col-8 mx-auto bg-pays rounds-start rounds-end"
         style={{ marginTop: '-10px' }}>
         {data.map((val, i) => (
           <tr key={i}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router';
-import CreatePassword from '../Pages/CreatePassword';
+import BioData from '../Pages/BioData';
 import Login from '../Pages/Login';
 import PageNotFound from '../Pages/PageNotFound';
 import Register from '../Pages/Register';
@@ -14,7 +14,7 @@ const Accounts = () => {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="verify-email" element={<VerifyEmail />} />
-        <Route path="create-password" element={<CreatePassword />} />
+        <Route path="bio-data" element={<BioData />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
