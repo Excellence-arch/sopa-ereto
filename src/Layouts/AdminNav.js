@@ -16,7 +16,9 @@ const Nav = ({ name, pix }) => {
           <Link className="navbar-brand" to="/" title="NevBank">
             <img src={logo} width="40px" className="rounds-start rounds-end" />{' '}
             <span className="text-muted" style={{ fontSize: '15', fontWeight: '500' }}>
-              <span className="text-blue">Sopa-</span>
+              <span className="text-blue" style={{ color: '#1E13EA' }}>
+                Sopa-
+              </span>
               <span className="text-danger">Ereto</span>
             </span>
           </Link>

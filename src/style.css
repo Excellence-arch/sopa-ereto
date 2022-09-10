@@ -79,7 +79,11 @@ p {
   cursor: pointer;
   border-radius: 13px;
   height: 150px !important;
-  width: 390px !important;
+  width: 100px !important;
+}
+
+.cards-start {
+  margin-left: 240px !important;
 }
 
 .month select,

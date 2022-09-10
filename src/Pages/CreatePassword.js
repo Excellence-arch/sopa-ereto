@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 const CreatePassword = () => {
   const [name, setName] = useState();
   const [location, setLocation] = useState();
+  const [address, setAddress] = useState();
+  const [phone, setPhone] = useState();
   // const navigate = useNavigate();
   return (
     <div className="bg-white">
@@ -11,11 +13,13 @@ const CreatePassword = () => {
         <div className="col-12 col-lg-4 bg-pays full-height">
           <p className="ms-5 mt-4 text-dark">Step 2/2: Bio Data</p>
           <div className="" style={{ marginTop: '150px', marginLeft: '50px' }}>
-            <p className="h2">Password recommendations</p>
-            <p className="text-ash mb-0 mt-4">Must contain an uppercase letter</p>
+            <p className="h2" style={{ marginBottom: '100px' }}>
+              Bio-Data
+            </p>
+            {/* <p className="text-ash mb-0 mt-4">Must contain an uppercase letter</p>
             <p className="text-ash mb-0">Must contain a lowercase letter</p>
             <p className="text-ash mb-0">Must contain a number</p>
-            <p className="text-ash mb-0">Must contain a special character</p>
+            <p className="text-ash mb-0">Must contain a special character</p> */}
             <button className="btn btn-pink mt-2">Choose to be anonymous</button>
           </div>
         </div>
@@ -31,8 +35,22 @@ const CreatePassword = () => {
             onChange={(e) => setName(e.target.value)}
             className="form-control w-75 mb-3 check-weight py-2"
           />
-          Address <br />
-          Phone Number <br />
+          <label className="fonts text-blue">Address</label>
+          <input
+            type="text"
+            placeholder={'Enter your Address'}
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            className="form-control w-75 mb-3 check-weight py-2"
+          />
+          <label className="fonts text-blue">Phone Number</label>
+          <input
+            type="text"
+            placeholder={'Enter your Phone Number'}
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="form-control w-75 mb-3 check-weight py-2"
+          />
           <label className="fonts text-blue">Country</label>
           <input
             type="text"

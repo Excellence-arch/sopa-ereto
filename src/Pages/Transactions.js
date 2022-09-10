@@ -5,7 +5,7 @@ import PaymentHistory from './PaymentHistory';
 
 const Transactions = () => {
   return (
-    <div className="bg-pays">
+    <div className="">
       <Nav />
       <QuickTransactions />
       <PaymentHistory />

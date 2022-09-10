@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import MaterialIcon from 'react-google-material-icons';
 import { useNavigate } from 'react-router';
+import Card from './Card';
 
 const QuickTransactions = () => {
   const data = useSelector((state) => state.transactionReducer.quickTransactions);
@@ -18,8 +19,8 @@ const QuickTransactions = () => {
 
   return (
     <div>
-      <p>Quick Transaction</p>
-      <div className="d-flex container">
+      <p className="fs-3 fw-bold text-muted text-center">Quick Transaction</p>
+      <div className="d-flex container cards-start">
         <button
           className="btn control bg-light mx-2"
           onClick={previous}
@@ -29,22 +30,11 @@ const QuickTransactions = () => {
         <div className="borders" onClick={() => navigate('/users/payment')}>
           Manual
         </div>
-        <div key={i} className="borders mx-2">
-          <img src={data[i].img} width="40px" className="rounded-circle text-center" />
-          <p className="my-3">{data[i].name}</p>
-        </div>
-        <div key={i + 1} className="borders mx-2">
-          <img src={data[i + 1].img} width="40px" className="rounded-circle text-center" />
-          <p className="my-3">{data[i + 1].name}</p>
-        </div>
-        <div key={i + 2} className="borders mx-2">
-          <img src={data[i + 2].img} width="40px" className="rounded-circle text-center" />
-          <p className="my-3">{data[i + 2].name}</p>
-        </div>
-        <div key={i + 3} className="borders mx-2">
-          <img src={data[i + 3].img} width="40px" className="rounded-circle text-center" />
-          <p className="my-3">{data[i + 3].name}</p>
-        </div>
+        <Card name={data[i].name} i={i} img={data[i].img} />
+        <Card name={data[i + 1].name} i={i + 1} img={data[i + 1].img} />
+        <Card name={data[i + 2].name} i={i + 2} img={data[i + 2].img} />
+        <Card name={data[i + 3].name} i={i + 3} img={data[i + 3].img} />
+        <Card name={data[i + 4].name} i={i + 4} img={data[i + 4].img} />
         <button
           className="btn control mx-2"
           onClick={next}
