@@ -17,7 +17,7 @@ const Rows = ({ i, img, name, email, role }) => {
             {name}
           </p>
         </div>
-        <p style={{ marginLeft: '47px', marginTop: '-25px' }} className="text-muted fw-light">
+        <p style={{ marginLeft: '47px', marginTop: '-26px' }} className="text-muted fw-light">
           {email}
         </p>
       </td>
@@ -33,7 +33,12 @@ const Rows = ({ i, img, name, email, role }) => {
           {role}
         </p>
       </td>
-      <td></td>
+      <td>
+        <p className="mt-3">
+          <button className="btn btn-light rounded-pill text-muted mx-2">Delete</button>
+          <button className="btn btn-light rounded-pill text-muted mx-2">Edit</button>
+        </p>
+      </td>
     </tr>
   );
 };

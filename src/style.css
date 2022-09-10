@@ -260,6 +260,12 @@ p {
   margin-left: 970px;
 }
 
+.bg-image {
+  background-image: url('./assets/success1.gif') !important;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
 @media (max-width: 500px) {
   .bord {
     display: none;

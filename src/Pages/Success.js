@@ -1,9 +1,17 @@
 import React from 'react';
+// import success from '../assets/success1.gif';
+import success2 from '../assets/success2.gif';
+import NewNav from '../Layouts/NewNav';
 
 const Success = () => {
   return (
-    <div>
-      <div></div>
+    <div className="">
+      <NewNav />
+      <div className="text-center">
+        <img src={success2} className="bg-image" width={'300px'} />
+        <p className="text-muted fw-bold fs-3">Donation Successful</p>
+        <p className="text-muted">Thank you for your donation.</p>
+      </div>
     </div>
   );
 };
