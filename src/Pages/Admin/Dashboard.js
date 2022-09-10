@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Nav from '../../Components/Nav';
+import AdminNav from '../../Layouts/AdminNav';
 import Table from '../../Components/Table';
 import UserManagement from '../../Components/UserManagement';
 
@@ -9,7 +9,7 @@ const Dashboard = () => {
   const pix = useSelector((state) => state.adminReducer.pix);
   return (
     <div className="bg-pays w-100 h-100">
-      <Nav name={name} pix={pix} />
+      <AdminNav name={name} pix={pix} />
       <UserManagement />
       <Table />
     </div>

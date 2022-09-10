@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MaterialIcon from 'react-google-material-icons';
-import logo from '../assets/NevBank.png';
+import logo from '../assets/logo.png';
 import { useDispatch } from 'react-redux';
 import { logout } from '../actions/index';
 import '../assets/Styles/Navbar.css';
@@ -13,7 +13,7 @@ const Nav = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light bg-pays">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/" title="NevBank">
-            <img src={logo} />{' '}
+            <img src={logo} width="40px" className="rounds-start rounds-end" />{' '}
             <span className="text-muted" style={{ fontSize: '15', fontWeight: '500' }}>
               <span className="text-blue">Sopa-</span>
               <span className="text-danger">Ereto</span>
