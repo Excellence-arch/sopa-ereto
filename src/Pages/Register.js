@@ -45,7 +45,7 @@ const Register = () => {
     }
   };
   return (
-    <div className="container-fluid bg-pays">
+    <div className="container-fluid bg-pays w-100 h-100">
       <div className="row">
         <div className="col-12 col-lg-4 new-color full-height">
           <h4 className="h2 text-white container mt-5">

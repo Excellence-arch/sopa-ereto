@@ -40,7 +40,7 @@ const NavBar = () => {
               </li> */}
             </ul>
             {/* <li className="nav-item"> */}
-            <Link
+            {/* <Link
               className="nav-link text-muted"
               aria-current="page"
               to="/"
@@ -49,9 +49,9 @@ const NavBar = () => {
             </Link>
             {/* </li> */}
             {/* <li className="nav-item"> */}
-            <Link className="nav-link text-muted me-5" to="/donor" style={{ fontSize: '15' }}>
+            {/* <Link className="nav-link text-muted me-5" to="/donor" style={{ fontSize: '15' }}>
               Transactions
-            </Link>
+            </Link> */}
             {/* </li> */}
             {/* <ul className="navbar-nav me-5">
               <li className="nav-item mx-2">

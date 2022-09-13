@@ -57,8 +57,10 @@ const Login = () => {
             <img src={logos} alt="file" width={'300px'} className="w-100" />
           </div>
           <form className="col-12 col-lg-6 mx-5 mt-5 pt-5 w-50 ms-6">
-            <p className="h1 mb-2 container text-blue">Login</p>
-            <p className="mb-5 text-muted" style={{ marginLeft: '20px' }}>
+            <p className="h1 mb-2 container text-blue" style={{ marginLeft: '-15px' }}>
+              Login
+            </p>
+            <p className="mb-5 text-muted" style={{ marginLeft: '5px' }}>
               Login to your account
             </p>
             {/* <p className="text-muted col-7 fonts" style={{ marginLeft: '50px' }}>
