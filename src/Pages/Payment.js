@@ -47,15 +47,15 @@ const Payment = () => {
   //   setCardNo(nums);
   // };
   return (
-    <div className="bg-pays">
+    <div className="bg-pays w-100 h-100">
       <NewNav />
       <div className="row p-5 container">
         <div className="col-12 col-lg-4">
           <img src={cards} alt="Card" width={'300px'} className="mt-1 mt-lg-5 ms-4" />
         </div>
-        <div className="col-12 col-lg-7 pt-5 ms-5">
+        <div className="col-12 col-lg-7 pt-4 ms-5">
           {error ? <div className="alert alert-danger text-danger">{error}</div> : null}
-          <p className=" h4 fw-bold" style={{ color: 'rgb(210,105,30)' }}>
+          <p className="fw-bold mb-0" style={{ color: 'rgb(210,105,30)', fontSize: '30px' }}>
             Your donation will save the Massai!
           </p>
           <p className="text-blue fonts mb-5">Enter your payment info below</p>
