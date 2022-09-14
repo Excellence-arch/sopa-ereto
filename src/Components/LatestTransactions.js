@@ -5,11 +5,11 @@ import { useSelector } from 'react-redux';
 const LatestTransactions = () => {
   const data = useSelector((state) => state.latestReducer.transactions);
   return (
-    <div className="col-12 col-lg-5 mx-auto border rounds-start rounds-end p-3 bg-white">
+    <div className="size border rounds-start rounds-end p-3 bg-white ms-4">
       <div className="">
         <p className="my-2 mb-4">
           <span className="position-relative mt-2">Land Owners</span>
-          <p className="" style={{ marginLeft: '420px', marginTop: '-25px' }}>
+          <p className="" style={{ marginLeft: '490px', marginTop: '-25px' }}>
             <button className="btn btn-light text-danger">{'<'}</button>{' '}
             <span className="btn btn-light">1</span>{' '}
             <button className="btn btn-light text-danger">{'>'}</button>
@@ -28,12 +28,12 @@ const LatestTransactions = () => {
               {/* <p className=""></p> */}
               <span
                 className="text-muted fw-light"
-                style={{ marginTop: '-52px', position: 'absolute', marginLeft: '130px' }}>
+                style={{ marginTop: '-52px', position: 'absolute', marginLeft: '140px' }}>
                 <span className="text-blue">{val.phone_no}</span>
               </span>
               <span
                 className="fw-light text-muted"
-                style={{ position: 'absolute', marginTop: '-52px', marginLeft: '230px' }}>
+                style={{ position: 'absolute', marginTop: '-52px', marginLeft: '250px' }}>
                 {val.name}
               </span>
               <span
@@ -42,7 +42,7 @@ const LatestTransactions = () => {
                   marginTop: '-52px',
                   position: 'absolute',
                   fontWeight: '200',
-                  marginLeft: '410px',
+                  marginLeft: '500px',
                   color: 'black',
                   backgroundColor: '#f5f5f5'
                 }}>

@@ -75,7 +75,7 @@ p {
 }
 
 .position {
-  margin-top: -50px !important;
+  margin-top: -40px !important;
 }
 
 .borders {
@@ -148,8 +148,8 @@ p {
 
 .bg-pays {
   background-color: #f6f5fe !important;
-  /* width: 100vw !important; */
 }
+
 
 .ms-6 {
   margin-left: 130px !important;
@@ -199,6 +199,7 @@ p {
   background-repeat: repeat-x !important;
   background-position-y: center !important;
   background-size: contain !important;
+  height: 180px;
   /* background-clip: ; */
   /* background-color: #1c3452; */
 }
@@ -227,7 +228,7 @@ p {
 }
 
 .margins {
-  margin-top: -50px !important;
+  margin-top: -40px !important;
 }
 
 .bg-images {
@@ -242,26 +243,26 @@ p {
 .moves {
   position: absolute !important;
   margin-top: -40px !important;
-  margin-left: 110px !important;
+  margin-left: 96px !important;
 }
 
 .amounts {
   position: absolute !important;
   margin-top: -46px !important;
-  margin-left: 420px !important;
+  margin-left: 500px !important;
   color: #000000 !important;
   background-color: #f5f5f5 !important;
 }
 
 .shift {
-  position: absolute;
-  margin-top: -40px;
+  position: absolute !important;
+  margin-top: -44px !important;
 }
 
 .recieved {
   position: absolute !important;
   margin-top: -40px !important;
-  margin-left: 230px !important;
+  margin-left: 280px !important;
 }
 
 .profile {
@@ -272,6 +273,15 @@ p {
   background-image: url('./assets/success1.gif') !important;
   background-repeat: no-repeat !important;
   background-size: auto !important;
+}
+
+.size {
+  width: 610px;
+  border: thin solid #e2e2e2 !important;
+}
+
+.imgss {
+  width: 438px;
 }
 
 @media (max-width: 500px) {
@@ -285,5 +295,9 @@ p {
   }
   .profile {
     margin-left: 100px !important;
+  }
+
+  .size {
+    width: 350px;
   }
 }

@@ -33,7 +33,9 @@ const Table = () => {
             </td>
             <td>Name</td>
             <td>User Role</td>
-            <td>Actions</td>
+            <td>
+              <span className="ms-5">Actions</span>
+            </td>
           </tr>
         </thead>
         <tbody>
