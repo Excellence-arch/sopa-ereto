@@ -14,10 +14,15 @@ const LatestBlocks = () => {
       </p>
       <div className="">
         {data.map((val, i) => (
-          <div key={i}>
+          <div key={i} className="">
             <td className="fw-bold pe-3">Today</td>
             <td className="ms-3 me-5">
-              <img src={val.picture} alt={'Picture'} width="40px" className="rounded-circle" />
+              <img
+                src={val.picture}
+                alt={'Picture'}
+                width="40px"
+                className="rounds-start rounds-end"
+              />
             </td>
             <p className=""></p>
             <span className="moves text-muted fw-light">

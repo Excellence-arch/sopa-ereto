@@ -112,6 +112,7 @@ const Register = () => {
             </p>
             <input
               className="radios"
+              checked
               type="radio"
               name="type"
               value={'individual'}

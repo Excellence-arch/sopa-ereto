@@ -20,7 +20,7 @@ const BioData = () => {
             <p className="text-ash mb-0">Must contain a lowercase letter</p>
             <p className="text-ash mb-0">Must contain a number</p>
             <p className="text-ash mb-0">Must contain a special character</p> */}
-            <button className="btn btn-pink mt-2">Choose to be anonymous</button>
+            <button className="btn btn-pink mt-2">Skip</button>
           </div>
         </div>
         <form className="col-12 col-lg-6 mx-5 mt-5 pt-5 w-50 ms-6">

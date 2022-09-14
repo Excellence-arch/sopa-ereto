@@ -35,7 +35,7 @@ const Rows = ({ i, img, name, email, role }) => {
       </td>
       <td>
         <p className="mt-3">
-          <button className="btn btn-light rounded-pill text-muted mx-2">Delete</button>
+          <button className="btn btn-light rounded-pill text-muted mx-2">Disable</button>
           <button className="btn btn-light rounded-pill text-muted mx-2">Edit</button>
         </p>
       </td>

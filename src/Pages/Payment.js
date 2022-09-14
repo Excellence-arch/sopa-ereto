@@ -58,7 +58,7 @@ const Payment = () => {
           <p className="fw-bold mb-0" style={{ color: 'rgb(210,105,30)', fontSize: '30px' }}>
             Your donation will save the Massai!
           </p>
-          <p className="text-blue fonts mb-5">Enter your payment info below</p>
+          <p className="fonts mb-5">Enter your payment info below</p>
           <label className="fonts text-blue">Email Address</label>
           <input
             type="text"
