@@ -5,12 +5,12 @@ import success2 from '../assets/success2.gif';
 
 const Success = () => {
   return (
-    <div className="colorss h-100 p-5">
+    <div className="colorss h-100" style={{ paddingTop: '80px' }}>
       {/* <NewNav /> */}
       <div className="text-center">
         <div
           className="bg-white p-4 rounds-start rounds-end"
-          style={{ width: 'fit-content', marginLeft: '380px' }}>
+          style={{ width: 'fit-content', marginLeft: '400px' }}>
           <img src={success2} className="bg-image" width={'400px'} />
           <p className="text-muted fw-bold fs-3" style={{ marginTop: '-50px' }}>
             Donation sent
