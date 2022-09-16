@@ -301,6 +301,16 @@ p {
   margin: 0 !important;
 }
 
+.cls-1-11 {
+  fill: url(#linear-gradient11);
+}
+.cls-2-1 {
+  fill: url(#linear-gradient-21);
+}
+.cls-4-1 {
+  fill: #ffffff;
+}
+
 @media (max-width: 500px) {
   .bord {
     display: none !important;

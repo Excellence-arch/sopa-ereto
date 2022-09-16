@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import card from '../assets/card.gif';
-import bitcoin from '../assets/bitcoin.gif';
+import circle from '../assets/circle.gif';
 import cards from '../assets/Rectangle.png';
 import NewNav from '../Layouts/NewNav';
 
@@ -102,7 +102,7 @@ const Payment = () => {
                 <img src={card} alt="Credit card" width={'50px'} />
               </span>
               <span className="px-5">
-                <img src={bitcoin} alt="Credit card" width={'50px'} />
+                <img src={circle} alt="Credit card" width={'60px'} />
               </span>
             </div>
           </div>
