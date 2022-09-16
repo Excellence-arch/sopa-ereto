@@ -46,24 +46,24 @@ p {
 
 .btn-pink {
   color: #fff !important;
-  background-color: #0071ff !important;
-  border-color: #0071ff !important;
+  background-color: #3a88fb !important;
+  border-color: #3a88fb !important;
 }
 
 .btn-pink:hover {
   color: #fff !important;
-  background-color: #0071ff !important;
-  border-color: #0071ff !important;
+  background-color: #3a88fb !important;
+  border-color: #3a88fb !important;
 }
 
 /* 38AEFA */
 
 .new-color {
-  background-color: #0071ff !important;
+  background-color: #3a88fb !important;
 }
 
 .text-blue {
-  color: #0071ff !important;
+  color: #3a88fb !important;
 }
 
 .full-height {
@@ -149,7 +149,6 @@ p {
 .bg-pays {
   background-color: #f6f5fe !important;
 }
-
 
 .ms-6 {
   margin-left: 130px !important;
@@ -282,6 +281,24 @@ p {
 
 .imgss {
   width: 438px;
+}
+
+.success-bg {
+  background-image: url('./assets/confetti.gif');
+}
+
+.success-image {
+  position: absolute;
+  margin-left: -210px;
+  margin-top: 70px;
+}
+
+.payment-border {
+  border: 1px solid rgb(176, 176, 176) !important;
+}
+
+.yh {
+  margin: 0 !important;
 }
 
 @media (max-width: 500px) {
