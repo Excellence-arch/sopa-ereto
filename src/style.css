@@ -327,4 +327,12 @@ p {
   .size {
     width: 350px;
   }
+
+  .cards-start {
+    margin-left: 0px !important;
+  }
+
+  .resp-width {
+    width: 150px !important;
+  }
 }
