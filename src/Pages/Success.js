@@ -28,11 +28,10 @@ const Success = () => {
                 </span>
               </p>
               <p className="fw-light text-dark" style={{ fontSize: '40px' }}>
-                Safe Checkout
+                Safe payout
               </p>
               <p className="text-muted mt-3 fw-light col-10" style={{ marginBottom: '130px' }}>
-                Sopa-Ereto is a safe and faster way to pay with card (MasterCard and Visa) and
-                mobile money
+                Sopa-Ereto is a secured and transparent way to donate money
               </p>
               <p className="mt-4">
                 <span
@@ -91,12 +90,12 @@ const Success = () => {
                     alt="pay-success-icon"
                   />
                 </div>
-                <h1 className="text-2xl text-white">Payment Successful</h1>
+                <h1 className="text-2xl text-white">Donation Recieved</h1>
                 <p
                   className="text-light text-sm mt-3 col-7"
                   style={{ textAlign: 'left', marginLeft: '158px' }}>
-                  You&rsquo;ll receive a payment confirmation by email shortly. We&rsquo;ve also
-                  notified the recipient about the payment.
+                  Thank you for donating. We&rsquo;ve also notified the beneficiaries about your
+                  donation.
                 </p>
               </div>
             </div>

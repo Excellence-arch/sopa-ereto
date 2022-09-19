@@ -1,12 +1,20 @@
 import React from 'react';
 import '../assets/Styles/search.css';
+import MaterialIcon from 'react-google-material-icons';
 
 const Search = () => {
   return (
     <div className="mb-3">
       <div className="d-flex searches">
-        <input type="text" className="form-control input" placeholder={`Search User`} />
-        <button className="btn btn-danger mx-3" style={{ width: '120px' }}>
+        <input
+          type="text"
+          className="form-control input border-0 my-2"
+          placeholder={`Search User`}
+        />
+        <span style={{ marginLeft: '-30px', marginTop: '10px' }}>
+          <MaterialIcon icon="search" />
+        </span>
+        <button className="btn btn-danger mx-3 my-2" style={{ width: '120px' }}>
           Add User
         </button>
       </div>

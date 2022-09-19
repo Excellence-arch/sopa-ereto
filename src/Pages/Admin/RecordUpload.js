@@ -16,20 +16,15 @@ const RecordUpload = () => {
   return (
     <div className="bg-white">
       <div className="row">
-        <div className="col-12 col-lg-4 bg-pays full-height">
+        <div className="col-12 col-lg-4 bg-pays">
           <p className="ms-5 mt-4 text-dark">Step 2/2: Bio Data</p>
           <div className="" style={{ marginTop: '150px', marginLeft: '50px' }}>
             <p className="h2" style={{ marginBottom: '100px' }}>
               Bio-Data
             </p>
-            {/* <p className="text-ash mb-0 mt-4">Must contain an uppercase letter</p>
-            <p className="text-ash mb-0">Must contain a lowercase letter</p>
-            <p className="text-ash mb-0">Must contain a number</p>
-            <p className="text-ash mb-0">Must contain a special character</p> */}
-            {/* <button className="btn btn-pink mt-2">Skip</button> */}
           </div>
         </div>
-        <form className="col-12 col-lg-6 mx-5 w-50 ms-6">
+        <form className="col-12 col-lg-8 bg-massai">
           <div className="mb-5 mt-4">
             <p className="h3">Let&rsquo;s meet you</p>
           </div>

@@ -317,6 +317,38 @@ p {
   width: 100px;
 }
 
+.bg-massai {
+  background: linear-gradient(rgba(112, 112, 112, 0.7), rgba(79, 79, 79, 0.7)), url('./assets/animals.jpg');
+}
+
+.bg-yellow {
+  background-color: rgba(202, 202, 0, 0.87);
+}
+
+.bg-green {
+  background-color: rgb(10, 125, 10);
+}
+
+.name {
+  margin-left: 50px;
+}
+
+.role {
+  margin-left: 180px;
+}
+
+.showRole {
+  margin-left: 180px;
+}
+
+.action {
+  margin-left: 500px;
+}
+
+.showAction {
+  margin-left: 430px;
+}
+
 @media (max-width: 500px) {
   .bord {
     display: none !important;

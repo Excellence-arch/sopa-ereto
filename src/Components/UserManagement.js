@@ -3,9 +3,9 @@ import Search from './Search';
 
 const UserManagement = () => {
   return (
-    <div className="container">
+    <div style={{ marginLeft: '50px' }}>
       <div className="">
-        <p className="text-dark h3 mt-4">User Management</p>
+        <p className="text-blue h3 mt-4">User Access Management</p>
         <Search />
       </div>
     </div>

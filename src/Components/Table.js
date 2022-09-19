@@ -24,20 +24,25 @@ const Table = () => {
     }
   };
   return (
-    <div className="container col-12 col-lg-12 mt-5">
+    <div className="col-12 col-lg-11 mt-5" style={{ marginLeft: '50px' }}>
       <table className="bg-white table rounds-start rounds-end">
-        <thead>
-          <tr>
-            <td className="p-3">
-              <input type={'checkbox'} />
-            </td>
-            <td>Name</td>
-            <td>User Role</td>
-            <td>
-              <span className="ms-5">Actions</span>
-            </td>
-          </tr>
-        </thead>
+        {/* <thead className="border-bottom"> */}
+        <tr className="border-bottom">
+          <td className="p-3">
+            <input type={'checkbox'} />
+          </td>
+          <td>
+            <span className="name">Name</span>
+          </td>
+          <td>
+            {' '}
+            <span className="role">User Role</span>
+          </td>
+          <td>
+            <span className="action">Actions</span>
+          </td>
+        </tr>
+        {/* </thead> */}
         <tbody>
           <Rows
             name={allUsers[i].name}

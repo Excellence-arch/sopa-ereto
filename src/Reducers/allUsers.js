@@ -1,10 +1,10 @@
-import michael from '../assets/Michael.jpg';
+import michael from '../assets/avatar.png';
 
 const initState = {
   users: [
     {
       name: 'Oladipupo Oluwayimika',
-      role: 'Tour Operator',
+      role: 'Ranger',
       img: michael,
       email: 'oladipopomichael9@gmail.com'
     },
@@ -16,7 +16,7 @@ const initState = {
     },
     {
       name: 'Ayo Solomon',
-      role: 'Tour Operator',
+      role: 'Ranger',
       img: michael,
       email: 'ayosolomon@gmail.com'
     },
@@ -28,7 +28,7 @@ const initState = {
     },
     {
       name: 'Oladipupo Oluwayimika',
-      role: 'Tour Operator',
+      role: 'Ranger',
       img: michael,
       email: 'oladipopomichael9@gmail.com'
     },
@@ -40,7 +40,7 @@ const initState = {
     },
     {
       name: 'Oladipupo Oluwayimika',
-      role: 'Tour Operator',
+      role: 'Ranger',
       img: michael,
       email: 'oladipopomichael9@gmail.com'
     },
@@ -52,7 +52,7 @@ const initState = {
     },
     {
       name: 'Oladipupo Oluwayimika',
-      role: 'Tour Operator',
+      role: 'Ranger',
       img: michael,
       email: 'oladipopomichael9@gmail.com'
     },
@@ -64,7 +64,7 @@ const initState = {
     },
     {
       name: 'Oladipupo Oluwayimika',
-      role: 'Tour Operator',
+      role: 'Ranger',
       img: michael,
       email: 'oladipopomichael9@gmail.com'
     },
