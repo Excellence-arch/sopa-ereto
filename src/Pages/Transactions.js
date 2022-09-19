@@ -1,14 +1,20 @@
 import React from 'react';
+import Donate from '../Components/Donate';
 import QuickTransactions from '../Components/QuickTransactions';
-import Nav from '../Layouts/Nav';
-import PaymentHistory from './PaymentHistory';
+import DarkNav from '../Layouts/DarkNav';
+import PaymentHistory from './../Components/PaymentHistory';
 
 const Transactions = () => {
   return (
-    <div className="">
-      <Nav />
-      <QuickTransactions />
-      <PaymentHistory />
+    <div className="row">
+      <DarkNav />
+      <div className="col-7">
+        <QuickTransactions />
+        <PaymentHistory />
+      </div>
+      <div className="col-4">
+        <Donate />
+      </div>
     </div>
   );
 };

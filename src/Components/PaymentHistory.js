@@ -6,8 +6,8 @@ const PaymentHistory = () => {
   return (
     <div className="mt-5">
       <div className="row mx-auto col-8 bg-pays p-3 rounds-start rounds-end">
-        <p className="col-4">Recent Activity</p>
-        <p className="btn" style={{ marginTop: '-39px', marginLeft: '350px' }}>
+        <p className="col-4 text-dark">Recent Activity</p>
+        <p className="btn text-danger" style={{ marginTop: '-39px', marginLeft: '350px' }}>
           Show All
         </p>
       </div>
@@ -27,7 +27,10 @@ const PaymentHistory = () => {
               </p>
             </td>
             <td>
-              {val.name} <br /> <span className="text-muted ms-4">{val.state}</span>{' '}
+              {val.name} <br />{' '}
+              <span className={val.state == 'sent' ? 'text-success ms-4' : 'text-warning ms-4'}>
+                {val.state}
+              </span>{' '}
             </td>
             <td>
               <p

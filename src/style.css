@@ -87,7 +87,7 @@ p {
 }
 
 .cards-start {
-  margin-left: 240px !important;
+  /* margin-left: 240px !important; */
 }
 
 .month select,
@@ -309,6 +309,11 @@ p {
 }
 .cls-4-1 {
   fill: #ffffff;
+}
+
+.def-width {
+  background-color: #ededed;
+  width: 100px;
 }
 
 @media (max-width: 500px) {

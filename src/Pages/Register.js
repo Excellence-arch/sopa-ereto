@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import MaterialIcon from 'react-google-material-icons';
 import logos from '../assets/register.gif';
 import { useSelector } from 'react-redux';
@@ -15,7 +15,10 @@ const Register = () => {
   const [showPwd, setShowPwd] = useState(false);
   const [type, setType] = useState('');
   const [confPassword, setConfPassword] = useState();
-  const url = `${useSelector((state) => state.urlReducer.baseUrl)}register-donor`;
+  const navigate = useNavigate();
+  const url = `${useSelector(
+    (state) => state.urlReducer.baseUrl
+  )}-diam.herokuapp.com/mcs2/Add-Donor`;
   // const url = `${baseUrl}api/register`;
 
   // const handleRole = (e) => {
@@ -26,16 +29,25 @@ const Register = () => {
 
   const register = (e) => {
     e.preventDefault();
-    if (email == '' || password == '' || type == '') setError('All Fields are required');
+    if (email == '' || password == '' || type == 'Individual') setError('All Fields are required');
     else {
       setIsloading(true);
       setError(false);
-      const details = { email, type };
+      const details = {
+        email: 'jsaklsjakl',
+        typeOf: 'organization',
+        lastName: 'jksj',
+        firstName: 'sajkas',
+        phone: '0813238233',
+        idNumber: '908937832232'
+      };
       axios
         .post(url, details)
         .then((res) => {
           setIsloading(false);
-          console.log(res);
+          if (res.data.status == 'SE200') {
+            navigate('/accounts/verify-email');
+          }
         })
         .catch((err) => {
           setIsloading(false);
