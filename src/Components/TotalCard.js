@@ -8,7 +8,7 @@ import recievedDonations from '../assets/recieved_donations.png';
 const TotalCard = () => {
   return (
     <div
-      className="border rounded shadow-blue position widthss bg-white mb-4 rounds-start rounds-end"
+      className="border rounded shadow-blue position col-7 bg-white mb-4 rounds-start rounds-end"
       style={{ marginLeft: '23px', marginRight: '23px' }}>
       <div className="row">
         <div className="col-12">
@@ -22,14 +22,14 @@ const TotalCard = () => {
                 width: '1px',
                 height: '80px',
                 marginTop: '10px',
-                marginLeft: '403px'
+                marginLeft: '380px'
               }}></p>
             <p
               className="bord bg-ash"
               style={{
                 position: 'absolute',
                 backgroundColor: 'black',
-                width: '340px',
+                width: '320px',
                 height: '1px',
                 marginTop: '51px',
                 marginLeft: '40px'
@@ -44,10 +44,10 @@ const TotalCard = () => {
               style={{
                 position: 'absolute',
                 backgroundColor: 'black',
-                width: '340px',
+                width: '320px',
                 height: '1px',
                 marginTop: '51px',
-                marginLeft: '430px'
+                marginLeft: '400px'
               }}></p>
             <EachCard name={'Beneficiaries'} amount={'191,594'} img={beneficiary} />
             <EachCard name={'Paid Beneficiaries'} amount={'11,736'} img={paidBeneficiary} />

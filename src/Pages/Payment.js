@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 // import { useSelector } from 'react-redux';
 // import { useNavigate } from 'react-router';
 import card from '../assets/card.png';
-import circle from '../assets/circle.png  ';
+import circle from '../assets/circle.png';
 import cards from '../assets/Rectangle.png';
 import NewNav from '../Layouts/NewNav';
 
