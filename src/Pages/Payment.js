@@ -13,6 +13,7 @@ const Payment = () => {
   const [currency, setCurrency] = useState();
   const email = 'chinwenduiheanatu@gmail.com';
   const [isloading, setIsloading] = useState(false);
+  const isLoadingCrypto = false;
   // const [dates, setDates] = useState('');
   // const [cardNo, setCardNo] = useState('');
   // const [selectedDate, setSelectedDate] = useState('');
@@ -91,19 +92,21 @@ const Payment = () => {
             className="form-control w-50 mb-3 border-0 check-weight py-2"
           />
           <label className="fonts text-blue">Currency</label>
-          <input
-            type="text"
-            placeholder={'Enter Currency'}
-            value={currency}
-            onChange={(e) => setCurrency(e.target.value)}
-            className="form-control w-50 border-0 mb-3 check-weight py-2"
-          />
+          <br />
+          <select
+            className="text-danger checks months fw-light p-2 mb-3 rounded"
+            onChange={(e) => setCurrency(e.target.value)}>
+            <option value="USD">USD</option>
+            <option value="KES">KES</option>
+            <option value="GBP">GBP</option>
+          </select>
+          <br />
           <label className="fonts text-blue">Country</label>
           <br />
           <select className="text-danger checks months fw-light p-2 rounded">
             <option>US</option>
-            <option>KES</option>
-            <option>GBP</option>
+            <option>Kenya</option>
+            <option>Great Britain</option>
           </select>
           <br />
           {/* <br /> */}
@@ -124,16 +127,13 @@ const Payment = () => {
             className="btn btn-color w-25 mt-5 shadow"
             style={{ marginLeft: '50px' }}
             onClick={pay}>
-            {isloading ? <span className="spinner-border"></span> : `Donate with`}
+            {isloading ? <span className="spinner-border"></span> : `Donate with Card`}
           </button>
           <img src={card} alt="Credit card" width={'60px'} />
           <br />
           <hr style={{ width: '120px', marginLeft: '50px' }} />
-          <button
-            className="btn btn-color w-25  shadow"
-            style={{ marginLeft: '50px' }}
-            onClick={pay}>
-            {isloading ? <span className="spinner-border"></span> : `Donate with `}
+          <button className="btn btn-color w-25  shadow" style={{ marginLeft: '50px' }}>
+            {isLoadingCrypto ? <span className="spinner-border"></span> : `Donate with Crypto`}
           </button>{' '}
           <img src={circle} alt="Circle" width={'60px'} />
         </div>

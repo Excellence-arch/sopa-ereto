@@ -3,7 +3,7 @@ import Lion from '../assets/MasaiLion.jpg';
 
 const Donate = () => {
   return (
-    <div className="bg-dark" style={{ position: 'sticky' }}>
+    <div className="bg-dark px-5 mt-5 py-5" style={{ width: '300px' }}>
       <div className="text-center mt-5 pt-5">
         <img src={Lion} alt="Massai Lion" width={'100px'} />
       </div>

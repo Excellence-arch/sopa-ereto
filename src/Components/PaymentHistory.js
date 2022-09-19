@@ -5,24 +5,24 @@ const PaymentHistory = () => {
   const data = useSelector((state) => state.transactionReducer.recentActivities);
   return (
     <div className="mt-5">
-      <div className="row mx-auto col-8 bg-pays p-3 rounds-start rounds-end">
+      <div className="row starts col-8 bg-pays p-3 rounds-start rounds-end">
         <p className="col-4 text-dark">Recent Activity</p>
-        <p className="btn text-danger" style={{ marginTop: '-39px', marginLeft: '350px' }}>
+        <p className="btn text-danger" style={{ marginTop: '-39px', marginLeft: '230px' }}>
           Show All
         </p>
       </div>
       <table
-        className="col-8 mx-auto bg-pays rounds-start rounds-end"
+        className="col-8 starts bg-pays rounds-start rounds-end"
         style={{ marginTop: '-10px' }}>
         {data.map((val, i) => (
           <tr key={i}>
             <div>
-              <p className="fw-bold ms-4" style={{ marginTop: '25px' }}>
+              <p className="fw-bold ms-4" style={{ marginTop: '27px' }}>
                 Today
               </p>
             </div>
             <td>
-              <p style={{ marginLeft: '-220px' }}>
+              <p style={{ marginLeft: '-100px' }}>
                 <img src={val.img} width="50px" className="rounded-circle my-3 ms-3" />
               </p>
             </td>
@@ -38,7 +38,7 @@ const PaymentHistory = () => {
                 style={{
                   position: 'absolute',
                   width: 'fit-content',
-                  marginLeft: '-100px',
+                  marginLeft: '-70px',
                   marginTop: '-30px'
                 }}>
                 {val.amount}

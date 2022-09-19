@@ -86,8 +86,9 @@ p {
   width: 100px !important;
 }
 
-.cards-start {
-  /* margin-left: 240px !important; */
+.starts {
+  margin-left: 82px;
+  width: 550px;
 }
 
 .month select,
