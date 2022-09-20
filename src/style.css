@@ -224,6 +224,13 @@ p {
   backdrop-filter: blur(10px) !important;
 }
 
+.glassmorphisms {
+  /* other styles */
+  background: rgba(255, 255, 255, 0.5) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
 .widthss {
   width: 700px !important;
 }
@@ -358,12 +365,10 @@ p {
 }
 
 .africa {
-  background-image: url('./assets/animals.jpg');
-  width: 40vw;
-  height: 100vh;
+  background-image: url('./assets/animals.jpg') !important;
   background-repeat: no-repeat;
   background-size: cover;
-
+  height: 100vh;
 }
 
 @media (max-width: 500px) {

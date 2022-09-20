@@ -16,6 +16,7 @@ const Admin = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/upload-record" element={<RecordUpload />} />
+        {/* <Route path='/ranger-upload' element={<Ranger} /> */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>

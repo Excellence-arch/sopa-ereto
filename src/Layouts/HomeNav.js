@@ -7,7 +7,7 @@ import '../assets/Styles/Navbar.css';
 const HomeNav = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-white">
+      <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
           <Link className="navbar-brand ms-3" to="/" title="NevBank">
             <img src={logo} width="40px" className="rounds-start rounds-end" />{' '}
@@ -48,7 +48,7 @@ const HomeNav = () => {
               className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
               style={{ '--bs-scroll-height': '100px' }}></ul>
             {/* <span className="text-muted me-5 border-end pe-3 ps-3 border-start"> */}
-            <button className="btn btn-dark me-5">Donate Now!</button>
+            <button className="btn btn-outline-dark me-5">Donate Now!</button>
             {/* <span style={{ position: 'absolute', paddingLeft: '3px' }}>
                 <MaterialIcon icon="account_circle" />
               </span>
