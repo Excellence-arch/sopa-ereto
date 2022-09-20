@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap');
 
 h1,
 p {
@@ -326,7 +327,7 @@ p {
 }
 
 .bg-green {
-  background-color: rgb(10, 125, 10);
+  background-color: rgba(12, 227, 12, 0.568);
 }
 
 .name {
@@ -347,6 +348,22 @@ p {
 
 .showAction {
   margin-left: 430px;
+}
+
+.landing {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/animals.jpg') !important;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.africa {
+  background-image: url('./assets/animals.jpg');
+  width: 40vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 @media (max-width: 500px) {
@@ -370,7 +387,31 @@ p {
     margin-left: 0px !important;
   }
 
+  .starts {
+    margin-left: 20px;
+    width: 370px;
+  }
+
   .resp-width {
     width: 150px !important;
+  }
+
+  .name {
+    margin-left: 5px;
+  }
+  .role {
+    margin-left: 6px;
+  }
+
+  .showRole {
+    margin-left: 10px;
+  }
+
+  .action {
+    margin-left: 50px;
+  }
+
+  .showAction {
+    margin-left: 40px;
   }
 }

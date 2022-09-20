@@ -46,17 +46,27 @@ const AdminDarkNav = () => {
             </ul>
             <div className="dropdown me-5">
               <span
-                className="text-light dropdown-toggle"
+                className="text-ash dropdown-toggle fw-light"
                 type="button"
                 id="dropdownMenu2"
                 data-bs-toggle="dropdown"
                 aria-expanded="false">
-                Dropdown
+                MANAGE
               </span>
-              <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <ul className="dropdown-menu glassmorphism" aria-labelledby="dropdownMenu2">
                 <li>
                   <button className="dropdown-item" type="button">
-                    Send Message
+                    Broadcast SMS
+                  </button>
+                </li>
+                <li>
+                  <button className="dropdown-item" type="button">
+                    Land Owners
+                  </button>
+                </li>
+                <li>
+                  <button className="dropdown-item" type="button">
+                    Rangers
                   </button>
                 </li>
               </ul>

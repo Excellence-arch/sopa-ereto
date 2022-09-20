@@ -36,7 +36,7 @@ const Table = () => {
           </td>
           <td>
             {' '}
-            <span className="role">User Role</span>
+            <span className="role">Beneficiary Status</span>
           </td>
           <td>
             <span className="action">Actions</span>

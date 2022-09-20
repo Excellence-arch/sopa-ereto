@@ -25,7 +25,7 @@ const RecordUpload = () => {
           </div>
         </div>
         <form className="col-12 col-lg-8 bg-massai">
-          <div className="mb-5 mt-4">
+          <div className="mb-4 mt-4">
             <p className="h3">Let&rsquo;s meet you</p>
           </div>
           <label className="fonts text-blue">First Name</label>
@@ -127,7 +127,7 @@ const RecordUpload = () => {
 
           <div className="">
             {/* <span className="nav-link">Choose to be anonymous</span> */}
-            <button className="btn new-color text-white" style={{ marginLeft: '490px' }}>
+            <button className="btn new-color text-white mb-3" style={{ marginLeft: '490px' }}>
               Continue
             </button>
           </div>

@@ -9,13 +9,13 @@ const Search = () => {
         <input
           type="text"
           className="form-control input border-0 my-2"
-          placeholder={`Search User`}
+          placeholder={`Search Beneficiary`}
         />
         <span style={{ marginLeft: '-30px', marginTop: '10px' }}>
           <MaterialIcon icon="search" />
         </span>
-        <button className="btn btn-danger mx-3 my-2" style={{ width: '120px' }}>
-          Add User
+        <button className="btn btn-danger mx-3 my-2" style={{ width: '150px' }}>
+          Add Beneficiary
         </button>
       </div>
     </div>

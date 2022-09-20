@@ -5,7 +5,7 @@ const UserManagement = () => {
   return (
     <div style={{ marginLeft: '50px' }}>
       <div className="">
-        <p className="text-blue h3 mt-4">User Access Management</p>
+        <p className="text-blue h3 mt-4">Beneficiary Identity Management</p>
         <Search />
       </div>
     </div>

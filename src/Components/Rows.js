@@ -31,10 +31,10 @@ const Rows = ({ i, img, name, email, role }) => {
         <p
           className={
             role == 'Ranger'
-              ? 'bg-yellow rounded-pill p-2 mt-3 showRole'
-              : 'bg-green rounded-pill p-2 mt-3 showRole'
+              ? 'bg-dark rounded-pill py-1 mt-3 text-white showRole'
+              : 'bg-green rounded-pill text-dark py-1 mt-3 showRole'
           }
-          style={{ maxWidth: `max-content` }}>
+          style={{ maxWidth: `max-content`, paddingLeft: '7px', paddingRight: '7px' }}>
           {role}
         </p>
       </td>
