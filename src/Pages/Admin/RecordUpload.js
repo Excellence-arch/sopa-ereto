@@ -24,7 +24,7 @@ const RecordUpload = () => {
             </p>
           </div>
         </div>
-        <form className="col-12 col-lg-8 bg-massai">
+        <form className="col-12 col-lg-8 bg-massai ps-5">
           <div className="mb-4 mt-4">
             <p className="h3">Let&rsquo;s meet you</p>
           </div>

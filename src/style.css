@@ -365,10 +365,14 @@ p {
 }
 
 .africa {
-  background-image: url('./assets/animals.jpg') !important;
+  background-image: url('./assets/unnamed.jpg') !important;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+}
+
+.img-width {
+  width: 42vw;
 }
 
 @media (max-width: 500px) {
@@ -418,5 +422,9 @@ p {
 
   .showAction {
     margin-left: 40px;
+  }
+
+  .img-width {
+    width: 95vw;
   }
 }
