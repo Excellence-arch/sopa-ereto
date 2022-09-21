@@ -367,12 +367,14 @@ p {
 .africa {
   background-image: url('./assets/unnamed.jpg') !important;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position-x: 40vw;
   height: 100vh;
 }
 
 .img-width {
-  width: 42vw;
+  margin-top: -20px;
+  width: 30vw;
 }
 
 @media (max-width: 500px) {
@@ -427,4 +429,12 @@ p {
   .img-width {
     width: 95vw;
   }
+
+  .africa {
+  background-image: url('./assets/unnamed.jpg') !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 5vw;
+  height: 100vh;
+}
 }
