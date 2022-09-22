@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.png';
+// import logo from '../assets/logo.png';
 import lock from '../assets/lock.png';
 import pci from '../assets/pci.png';
 import visa from '../assets/visa.png';
@@ -7,23 +7,13 @@ import mastecad from '../assets/MasterCard.png';
 import mpesa from '../assets/mpesa.png';
 // import intasend from '../assets/intasend.png';
 import mara from '../assets/mara.png';
+import NewNav from '../Layouts/NewNav';
 
 const Success = () => {
   return (
     <div className="bg-pays w-100 h-100">
+      <NewNav />
       <div className="">
-        <p className="position-absolute">
-          <img
-            src={logo}
-            alt={"sopa-ereto's logo"}
-            className="rounds-start rounds-end"
-            width="40px"
-          />{' '}
-          <span className="text-muted" style={{ fontSize: '15', fontWeight: '500' }}>
-            <span className="text-blue">Sopa-</span>
-            <span className="text-danger">Ereto</span>
-          </span>
-        </p>
         <div className="d-flex flex-lg-row-reverse flex-column">
           <div className="new-color p-3 col-12 col-lg-6">
             <div className="h-48 px-4 py-4 pt-5 mt-5 ">
