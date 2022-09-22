@@ -4,7 +4,7 @@ import MaterialIcon from 'react-google-material-icons';
 
 const Search = () => {
   return (
-    <div className="mb-3">
+    <div className="mb-3 ms-lg-auto mt-3">
       <div className="d-flex searches">
         <input
           type="text"
@@ -14,7 +14,7 @@ const Search = () => {
         <span style={{ marginLeft: '-30px', marginTop: '10px' }}>
           <MaterialIcon icon="search" />
         </span>
-        <button className="btn btn-danger mx-3 my-2" style={{ width: '150px' }}>
+        <button className="btn btn-danger mx-3 my-2" style={{ width: '190px' }}>
           Add Beneficiary
         </button>
       </div>

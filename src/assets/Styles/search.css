@@ -24,19 +24,20 @@ input::placeholder {
 }
 
 .searches {
-  position: absolute;
+  /* position: absolute; */
   width: 380px;
   height: 42px;
-  margin-left: 785px;
-  margin-top: -30px;
+  /* margin-left: 785px; */
+  /* margin-top: -30px; */
 }
 
 @media (max-width: 500px) {
   .searches {
     position: relative;
-    width: 380px;
+    width: 300px;
     height: 42px;
     margin-left: 10px;
     margin-top: 0px;
   }
+
 }

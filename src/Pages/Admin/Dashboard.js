@@ -9,7 +9,7 @@ const Dashboard = () => {
   // const name = useSelector((state) => state.adminReducer.name);
   // const pix = useSelector((state) => state.adminReducer.pix);
   return (
-    <div className="bg-pays w-100 h-100">
+    <div className="bg-pays">
       <AdminDarkNav />
       <UserManagement />
       <Table />
