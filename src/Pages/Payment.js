@@ -10,14 +10,16 @@ import Modal from '../Components/Modal';
 import NewNav from '../Layouts/NewNav';
 
 const Payment = () => {
-  const [amount, setAmount] = useState();
-  const [currency, setCurrency] = useState();
+  const [amount, setAmount] = useState('10');
+  const [currency, setCurrency] = useState('USD');
   const email = 'chinwenduiheanatu@gmail.com';
   const [isloading, setIsloading] = useState(false);
   const isLoadingCrypto = false;
   const [cardNo, setCardNo] = useState();
   const [cvv, setCvv] = useState();
   const [expDate, setExpDate] = useState();
+  const [keys, setKeys] = useState();
+  const [newError, setNewError] = useState();
   // const [dates, setDates] = useState('');
   // const [cardNo, setCardNo] = useState('');
   // const [selectedDate, setSelectedDate] = useState('');
@@ -25,38 +27,77 @@ const Payment = () => {
   // const [cvv, setCvv] = useState();
   const [error, setError] = useState(false);
   // const navigate = useNavigate();
-  const url = `https://sopa-ereto-payments.herokuapp.com/mcs3/donorPay`;
+  // const url = `https://sopa-ereto-payments.herokuapp.com/mcs3/donorPay`;
+  const urls = `https://sopa-ereto-payments.herokuapp.com/mcs3/createCard`;
   // const url = `${useSelector((state) => state.urlReducer.baseUrl)}mcs3/pay`;
   // useEffect(() => {
   //   let date = new Date();
   //   setDates(date.getFullYear());
   // }, []);
 
+  const getKeys = () => {
+    if (currency == '' || amount == '') {
+      setError('All fields arre required');
+    } else {
+      const newUrl = `https://sopa-ereto-payments.herokuapp.com/mcs3/key`;
+      axios
+        .get(newUrl)
+        .then((res) => {
+          console.log(res.data);
+          setKeys(res.data);
+        })
+        .catch((err) => {
+          setNewError(err.message);
+        });
+    }
+  };
+  const getYears = () => {
+    let month = expDate.split('-')[1];
+    let year = expDate.split('-')[0];
+    const newUrl = `https://sopa-ereto-payments.herokuapp.com/mcs3/`;
+    axios
+      .post(newUrl, { month, year })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        setNewError(err.message);
+      });
+  };
   const pay = () => {
     setIsloading(true);
-    if (amount == '' || currency == '') {
-      setIsloading(false);
-      setError('All inputs are required');
-    } else {
-      axios.post(url, { amount }).then((res) => {
-        if (res.data.status == 'SE200') {
-          setIsloading(false);
-          // console.log(res.data.data.url);
-          openInNewTab(res.data.data.url);
-          // navigate(res.data.url);
-        } else {
-          setIsloading(false);
-          console.log(res.data);
-          setError(res.data.message);
-        }
+    axios
+      .post(urls, { keys, number: cardNo, cvv })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        setNewError(err.message);
       });
+    // axios.post(url, { amount }).then((res) => {
+    //   if (res.data.status == 'SE200') {
+    //     setIsloading(false);
+    //     // console.log(res.data.data.url);
+    //     openInNewTab(res.data.data.url);
+    //     // navigate(res.data.url);
+    //   } else {
+    //     setIsloading(false);
+    //     console.log(res.data);
+    //     setError(res.data.message);
+    //   }
+    // });
+  };
+
+  const spaceIt = () => {
+    if (cardNo.split('').length % 4 == 0) {
+      setCardNo(``);
     }
   };
 
-  const openInNewTab = (url) => {
-    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
-    if (newWindow) newWindow.opener = null;
-  };
+  // const openInNewTab = (url) => {
+  //   const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+  //   if (newWindow) newWindow.opener = null;
+  // };
 
   // const changeNo = (e) => {
   //   let nums = e.target.value;
@@ -130,7 +171,8 @@ const Payment = () => {
           <button
             className="btn btn-color w-25 mt-5 shadow"
             style={{ marginLeft: '50px' }}
-            data-bs-toggle="modal"
+            data-bs-toggle={!error && 'modal'}
+            onClick={getKeys}
             data-bs-target="#exampleModal">
             {isloading ? <span className="spinner-border"></span> : `Donate with Card`}
           </button>
@@ -151,6 +193,9 @@ const Payment = () => {
         setCardNo={setCardNo}
         setCvv={setCvv}
         setExpDate={setExpDate}
+        getYears={getYears}
+        newError={newError}
+        spaceIt={spaceIt}
       />
     </div>
   );

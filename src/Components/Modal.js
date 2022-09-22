@@ -1,7 +1,7 @@
 import React from 'react';
 
 // eslint-disable-next-line react/prop-types
-const Modal = ({ pay, cardNo, setCardNo, cvv, setCvv, expDate, setExpDate }) => {
+const Modal = ({ pay, cardNo, setCardNo, cvv, setCvv, expDate, setExpDate, getYears, spaceIt }) => {
   return (
     // <div>
     <div
@@ -10,10 +10,10 @@ const Modal = ({ pay, cardNo, setCardNo, cvv, setCvv, expDate, setExpDate }) => 
       tabIndex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true">
-      <div className="modal-dialog modal-dialog-centered">
+      <div className="modal-dialog modal-dialog-centered rounds-start rounds-end border-0">
         <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">
+          <div className="modal-header new-color">
+            <h5 className="modal-title text-white" id="exampleModalLabel">
               Enter your Card details
             </h5>
             <button
@@ -29,6 +29,8 @@ const Modal = ({ pay, cardNo, setCardNo, cvv, setCvv, expDate, setExpDate }) => 
                 <input
                   type={'text'}
                   value={cardNo}
+                  placeholder="1234 5678 9012 1234"
+                  onInput={spaceIt}
                   onChange={(e) => setCardNo(e.target.value)}
                   className="form-control"
                 />
@@ -45,9 +47,12 @@ const Modal = ({ pay, cardNo, setCardNo, cvv, setCvv, expDate, setExpDate }) => 
               <div className="col-6">
                 <label className="text-blue">Expiry Date</label>
                 <input
-                  type={'text'}
+                  type={'month'}
                   value={expDate}
-                  onChange={(e) => setExpDate(e.target.value)}
+                  onChange={(e) => {
+                    getYears;
+                    setExpDate(e.target.value);
+                  }}
                   className="form-control"
                 />
               </div>
