@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Routes, Route, Navigate } from 'react-router';
 import Dashboard from '../Pages/Admin/Dashboard';
 import Login from '../Pages/Admin/Login';
+import Profile from '../Pages/Admin/Profile';
 import RangersUpload from '../Pages/Admin/RangersUpload';
 import RecordUpload from '../Pages/Admin/RecordUpload';
 import Register from '../Pages/Admin/Register';
@@ -18,6 +19,7 @@ const Admin = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/upload-record" element={<RecordUpload />} />
         <Route path="/ranger-upload" element={<RangersUpload />} />
+        <Route path="/profile/:id" element={<Profile />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>

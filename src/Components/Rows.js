@@ -3,10 +3,10 @@ import lock from '../assets/lock.png';
 import { FaLock, FaPen } from 'react-icons/fa';
 
 // eslint-disable-next-line react/prop-types
-const Rows = ({ i, img, name, email, role }) => {
+const Rows = ({ i, img, name, email, role, click }) => {
   return (
     // <div>
-    <tr key={i} className="border-bottom">
+    <tr key={i} className="border-bottom cursor-pointer" onClick={click}>
       <td className="px-3">
         <input type={'checkbox'} style={{ marginTop: '14px' }} />
       </td>
@@ -15,7 +15,7 @@ const Rows = ({ i, img, name, email, role }) => {
           <p>
             <img src={img} alt={name} width="40px" className="rounded-circle mt-2" />
           </p>
-          <p className="ms-2" style={{ fontWeight: '450', marginTop: '12px' }}>
+          <p className="ms-2 text-dark" style={{ fontWeight: '450', marginTop: '12px' }}>
             {name}{' '}
             <span>
               <img src={lock} alt={'linked'} width="10px" />
