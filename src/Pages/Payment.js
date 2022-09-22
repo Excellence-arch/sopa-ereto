@@ -88,10 +88,16 @@ const Payment = () => {
     // });
   };
 
-  const spaceIt = () => {
-    if (cardNo.split('').length % 4 == 0) {
-      setCardNo(``);
+  const spaceIt = (e) => {
+    let nums = e.target.value;
+    if (nums.length > 0) {
+      let p = nums.split(' ').join('');
+      console.log(p);
+      if (p.length % 4 == 0) {
+        nums += ' ';
+      }
     }
+    setCardNo(nums);
   };
 
   // const openInNewTab = (url) => {
@@ -190,7 +196,6 @@ const Payment = () => {
         cardNo={cardNo}
         cvv={cvv}
         expDate={expDate}
-        setCardNo={setCardNo}
         setCvv={setCvv}
         setExpDate={setExpDate}
         getYears={getYears}

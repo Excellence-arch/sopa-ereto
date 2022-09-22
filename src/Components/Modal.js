@@ -1,7 +1,7 @@
 import React from 'react';
 
 // eslint-disable-next-line react/prop-types
-const Modal = ({ pay, cardNo, setCardNo, cvv, setCvv, expDate, setExpDate, getYears, spaceIt }) => {
+const Modal = ({ pay, cardNo, cvv, setCvv, expDate, setExpDate, getYears, spaceIt }) => {
   return (
     // <div>
     <div
@@ -31,7 +31,7 @@ const Modal = ({ pay, cardNo, setCardNo, cvv, setCvv, expDate, setExpDate, getYe
                   value={cardNo}
                   placeholder="1234 5678 9012 1234"
                   onInput={spaceIt}
-                  onChange={(e) => setCardNo(e.target.value)}
+                  onChange={(e) => spaceIt(e.target.value)}
                   className="form-control"
                 />
               </div>
