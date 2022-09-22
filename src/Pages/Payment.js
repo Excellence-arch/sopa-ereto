@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import card from '../assets/card.png';
 import circle from '../assets/circle.png';
 import cards from '../assets/Rectangle.png';
+import Modal from '../Components/Modal';
 import NewNav from '../Layouts/NewNav';
 
 const Payment = () => {
@@ -14,6 +15,9 @@ const Payment = () => {
   const email = 'chinwenduiheanatu@gmail.com';
   const [isloading, setIsloading] = useState(false);
   const isLoadingCrypto = false;
+  const [cardNo, setCardNo] = useState();
+  const [cvv, setCvv] = useState();
+  const [expDate, setExpDate] = useState();
   // const [dates, setDates] = useState('');
   // const [cardNo, setCardNo] = useState('');
   // const [selectedDate, setSelectedDate] = useState('');
@@ -126,7 +130,8 @@ const Payment = () => {
           <button
             className="btn btn-color w-25 mt-5 shadow"
             style={{ marginLeft: '50px' }}
-            onClick={pay}>
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
             {isloading ? <span className="spinner-border"></span> : `Donate with Card`}
           </button>
           <img src={card} alt="Credit card" width={'60px'} style={{ marginTop: '35px' }} />
@@ -138,6 +143,15 @@ const Payment = () => {
           <img src={circle} alt="Circle" width={'70px'} />
         </div>
       </div>
+      <Modal
+        pay={pay}
+        cardNo={cardNo}
+        cvv={cvv}
+        expDate={expDate}
+        setCardNo={setCardNo}
+        setCvv={setCvv}
+        setExpDate={setExpDate}
+      />
     </div>
   );
 };
