@@ -51,23 +51,25 @@ const Payment = () => {
         });
     }
   };
-  const getYears = () => {
-    let month = expDate.split('-')[1];
-    let year = expDate.split('-')[0];
-    const newUrl = `https://sopa-ereto-payments.herokuapp.com/mcs3/`;
-    axios
-      .post(newUrl, { month, year })
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        setNewError(err.message);
-      });
-  };
+  // const getYears = () => {
+  //   let month = expDate.split('-')[1];
+  //   let year = expDate.split('-')[0];
+  //   const newUrl = `https://sopa-ereto-payments.herokuapp.com/mcs3/`;
+  //   axios
+  //     .post(newUrl, { month, year })
+  //     .then((res) => {
+  //       console.log(res.data);
+  //     })
+  //     .catch((err) => {
+  //       setNewError(err.message);
+  //     });
+  // };
   const pay = () => {
     setIsloading(true);
+    let month = expDate.split('-')[1];
+    let year = expDate.split('-')[0];
     axios
-      .post(urls, { keys, number: cardNo, cvv })
+      .post(urls, { keys, number: cardNo, cvv, month, year })
       .then((res) => {
         console.log(res.data);
       })
@@ -198,7 +200,7 @@ const Payment = () => {
         expDate={expDate}
         setCvv={setCvv}
         setExpDate={setExpDate}
-        getYears={getYears}
+        // getYears={getYears}
         newError={newError}
         spaceIt={spaceIt}
       />
