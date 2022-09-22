@@ -17,7 +17,7 @@ const EachCard = ({ name, amount, img }) => {
   return (
     <div className={`col-5 container ps-5 pt-2 px-2`}>
       <div className="d-flex">
-        <div className="position-absolute" style={{ marginTop: '5px' }}>
+        <div style={{ marginTop: '5px' }}>
           <img src={img} alt={name} width="25px" className="text-blue" />
         </div>
         <div className="ms-5">

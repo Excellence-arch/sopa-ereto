@@ -53,7 +53,7 @@ const RangersUpload = () => {
         <div className="col-md-4">
           <label className="fonts text-blue">Date of birth</label>
           <input
-            type="text"
+            type="date"
             placeholder={'Enter your date of birth'}
             value={dateOfBirth}
             onChange={(e) => setDateOfBirth(e.target.value)}
@@ -92,13 +92,24 @@ const RangersUpload = () => {
         </div>
         <div className="col-md-4">
           <label className="fonts text-blue">Gender</label>
-          <input
+          <br />
+          <select
+            onChange={(e) => setGender(e.target.value)}
+            value={gender}
+            className="form-control w-75 mb-3 check-weight py-2">
+            <option defaultValue={'Male'} selected disabled>
+              Select Gender
+            </option>
+            <option value={'Male'}>Male</option>
+            <option value={'Female'}>Female</option>
+          </select>
+          {/* <input
             type="text"
             placeholder={'Enter your gender'}
             value={gender}
             onChange={(e) => setGender(e.target.value)}
             className="form-control w-75 mb-3 check-weight py-2"
-          />
+          /> */}
         </div>
         <div className="col-md-4">
           <label className="fonts text-blue">Account Number</label>
@@ -112,13 +123,17 @@ const RangersUpload = () => {
         </div>
         <div className="col-md-4">
           <label className="fonts text-blue">Active</label>
-          <input
-            type="text"
-            placeholder={'Enter your active status'}
-            value={isActive}
+          <br />
+          <select
             onChange={(e) => setIsActive(e.target.value)}
-            className="form-control w-75 mb-3 check-weight py-2"
-          />
+            value={isActive}
+            className="form-control w-75 mb-3 check-weight py-2">
+            <option defaultValue={false} selected disabled>
+              Select active status
+            </option>
+            <option value={true}>Active</option>
+            <option value={false}>Inactive</option>
+          </select>
         </div>
         <div className="col-md-4">
           <label className="fonts text-blue">Phone Number</label>

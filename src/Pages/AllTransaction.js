@@ -36,7 +36,7 @@ const AllTransaction = () => {
           </span>
         </p>
       </div>
-      <div className="row">
+      <div className="d-flex flex-lg-row flex-column-reverse">
         <TotalCard />
         <Graph />
       </div>

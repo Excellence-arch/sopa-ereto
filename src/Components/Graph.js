@@ -6,9 +6,8 @@ const Graph = () => {
   const navigate = useNavigate();
   return (
     <div
-      className="cursor-pointer bg-pays glassmorphism imgss margins rounds-start rounds-end bg-images"
-      onClick={() => navigate('/accounts/login')}
-      style={{ height: '110px' }}>
+      className="cursor-pointer bg-pays glassmorphism px-5 margins rounds-start rounds-end bg-images mb-4"
+      onClick={() => navigate('/accounts/login')}>
       {/* <img
         src={animals}
         className="rounds-start rounds-end"
