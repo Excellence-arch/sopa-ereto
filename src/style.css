@@ -377,6 +377,11 @@ p {
   width: 30vw;
 }
 
+.height-and-width {
+  width: 1000vw;
+  height: 100vh;
+}
+
 @media (max-width: 500px) {
   .bord {
     display: none !important;
@@ -436,5 +441,10 @@ p {
   background-size: cover;
   background-position-x: 5vw;
   height: 100vh;
+}
+
+.height-and-width {
+  width: 100vw;
+  height: max-content;
 }
 }
