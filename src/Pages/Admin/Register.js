@@ -6,6 +6,7 @@ import logos from '../../assets/register.gif';
 import { useSelector } from 'react-redux';
 import Input from '../../Components/Input';
 import Password from '../../Components/Password';
+import { useEffect } from 'react';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -13,6 +14,8 @@ const Register = () => {
   const [isloading, setIsloading] = useState(false);
   const [error, setError] = useState(false);
   const [showPwd, setShowPwd] = useState(false);
+  const [disabled, setDisabled] = useState(true);
+  const [userError, setUserError] = useState(false);
   const url = `${useSelector((state) => state.urlReducer.baseUrl)}register-donor`;
   // const url = `${baseUrl}api/register`;
 
@@ -21,6 +24,25 @@ const Register = () => {
   //   if (e.target.value == 'donor') setValid(false);
   //   else setValid(true);
   // };
+
+  useEffect(() => {
+    if (isloading || userError) {
+      setDisabled(true);
+    } else {
+      setDisabled(false);
+    }
+  });
+
+  const handleEmailChange = (e) => {
+    let re = /^\S+@\S+\.\S+$/;
+    setEmail(e.target.value);
+    let pass = e.target.value;
+    if (!re.test(pass)) {
+      setUserError('Invalid email address');
+    } else {
+      setUserError(false);
+    }
+  };
 
   const register = (e) => {
     e.preventDefault();
@@ -61,7 +83,7 @@ const Register = () => {
             <Input
               placeholder={'abc@yahoo.com'}
               value={email}
-              handleChange={(e) => setEmail(e.target.value)}
+              handleChange={(e) => handleEmailChange(e)}
             />
             <label className="fonts text-blue">Password</label>
             <Password
@@ -73,7 +95,7 @@ const Register = () => {
           </div>
           <button
             className="btn btn-pink px-4 mt-5 mb-2 shadow"
-            disabled={isloading ? true : false}
+            disabled={disabled}
             onClick={(e) => register(e)}>
             {isloading ? <span className="spinner-border"></span> : 'Create Account'}
           </button>

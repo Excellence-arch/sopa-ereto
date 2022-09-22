@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -15,11 +15,31 @@ const Login = () => {
   const [showPwd, setShowPwd] = useState(false);
   const [error, setError] = useState(false);
   const [isloading, setIsloading] = useState(false);
+  const [disabled, setDisabled] = useState(true);
+  const [userError, setUserError] = useState(false);
   const url = `${useSelector((state) => state.urlReducer.baseUrl)}login-donor`;
   // const url = `${baseUrl}api/login`;
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    if (isloading || userError) {
+      setDisabled(true);
+    } else {
+      setDisabled(false);
+    }
+  });
+
+  const handleEmailChange = (e) => {
+    let re = /^\S+@\S+\.\S+$/;
+    setEmail(e.target.value);
+    let pass = e.target.value;
+    if (!re.test(pass)) {
+      setUserError('Invalid email address');
+    } else {
+      setUserError(false);
+    }
+  };
   const login = (e) => {
     e.preventDefault();
     setError(false);
@@ -64,9 +84,10 @@ const Login = () => {
               Login to your account
             </p>
             {error ? <div className="text-danger alert alert-danger">{error}</div> : null}
+            {userError ? <div className="text-danger alert alert-danger">{userError}</div> : null}
             <Input
               placeholder={'Enter your email'}
-              handleChange={(e) => setEmail(e.target.value)}
+              handleChange={(e) => handleEmailChange(e)}
               value={email}
             />
             {/* <div className="input-group my-3 w-75"> */}
@@ -92,7 +113,8 @@ const Login = () => {
 
             <button
               className="btn btn-pink w-70 my-2 mt-5 center rounded shadow"
-              onClick={(e) => login(e)}>
+              onClick={(e) => login(e)}
+              disabled={disabled}>
               {isloading ? <span className="spinner-border"></span> : 'Login'}
             </button>
 
