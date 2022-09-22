@@ -12,22 +12,44 @@ const Success = () => {
   return (
     <div className="bg-pays w-100 h-100">
       <div className="">
-        <div className="d-flex flex-lg-row flex-column">
+        <p className="position-absolute">
+          <img
+            src={logo}
+            alt={"sopa-ereto's logo"}
+            className="rounds-start rounds-end"
+            width="40px"
+          />{' '}
+          <span className="text-muted" style={{ fontSize: '15', fontWeight: '500' }}>
+            <span className="text-blue">Sopa-</span>
+            <span className="text-danger">Ereto</span>
+          </span>
+        </p>
+        <div className="d-flex flex-lg-row-reverse flex-column">
+          <div className="new-color p-3 col-12 col-lg-6">
+            <div className="h-48 px-4 py-4 pt-5 mt-5 ">
+              <div className="celebrate-bg h-48 flex flex-col justify-center text-center">
+                <div className="flex flex-row justify-center">
+                  <img
+                    src="https://intasend-staging-static.s3.amazonaws.com/img/payscreens/success.svg"
+                    className="w-32"
+                    alt="pay-success-icon"
+                  />
+                </div>
+                <div className="payout-text">
+                  <h1 className="text-white" style={{ textAlign: 'left' }}>
+                    Donation Recieved
+                  </h1>
+                  <p className="text-light text-sm mt-3 col-7" style={{ textAlign: 'left' }}>
+                    Thank you for donating. We&rsquo;ve also notified the beneficiaries about your
+                    donation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="col-12 col-lg-6 full-height">
             <p className="pt-4 text-white h2 col-10 container">
-              <p style={{ marginBottom: '130px' }}>
-                <img
-                  src={logo}
-                  alt={"sopa-ereto's logo"}
-                  className="rounds-start rounds-end"
-                  width="40px"
-                />{' '}
-                <span className="text-muted" style={{ fontSize: '15', fontWeight: '500' }}>
-                  <span className="text-blue">Sopa-</span>
-                  <span className="text-danger">Ereto</span>
-                </span>
-              </p>
-              <p className="fw-light text-dark" style={{ fontSize: '40px' }}>
+              <p className="fw-light text-dark" style={{ fontSize: '40px', marginTop: '130px' }}>
                 Safe payout
               </p>
               <p className="text-muted mt-3 fw-light col-10" style={{ marginBottom: '130px' }}>
@@ -54,54 +76,32 @@ const Success = () => {
                   <img src={intasend} alt="intasend logo" width="80px" className="ms-1" /> */}
                 </p>
                 <p style={{ borderTop: '1px solid rgb(176, 176, 176)' }}></p>
-                <div className="d-flex">
+                <div className="d-flex flex-wrap">
                   <img
                     src={pci}
                     alt={'PCI logo'}
                     width="70px"
-                    className="col-3"
-                    // style={{ marginRight: '35px', marginLeft: '35px' }}
+                    className="me-4"
+                    style={{ marginLeft: '65px' }}
                   />
-                  <img src={visa} alt={'Visa logo'} width="70px" className="col-3" />
+                  <img src={visa} alt={'Visa logo'} width="70px" className="mx-4" />
                   <img
                     src={mastecad}
                     alt={'Mastecard logo'}
                     width="60px"
-                    className="col-3"
+                    className="mx-4"
                     // style={{ marginRight: '40px' }}
                   />
                   <img
                     src={mpesa}
                     alt={'Mpesa logo'}
                     width="70px"
-                    className="col-3"
+                    className="mx-4"
                     // style={{ marginRight: '40px' }}
                   />
                 </div>
               </div>
             </p>
-          </div>
-          <div className="new-color p-3 col-12 col-lg-6">
-            <div className="h-48 px-4 py-4 pt-5 mt-5 ">
-              <div className="celebrate-bg h-48 flex flex-col justify-center text-center">
-                <div className="flex flex-row justify-center">
-                  <img
-                    src="https://intasend-staging-static.s3.amazonaws.com/img/payscreens/success.svg"
-                    className="w-32"
-                    alt="pay-success-icon"
-                  />
-                </div>
-                <div className="payout-text">
-                  <h1 className="text-white" style={{ textAlign: 'left' }}>
-                    Donation Recieved
-                  </h1>
-                  <p className="text-light text-sm mt-3 col-7" style={{ textAlign: 'left' }}>
-                    Thank you for donating. We&rsquo;ve also notified the beneficiaries about your
-                    donation.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
           {/* <div className="success-bg col-12 col-lg-6">
           </div> */}

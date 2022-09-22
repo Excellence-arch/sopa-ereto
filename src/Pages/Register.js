@@ -6,6 +6,7 @@ import logos from '../assets/register.gif';
 import { useSelector } from 'react-redux';
 import Input from '../Components/Input';
 import Password from '../Components/Password';
+import { useEffect } from 'react';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -13,8 +14,10 @@ const Register = () => {
   const [error, setError] = useState(false);
   const [password, setPassword] = useState();
   const [showPwd, setShowPwd] = useState(false);
-  const [type, setType] = useState('');
+  const [typeOf, setTypeOf] = useState('');
+  const [disable, setDisable] = useState(true);
   const [confPassword, setConfPassword] = useState();
+  const [userError, setUserError] = useState(false);
   const navigate = useNavigate();
   const url = `${useSelector(
     (state) => state.urlReducer.baseUrl
@@ -27,33 +30,59 @@ const Register = () => {
   //   else setValid(true);
   // };
 
+  const handleEmailChange = (e) => {
+    let re = /^\S+@\S+\.\S+$/;
+    setEmail(e.target.value);
+    let pass = e.target.value;
+    if (!re.test(pass)) {
+      setUserError('Invalid email address');
+    } else {
+      setUserError(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isloading || userError) {
+      setDisable(true);
+    } else {
+      setDisable(false);
+    }
+  });
+
   const register = (e) => {
     e.preventDefault();
-    if (email == '' || password == '' || type == 'Individual') setError('All Fields are required');
-    else {
-      setIsloading(true);
-      setError(false);
-      const details = {
-        email: 'jsaklsjakl',
-        typeOf: 'organization',
-        lastName: 'jksj',
-        firstName: 'sajkas',
-        phone: '0813238233',
-        idNumber: '908937832232'
-      };
-      axios
-        .post(url, details)
-        .then((res) => {
-          setIsloading(false);
-          if (res.data.status == 'SE200') {
-            navigate('/accounts/verify-email');
-          }
-        })
-        .catch((err) => {
-          setIsloading(false);
-          setError(err.message);
-          // console.log(err.message);
-        });
+    if (email == '' || password == '' || confPassword == '') {
+      setUserError('All Fields are required');
+    } else {
+      if (password !== confPassword) {
+        setUserError('Passwords did not match');
+      } else {
+        setIsloading(true);
+        setError(false);
+        const details = {
+          email,
+          typeOf,
+          lastName: '',
+          firstName: '',
+          phone: '',
+          idNumber: '',
+          password
+        };
+        axios
+          .post(url, details)
+          .then((res) => {
+            setIsloading(false);
+            if (res.data.status == 'SE200') {
+              navigate('/accounts/verify-email');
+            }
+          })
+          .catch((err) => {
+            setIsloading(false);
+            setError(err.message);
+            setDisable(false);
+            // console.log(err.message);
+          });
+      }
     }
   };
   return (
@@ -73,17 +102,15 @@ const Register = () => {
             up your profile
           </p>
           {error ? <div className="text-danger alert alert-danger">{error}</div> : null}
+          {userError ? <div className="text-danger alert alert-danger">{userError}</div> : null}
+
           <div className="w-75">
             <label className="fonts text-blue">Email</label>
-            <Input
-              placeholder={'Email'}
-              value={email}
-              handleChange={(e) => setEmail(e.target.value)}
-            />
+            <Input placeholder={'Email'} value={email} handleChange={(e) => handleEmailChange(e)} />
             <label className="fonts text-blue">Password</label>
             <Password
               password={password}
-              handleChange={(e) => setPassword(e.target.password)}
+              handleChange={(e) => setPassword(e.target.value)}
               showPwd={showPwd}
               clicked={() => setShowPwd(!showPwd)}
             />
@@ -128,7 +155,7 @@ const Register = () => {
               type="radio"
               name="type"
               value={'individual'}
-              onChange={(e) => setType(e.target.value)}
+              onChange={(e) => setTypeOf(e.target.value)}
             />
             <span className="fonts text-muted">&nbsp;Individual&nbsp;&nbsp;&nbsp;</span>
             <input
@@ -136,7 +163,7 @@ const Register = () => {
               type="radio"
               name="type"
               value={'organization'}
-              onChange={(e) => setType(e.target.value)}
+              onChange={(e) => setTypeOf(e.target.value)}
             />
             <span className="fonts text-muted">&nbsp;Organization</span>
           </div>
@@ -149,7 +176,7 @@ const Register = () => {
           </select> */}
           <button
             className="btn btn-pink px-4 mt-5 mb-2 shadow"
-            disabled={isloading ? true : false}
+            disabled={disable}
             onClick={(e) => register(e)}>
             {isloading ? <span className="spinner-border"></span> : 'Get Started'}
           </button>

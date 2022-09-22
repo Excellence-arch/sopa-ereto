@@ -104,9 +104,9 @@ const Modals = ({
 }) => {
   return (
     <>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+      <Modal show={show} onHide={handleClose} className="mt-5">
+        <Modal.Header closeButton className="new-color">
+          <Modal.Title>Enter your card details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form className="row">
@@ -143,7 +143,7 @@ const Modals = ({
             </div>
           </form>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer className="shadow">
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
