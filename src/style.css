@@ -1,3 +1,4 @@
+@import url('./assets/Styles/responsive-500.css');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap');
 
@@ -382,7 +383,11 @@ p {
   height: 100vh;
 }
 
-@media (max-width: 500px) {
+.payout-text {
+  margin-left: 180px;
+}
+
+/* @media (max-width: 500px) {
   .bord {
     display: none !important;
   }
@@ -447,4 +452,12 @@ p {
   width: 100vw;
   height: max-content;
 }
+
+.resp-margin {
+  margin-left: 50px;
 }
+
+.payout-text {
+  margin-left: 50px;
+}
+} */

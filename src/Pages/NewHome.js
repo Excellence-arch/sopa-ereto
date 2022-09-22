@@ -45,7 +45,7 @@ const NewHome = () => {
             </p> */}
           </div>
         </div>
-        <div className="container d-flex flex-row flex-wrap ">
+        <div className="container d-flex flex-row flex-wrap resp-margin">
           <div className="col-lg-3 mx-3 col-5">
             <p>
               <img src={visibility} alt="Transparency" width={'20px'} />

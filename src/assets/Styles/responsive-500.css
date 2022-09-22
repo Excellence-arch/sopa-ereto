@@ -1,0 +1,74 @@
+@media (max-width: 500px) {
+  .bord {
+    display: none !important;
+  }
+  .amounts {
+    position: absolute !important;
+    margin-top: 10px !important;
+    margin-left: 200px !important;
+  }
+  .profile {
+    margin-left: 100px !important;
+  }
+
+  .size {
+    width: 350px;
+  }
+
+  .cards-start {
+    margin-left: 0px !important;
+  }
+
+  .starts {
+    margin-left: 20px;
+    width: 370px;
+  }
+
+  .resp-width {
+    width: 150px !important;
+  }
+
+  .name {
+    margin-left: 5px;
+  }
+  .role {
+    margin-left: 6px;
+  }
+
+  .showRole {
+    margin-left: 10px;
+  }
+
+  .action {
+    margin-left: 50px;
+  }
+
+  .showAction {
+    margin-left: 40px;
+  }
+
+  .img-width {
+    width: 95vw;
+  }
+
+  .africa {
+  background-image: url('../unnamed.jpg') !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 5vw;
+  height: 100vh;
+}
+
+.height-and-width {
+  width: 100vw;
+  height: max-content;
+}
+
+.resp-margin {
+  margin-left: 50px;
+}
+
+.payout-text {
+  margin-left: 50px;
+}
+}

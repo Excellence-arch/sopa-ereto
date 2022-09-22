@@ -5,14 +5,14 @@ import pci from '../assets/pci.png';
 import visa from '../assets/visa.png';
 import mastecad from '../assets/MasterCard.png';
 import mpesa from '../assets/mpesa.png';
-import intasend from '../assets/intasend.png';
+// import intasend from '../assets/intasend.png';
 import mara from '../assets/mara.png';
 
 const Success = () => {
   return (
     <div className="bg-pays w-100 h-100">
-      <div className="row mx-auto">
-        <div className="col-12 row">
+      <div className="">
+        <div className="d-flex flex-lg-row flex-column">
           <div className="col-12 col-lg-6 full-height">
             <p className="pt-4 text-white h2 col-10 container">
               <p style={{ marginBottom: '130px' }}>
@@ -33,10 +33,8 @@ const Success = () => {
               <p className="text-muted mt-3 fw-light col-10" style={{ marginBottom: '130px' }}>
                 Sopa-Ereto is a secured and transparent way to donate money
               </p>
-              <p className="mt-4">
-                <span
-                  style={{ fontSize: '8px', marginLeft: '340px' }}
-                  className="text-dark fw-light">
+              <p className="mt-3 me-1 float-end">
+                <span style={{ fontSize: '8px' }} className="text-dark fw-light">
                   POWERED BY:{' '}
                 </span>{' '}
                 <img src={mara} alt="mara logo" width="70px" />
@@ -50,31 +48,34 @@ const Success = () => {
                   <span className="text-dark" style={{ marginLeft: '-15px' }}>
                     Safe payout
                   </span>
-                  <span className="text-dark fw-light" style={{ marginLeft: '190px' }}>
+                  {/* <span className="text-dark fw-light" style={{ marginLeft: '190px' }}>
                     Secured by:{' '}
                   </span>
-                  <img src={intasend} alt="intasend logo" width="80px" className="ms-1" />
+                  <img src={intasend} alt="intasend logo" width="80px" className="ms-1" /> */}
                 </p>
                 <p style={{ borderTop: '1px solid rgb(176, 176, 176)' }}></p>
-                <div className="m-0">
+                <div className="d-flex">
                   <img
                     src={pci}
                     alt={'PCI logo'}
                     width="70px"
-                    style={{ marginRight: '35px', marginLeft: '35px' }}
+                    className="col-3"
+                    // style={{ marginRight: '35px', marginLeft: '35px' }}
                   />
-                  <img src={visa} alt={'Visa logo'} width="70px" style={{ marginRight: '40px' }} />
+                  <img src={visa} alt={'Visa logo'} width="70px" className="col-3" />
                   <img
                     src={mastecad}
                     alt={'Mastecard logo'}
                     width="60px"
-                    style={{ marginRight: '40px' }}
+                    className="col-3"
+                    // style={{ marginRight: '40px' }}
                   />
                   <img
                     src={mpesa}
                     alt={'Mpesa logo'}
                     width="70px"
-                    style={{ marginRight: '40px' }}
+                    className="col-3"
+                    // style={{ marginRight: '40px' }}
                   />
                 </div>
               </div>
@@ -90,13 +91,15 @@ const Success = () => {
                     alt="pay-success-icon"
                   />
                 </div>
-                <h1 className="text-2xl text-white">Donation Recieved</h1>
-                <p
-                  className="text-light text-sm mt-3 col-7"
-                  style={{ textAlign: 'left', marginLeft: '158px' }}>
-                  Thank you for donating. We&rsquo;ve also notified the beneficiaries about your
-                  donation.
-                </p>
+                <div className="payout-text">
+                  <h1 className="text-white" style={{ textAlign: 'left' }}>
+                    Donation Recieved
+                  </h1>
+                  <p className="text-light text-sm mt-3 col-7" style={{ textAlign: 'left' }}>
+                    Thank you for donating. We&rsquo;ve also notified the beneficiaries about your
+                    donation.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
