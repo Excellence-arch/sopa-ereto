@@ -66,11 +66,11 @@ const Payment = () => {
   return (
     <div className="bg-pays w-100 h-100">
       <NewNav />
-      <div className="row p-5 container">
+      <div className="row p-lg-5 p-2 container">
         <div className="col-12 col-lg-4">
           <img src={cards} alt="Card" width={'300px'} className="mt-1 mt-lg-5 ms-4" />
         </div>
-        <div className="col-12 col-lg-6" style={{ marginLeft: '100px', marginTop: '-20px' }}>
+        <div className="col-12 col-lg-6 ms-1" style={{ marginLeft: '100px', marginTop: '-20px' }}>
           {error ? <div className="alert alert-danger text-danger">{error}</div> : null}
           <p className="fw-bold mb-0" style={{ color: 'rgb(210,105,30)', fontSize: '30px' }}>
             Your donation will save the Massai!
@@ -129,13 +129,13 @@ const Payment = () => {
             onClick={pay}>
             {isloading ? <span className="spinner-border"></span> : `Donate with Card`}
           </button>
-          <img src={card} alt="Credit card" width={'60px'} />
+          <img src={card} alt="Credit card" width={'60px'} style={{ marginTop: '35px' }} />
           <br />
           <hr style={{ width: '120px', marginLeft: '50px' }} />
           <button className="btn btn-color w-25  shadow" style={{ marginLeft: '50px' }}>
             {isLoadingCrypto ? <span className="spinner-border"></span> : `Donate with Crypto`}
           </button>{' '}
-          <img src={circle} alt="Circle" width={'60px'} />
+          <img src={circle} alt="Circle" width={'70px'} />
         </div>
       </div>
     </div>

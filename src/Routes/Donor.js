@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Route, Routes, useNavigate } from 'react-router';
+import CardDetails from '../Pages/CardDetails';
 import PageNotFound from '../Pages/PageNotFound';
 import Payment from '../Pages/Payment';
 import Success from '../Pages/Success';
@@ -20,6 +21,7 @@ const User = () => {
         <Route path="" element={<Transactions />} />
         <Route path="payment" element={<Payment />} />
         <Route path="success" element={<Success />} />
+        <Route path="/card-details" element={<CardDetails />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
