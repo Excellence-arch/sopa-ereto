@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import MaterialIcon from 'react-google-material-icons';
 import logos from '../assets/register.gif';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import Input from '../Components/Input';
 import Password from '../Components/Password';
 import { useEffect } from 'react';
@@ -19,9 +19,10 @@ const Register = () => {
   const [confPassword, setConfPassword] = useState();
   const [userError, setUserError] = useState(false);
   const navigate = useNavigate();
-  const url = `${useSelector(
-    (state) => state.urlReducer.baseUrl
-  )}-diam.herokuapp.com/mcs2/Add-Donor`;
+  // const url = `${useSelector(
+  //   (state) => state.urlReducer.baseUrl
+  // )}-diam.herokuapp.com/mcs2/Add-Donor`;
+  const url = `https://7ccf-105-55-203-144.in.ngrok.io/mcs2/add-donor`;
   // const url = `${baseUrl}api/register`;
 
   // const handleRole = (e) => {
