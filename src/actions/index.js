@@ -12,4 +12,11 @@ const logout = (stat) => {
   };
 };
 
-export { login, logout };
+const getDetails = (data) => {
+  return {
+    type: 'DETAILS',
+    payload: data
+  };
+};
+
+export { login, logout, getDetails };
