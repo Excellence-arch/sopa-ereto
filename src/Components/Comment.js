@@ -9,9 +9,13 @@ const Comment = ({ message, name, key }) => {
         <div>
           <img src={avatar} alt="profile picture" width={'50px'} className="rounded-circle" />
         </div>
-        <div>
-          <p className="fw-bold text-dark">{name}</p>
-          <p>{message.length > 23 ? `${message.slice(0, 23)}...` : message}</p>
+        <div className="ms-2">
+          <p className="fw-bold text-dark" style={{ marginTop: '15px' }}>
+            {name}
+          </p>
+          <p style={{ marginTop: '-12px' }}>
+            {message.length > 23 ? `${message.slice(0, 23)}...` : message}
+          </p>
         </div>
       </div>
     </div>
