@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // import MaterialIcon from 'react-google-material-icons';
 import logo from '../assets/logo.png';
 import '../assets/Styles/Navbar.css';
 
 const HomeNav = () => {
+  const navigate = useNavigate();
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -48,7 +49,11 @@ const HomeNav = () => {
               className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
               style={{ '--bs-scroll-height': '100px' }}></ul>
             {/* <span className="text-muted me-5 border-end pe-3 ps-3 border-start"> */}
-            <button className="btn btn-outline-dark me-5">Donate Now!</button>
+            <button
+              className="btn btn-outline-dark me-5"
+              onClick={() => navigate('/donor/payment')}>
+              Donate Now!
+            </button>
             {/* <span style={{ position: 'absolute', paddingLeft: '3px' }}>
                 <MaterialIcon icon="account_circle" />
               </span>

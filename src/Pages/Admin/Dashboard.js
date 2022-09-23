@@ -56,7 +56,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="bg-pays">
+    <div className="bg-pays height-and-width">
       <AdminDarkNav />
       <UserManagement />
       <nav className="nav nav-pills flex-column flex-sm-row">

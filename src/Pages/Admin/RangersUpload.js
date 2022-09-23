@@ -45,6 +45,7 @@ const RangersUpload = () => {
       .then((res) => {
         setIsloading(false);
         if (res.data.status == 200) {
+          console.log(res.data);
           navigate('/admin');
         } else {
           setError(res.data.data);

@@ -326,7 +326,13 @@ p {
 }
 
 .bg-massai {
-  background: linear-gradient(rgba(112, 112, 112, 0.7), rgba(79, 79, 79, 0.7)), url('./assets/animals.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/Massai2.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inputs {
+  background-color: #d1d1d1;
 }
 
 .bg-yellow {
