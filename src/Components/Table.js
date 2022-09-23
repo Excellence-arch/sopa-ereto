@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
@@ -9,7 +10,13 @@ const Table = () => {
   const [i, setI] = useState(0);
   const [disableNext, setDisableNext] = useState(false);
   const [disablePrevious, setDisablePrevious] = useState(true);
+  const [message, setMessage] = useState(false);
   const navigate = useNavigate();
+  useEffect(() => {
+    if (allUsers.length == 0) {
+      setMessage('There are no beneficiaries yet');
+    }
+  });
 
   const next = () => {
     if (i % 7 > 0) {
@@ -31,6 +38,7 @@ const Table = () => {
   };
   return (
     <div className="col-12 col-lg-11 mt-5" style={{ marginLeft: '50px' }}>
+      {message && <div className="alert alert-success text-success">{message}</div>}
       <table className="bg-white table rounds-start rounds-end">
         {/* <thead className="border-bottom"> */}
         <tr className="border-bottom">

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import AdminAdd from '../../Layouts/AdminAdd';
 import imgs from '../../assets/africa.png';
+import { useNavigate } from 'react-router';
+import { useSelector } from 'react-redux';
 
 const RangersUpload = () => {
   const [firstName, setFirstName] = useState();
@@ -14,6 +17,43 @@ const RangersUpload = () => {
   const [accountNumber, setAccountNumber] = useState();
   const [isActive, setIsActive] = useState();
   const [phone, setPhone] = useState();
+  const [isloading, setIsloading] = useState(false);
+  const [error, setError] = useState(false);
+
+  const navigate = useNavigate();
+  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/save-Ranger`;
+
+  const addRanger = (e) => {
+    setIsloading(true);
+    e.preventDefault();
+    const details = {
+      firstName,
+      lastName,
+      middleName,
+      dateOfBirth,
+      userAddress,
+      gender,
+      accountNumber,
+      acre: landAcreSize,
+      conservancy,
+      phone,
+      isActive
+    };
+    axios
+      .post(url, details)
+      .then((res) => {
+        setIsloading(false);
+        if (res.data.status == 'SE200') {
+          navigate('/admin');
+        } else {
+          setError(res.data.message);
+        }
+      })
+      .catch((err) => {
+        setIsloading(false);
+        setError(err.message);
+      });
+  };
   return (
     <div>
       <AdminAdd />
@@ -21,8 +61,10 @@ const RangersUpload = () => {
         <div className="col-12 col-lg-4 new-color shadow-blue hh-100">
           <img alt="Image" src={imgs} width={'300px'} className="ms-4" /> <br />
           <div className="text-center">
-            <button className="btn btn-warning text-white text-center mt-4 mb-5 px-5">
-              Continue
+            <button
+              className="btn btn-warning text-white text-center mt-4 mb-5 px-5"
+              onClick={(e) => addRanger(e)}>
+              {isloading ? <span className="spinner-border"></span> : 'continue'}
             </button>
           </div>
         </div>
@@ -30,6 +72,7 @@ const RangersUpload = () => {
           <div className="mt-4">
             <p className="h3">Add Ranger</p>
           </div>
+          {error && <div className="text-danger text-center alert alert-danger">{error}</div>}
           <div className="col-md-6">
             <label className="fonts text-blue">First Name</label>
             <input

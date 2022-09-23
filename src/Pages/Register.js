@@ -7,6 +7,7 @@ import logos from '../assets/register.gif';
 import Input from '../Components/Input';
 import Password from '../Components/Password';
 import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -22,8 +23,8 @@ const Register = () => {
   // const url = `${useSelector(
   //   (state) => state.urlReducer.baseUrl
   // )}-diam.herokuapp.com/mcs2/Add-Donor`;
-  const url = `https://7ccf-105-55-203-144.in.ngrok.io/mcs2/add-donor`;
-  // const url = `${baseUrl}api/register`;
+  // const url = `https://7ccf-105-55-203-144.in.ngrok.io/mcs2/add-donor`;
+  const url = `${useSelector((state) => state.urlReducer.diam)}mcs2/Add-Donor`;
 
   // const handleRole = (e) => {
   //   setRole(e.target.value);

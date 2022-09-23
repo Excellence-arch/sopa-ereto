@@ -1,5 +1,8 @@
+import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
 
 const RecordUpload = () => {
   const [firstName, setFirstName] = useState();
@@ -13,6 +16,42 @@ const RecordUpload = () => {
   const [accountNumber, setAccountNumber] = useState();
   const [isActive, setIsActive] = useState();
   const [phone, setPhone] = useState();
+  const [error, setError] = useState(false);
+  const [isloading, setIsloading] = useState(false);
+  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/save-LandOwner`;
+  const navigate = useNavigate();
+
+  const addLandOwner = (e) => {
+    setIsloading(true);
+    e.preventDefault();
+    const details = {
+      firstName,
+      lastName,
+      middleName,
+      dateOfBirth,
+      userAddress,
+      gender,
+      accountNumber,
+      acre: landAcreSize,
+      conservancy,
+      phone,
+      isActive
+    };
+    axios
+      .post(url, details)
+      .then((res) => {
+        setIsloading(false);
+        if (res.data.status == 'SE200') {
+          navigate('/admin');
+        } else {
+          setError(res.data.message);
+        }
+      })
+      .catch((err) => {
+        setIsloading(false);
+        setError(err.message);
+      });
+  };
   return (
     <div className="bg-white">
       <div className="row">
@@ -28,6 +67,7 @@ const RecordUpload = () => {
           <div className="mb-4 mt-4">
             <p className="h3">Let&rsquo;s meet you</p>
           </div>
+          {error && <div className="alert alert-danger text-danger text-center">{error}</div>}
           <label className="fonts text-blue">First Name</label>
           <input
             type="text"
@@ -55,8 +95,7 @@ const RecordUpload = () => {
 
           <label className="fonts text-blue">Date of Birth</label>
           <input
-            type="text"
-            placeholder={'Enter your Date of birth'}
+            type="date"
             value={dateOfBirth}
             onChange={(e) => setDateOfBirth(e.target.value)}
             className="form-control w-75 mb-3 check-weight py-2"
@@ -90,13 +129,17 @@ const RecordUpload = () => {
           />
 
           <label className="fonts text-blue">Gender</label>
-          <input
-            type="text"
-            placeholder={'Enter your gender'}
-            value={gender}
+          <br />
+          <select
             onChange={(e) => setGender(e.target.value)}
-            className="form-control w-75 mb-3 check-weight py-2"
-          />
+            value={gender}
+            className="form-control w-75 mb-3 check-weight py-2">
+            <option defaultValue={'Male'} selected disabled>
+              Select Gender
+            </option>
+            <option value={'Male'}>Male</option>
+            <option value={'Female'}>Female</option>
+          </select>
 
           <label className="fonts text-blue">Account Number</label>
           <input
@@ -108,13 +151,17 @@ const RecordUpload = () => {
           />
 
           <label className="fonts text-blue">Active</label>
-          <input
-            type="text"
-            placeholder={'Enter your Active Status'}
-            value={isActive}
+          <br />
+          <select
             onChange={(e) => setIsActive(e.target.value)}
-            className="form-control w-75 mb-3 check-weight py-2"
-          />
+            value={isActive}
+            className="form-control w-75 mb-3 check-weight py-2">
+            <option defaultValue={false} selected disabled>
+              Select active status
+            </option>
+            <option value={true}>Active</option>
+            <option value={false}>Inactive</option>
+          </select>
 
           <label className="fonts text-blue">Phone Number</label>
           <input
@@ -125,10 +172,10 @@ const RecordUpload = () => {
             className="form-control w-75 mb-3 check-weight py-2"
           />
 
-          <div className="">
+          <div className="text-center">
             {/* <span className="nav-link">Choose to be anonymous</span> */}
-            <button className="btn new-color text-white mb-3" style={{ marginLeft: '490px' }}>
-              Continue
+            <button className="btn new-color text-white mb-3" onClick={(e) => addLandOwner(e)}>
+              {isloading ? <span className="spinner-border"></span> : 'Continue'}
             </button>
           </div>
         </form>
