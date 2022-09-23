@@ -6,7 +6,7 @@ import { createStore } from 'redux';
 import App from './App';
 import './style.css';
 import allReducers from './Reducers/allReducers';
-import { disableReactDevTools } from '@fvilers/disable-react-devtools';
+// import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -16,7 +16,7 @@ const store = createStore(
 );
 
 // if (process.env.NODE_ENV == 'production') {
-disableReactDevTools();
+// disableReactDevTools();
 // }
 
 root.render(

@@ -9,19 +9,19 @@ const RangersUpload = () => {
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const [middleName, setMiddleName] = useState();
-  const [dateOfBirth, setDateOfBirth] = useState();
-  const [conservancy, setConservancy] = useState();
-  const [landAcreSize, setLandAcreSize] = useState();
+  // const [dateOfBirth, setDateOfBirth] = useState();
+  // const [conservancy, setConservancy] = useState();
+  const [salary, setSalary] = useState();
   const [userAddress, setUserAddress] = useState();
-  const [gender, setGender] = useState();
+  // const [gender, setGender] = useState();
   const [accountNumber, setAccountNumber] = useState();
-  const [isActive, setIsActive] = useState();
+  // const [isActive, setIsActive] = useState();
   const [phone, setPhone] = useState();
   const [isloading, setIsloading] = useState(false);
   const [error, setError] = useState(false);
 
   const navigate = useNavigate();
-  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/save-Ranger`;
+  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/add-Ranger`;
 
   const addRanger = (e) => {
     setIsloading(true);
@@ -30,14 +30,14 @@ const RangersUpload = () => {
       firstName,
       lastName,
       middleName,
-      dateOfBirth,
+      // dateOfBirth,
       userAddress,
-      gender,
+      // gender,
       accountNumber,
-      acre: landAcreSize,
-      conservancy,
-      phone,
-      isActive
+      salary,
+      // conservancy,
+      phone
+      // isActive
     };
     axios
       .post(url, details)
@@ -103,7 +103,7 @@ const RangersUpload = () => {
               className="form-control w-75 mb-3 check-weight py-2"
             />
           </div>
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <label className="fonts text-blue">Date of birth</label>
             <input
               type="date"
@@ -122,14 +122,14 @@ const RangersUpload = () => {
               onChange={(e) => setConservancy(e.target.value)}
               className="form-control w-75 mb-3 check-weight py-2"
             />
-          </div>
+          </div> */}
           <div className="col-md-6">
             <label className="fonts text-blue">Size of your land(Acres)</label>
             <input
               type="text"
               placeholder={'Enter the size of your land in acres'}
-              value={landAcreSize}
-              onChange={(e) => setLandAcreSize(e.target.value)}
+              value={salary}
+              onChange={(e) => setSalary(e.target.value)}
               className="form-control w-75 mb-3 check-weight py-2"
             />
           </div>
@@ -143,7 +143,7 @@ const RangersUpload = () => {
               className="form-control w-75 mb-3 check-weight py-2"
             />
           </div>
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <label className="fonts text-blue">Gender</label>
             <br />
             <select
@@ -156,7 +156,7 @@ const RangersUpload = () => {
               <option value={'Male'}>Male</option>
               <option value={'Female'}>Female</option>
             </select>
-          </div>
+          </div> */}
           <div className="col-md-6">
             <label className="fonts text-blue">Account Number</label>
             <input
@@ -167,7 +167,7 @@ const RangersUpload = () => {
               className="form-control w-75 mb-3 check-weight py-2"
             />
           </div>
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <label className="fonts text-blue">Active</label>
             <br />
             <select
@@ -180,7 +180,7 @@ const RangersUpload = () => {
               <option value={true}>Active</option>
               <option value={false}>Inactive</option>
             </select>
-          </div>
+          </div> */}
           <div className="col-md-6">
             <label className="fonts text-blue">Phone Number</label>
             <input
