@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 // import $ from 'jquery';
-import card from '../assets/card.png';
-import circle from '../assets/circle.png';
+// import card from '../assets/card.png';
+// import circle from '../assets/circle.png';
 import cards from '../assets/Rectangle.png';
 import Modal from '../Components/Modal';
 import NewNav from '../Layouts/NewNav';
@@ -16,14 +17,14 @@ const Payment = () => {
   const [currency, setCurrency] = useState('USD');
   const email = 'chinwenduiheanatu@gmail.com';
   const [isloading, setIsloading] = useState(false);
-  const isLoadingCrypto = false;
+  // const [isLoadingCrypto, setIsLoadingCrypto] = useState(false);
   const [cardNo, setCardNo] = useState();
   const [cvv, setCvv] = useState();
   const [expDate, setExpDate] = useState();
   const [keys, setKeys] = useState();
   const [newError, setNewError] = useState();
   const [error, setError] = useState(false);
-  const baseUrl = `https://sopa-ereto-payments.herokuapp.com`;
+  const baseUrl = `${useSelector((state) => state.urlReducer.payments)}`;
   const navigate = useNavigate();
 
   const getKeys = () => {
@@ -43,19 +44,6 @@ const Payment = () => {
         });
     }
   };
-  // const getYears = () => {
-  //   let month = expDate.split('-')[1];
-  //   let year = expDate.split('-')[0];
-  //   const newUrl = `https://sopa-ereto-payments.herokuapp.com/mcs3/`;
-  //   axios
-  //     .post(newUrl, { month, year })
-  //     .then((res) => {
-  //       console.log(res.data);
-  //     })
-  //     .catch((err) => {
-  //       setNewError(err.message);
-  //     });
-  // };
   const pay = () => {
     setIsloading(true);
     let month = expDate.split('-')[1];
@@ -81,22 +69,6 @@ const Payment = () => {
       });
   };
 
-  // const spaceIt = (e) => {
-  //   let nums = e.target.value;
-  //   if (nums.length > 0) {
-  //     let p = nums.split(' ').join('');
-  //     console.log(p);
-  //     if (p.length % 4 == 0) {
-  //       nums += ' ';
-  //     }
-  //   }
-  //   setCardNo(nums);
-  // };
-
-  // const openInNewTab = (url) => {
-  //   const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
-  //   if (newWindow) newWindow.opener = null;
-  // };
   return (
     <div className="bg-pays height-and-width">
       <NewNav />
@@ -137,28 +109,25 @@ const Payment = () => {
           <br />
           <label className="fonts text-blue">Country</label>
           <br />
-          <select className="text-danger checks months fw-light p-2 rounded">
+          <select className="text-danger checks months fw-light p-2 rounded mb-3">
             <option>US</option>
             <option>Kenya</option>
             <option>Great Britain</option>
           </select>
           <br />
-          <button
-            className="btn btn-color w-25 mt-5 shadow"
-            style={{ marginLeft: '50px' }}
-            // data-bs-toggle={'modal'}
-            onClick={getKeys}
-            // data-bs-target="#exampleModal"
-          >
-            {isloading ? <span className="spinner-border"></span> : `Donate with Card`}
-          </button>
-          <img src={card} alt="Credit card" width={'60px'} style={{ marginTop: '35px' }} />
+          {/* <span> */}
+          <input type={'radio'} className="radios" name="payment" checked value={'card'} />
+          <span className="fonts text-muted">&nbsp;Donate with Card</span>
+          {/* </span> */}
+          &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+          {/* <span> */}
+          <input type={'radio'} name="payment" value={'crypto'} className="radios" />
+          <span className="fonts text-muted">&nbsp;Donate with Crypto</span>
+          {/* </span> */}
           <br />
-          <hr style={{ width: '120px', marginLeft: '50px' }} />
-          <button className="btn btn-color w-25  shadow" style={{ marginLeft: '50px' }}>
-            {isLoadingCrypto ? <span className="spinner-border"></span> : `Donate with Crypto`}
-          </button>{' '}
-          <img src={circle} alt="Circle" width={'70px'} />
+          <button className="btn btn-color px-4 mt-4" onClick={getKeys}>
+            Donate
+          </button>
         </div>
       </div>
       <Modal
