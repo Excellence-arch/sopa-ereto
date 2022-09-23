@@ -31,19 +31,20 @@ const RangersUpload = () => {
       lastName,
       middleName,
       // dateOfBirth,
-      userAddress,
+      address: userAddress,
       // gender,
       accountNumber,
       salary,
       // conservancy,
-      phone
+      phoneNumber: phone
       // isActive
     };
+    console.log(url);
     axios
       .post(url, details)
       .then((res) => {
         setIsloading(false);
-        if (res.data.status == 'SE200') {
+        if (res.data.status == 200) {
           navigate('/admin');
         } else {
           setError(res.data.message);
@@ -124,10 +125,10 @@ const RangersUpload = () => {
             />
           </div> */}
           <div className="col-md-6">
-            <label className="fonts text-blue">Size of your land(Acres)</label>
+            <label className="fonts text-blue">Salary</label>
             <input
               type="text"
-              placeholder={'Enter the size of your land in acres'}
+              placeholder={`Enter the ranger's salary`}
               value={salary}
               onChange={(e) => setSalary(e.target.value)}
               className="form-control w-75 mb-3 check-weight py-2"
