@@ -1,9 +1,10 @@
 import React from 'react';
 import lock from '../assets/lock.png';
 import { FaLock, FaPen } from 'react-icons/fa';
+import img from '../assets/avatar.png';
 
 // eslint-disable-next-line react/prop-types
-const Rows = ({ i, img, name, email, role, click }) => {
+const Rows = ({ i, name, phone, gender, click }) => {
   return (
     // <div>
     <tr key={i} className="border-bottom cursor-pointer" onClick={click}>
@@ -23,19 +24,19 @@ const Rows = ({ i, img, name, email, role, click }) => {
           </p>
         </div>
         <p style={{ marginLeft: '47px', marginTop: '-32px' }} className="text-muted fw-light">
-          {email}
+          {phone}
         </p>
       </td>
       <td>
         {' '}
         <p
           className={
-            role == 'Ranger'
+            gender == 'male'
               ? 'bg-dark rounded-pill py-1 mt-3 text-white showRole'
               : 'bg-green rounded-pill text-dark py-1 mt-3 showRole'
           }
           style={{ maxWidth: `max-content`, paddingLeft: '7px', paddingRight: '7px' }}>
-          {role}
+          {gender}
         </p>
       </td>
       <td>

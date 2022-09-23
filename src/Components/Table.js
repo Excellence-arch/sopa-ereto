@@ -1,47 +1,45 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import Rows from './Rows';
-
 // eslint-disable-next-line react/prop-types
-const Table = ({ dataset }) => {
-  const data = useSelector((state) => state.allUsersReducer);
-  const [i, setI] = useState(0);
-  const [disableNext, setDisableNext] = useState(false);
-  const [allUsers, setAllUsers] = useState('rangers');
-  const [disablePrevious, setDisablePrevious] = useState(true);
+const Table = ({ allUsers, dataset }) => {
+  // const [i, setI] = useState(0);
+  // const [disableNext, setDisableNext] = useState(false);
+  // const [disablePrevious, setDisablePrevious] = useState(true);
   const [message, setMessage] = useState(false);
   const navigate = useNavigate();
+
   useEffect(() => {
-    if (dataset == 'rangers') {
-      setAllUsers(data.rangers);
-      if (allUsers.length == 0) {
-        setMessage('There are no beneficiaries yet');
-      }
-    } else {
-      setAllUsers(data.landOwners);
+    // eslint-disable-next-line react/prop-types
+    if (allUsers.length == 0) {
+      setMessage('There are no beneficiaries yet');
     }
   });
 
-  const next = () => {
-    if (i % 7 > 0) {
-      setI(i + 6);
-    } else {
-      setDisableNext(true);
-    }
-  };
-  const previous = () => {
-    if (i == 0) {
-      setDisablePrevious(true);
-    } else {
-      setI(i - 6);
-    }
-  };
+  // const next = () => {
+  //   if (i % 7 > 0) {
+  //     setI(i + 6);
+  //   } else {
+  //     setDisableNext(true);
+  //   }
+  // };
+  // const previous = () => {
+  //   if (i == 0) {
+  //     setDisablePrevious(true);
+  //   } else {
+  //     setI(i - 6);
+  //   }
+  // };
 
   const profile = (id) => {
-    navigate(`/admin/profile/${id}`);
+    if (dataset == 'rangers') {
+      navigate(`/admin/profile/r${id}`);
+    } else {
+      navigate(`/admin/profile/l${id}`);
+    }
   };
   return (
     <div className="col-12 col-lg-11 mt-5" style={{ marginLeft: '50px' }}>
@@ -65,56 +63,23 @@ const Table = ({ dataset }) => {
         </tr>
         {/* </thead> */}
         <tbody>
-          <Rows
-            name={allUsers[i].name}
-            img={allUsers[i].img}
-            email={allUsers[i].email}
-            role={allUsers[i].role}
-            click={() => profile(i)}
-          />
-          <Rows
-            name={allUsers[i + 1].name}
-            img={allUsers[i + 1].img}
-            email={allUsers[i + 1].email}
-            role={allUsers[i + 1].role}
-            click={() => profile(i + 1)}
-          />
-          <Rows
-            name={allUsers[i + 2].name}
-            img={allUsers[i + 2].img}
-            email={allUsers[i + 2].email}
-            role={allUsers[i + 2].role}
-            click={() => profile(i + 2)}
-          />
-          <Rows
-            name={allUsers[i + 3].name}
-            img={allUsers[i + 3].img}
-            email={allUsers[i + 3].email}
-            role={allUsers[i + 3].role}
-            click={() => profile(i + 3)}
-          />
-          <Rows
-            name={allUsers[i + 4].name}
-            img={allUsers[i + 4].img}
-            email={allUsers[i + 4].email}
-            role={allUsers[i + 4].role}
-            click={() => profile(i + 4)}
-          />
-          <Rows
-            name={allUsers[i + 5].name}
-            img={allUsers[i + 5].img}
-            email={allUsers[i + 5].email}
-            role={allUsers[i + 5].role}
-            click={() => profile(i + 5)}
-          />
+          {allUsers.map((val, i) => (
+            <Rows
+              key={i}
+              name={val.firstName + ' ' + val.lastName}
+              phone={val.phone}
+              gender={val.gender}
+              click={() => profile(val.idNumber)}
+            />
+          ))}
         </tbody>
       </table>
-      <button onClick={previous} disabled={disablePrevious} className="btn">
+      {/* <button onClick={previous} disabled={disablePrevious} className="btn">
         Previous
       </button>
       <button onClick={next} disabled={disableNext} className="btn">
         Next
-      </button>
+      </button> */}
     </div>
   );
 };
