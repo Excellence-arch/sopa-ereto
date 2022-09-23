@@ -47,7 +47,7 @@ const RangersUpload = () => {
         if (res.data.status == 200) {
           navigate('/admin');
         } else {
-          setError(res.data.message);
+          setError(res.data.data);
         }
       })
       .catch((err) => {

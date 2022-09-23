@@ -18,7 +18,7 @@ const RecordUpload = () => {
   const [phone, setPhone] = useState();
   const [error, setError] = useState(false);
   const [isloading, setIsloading] = useState(false);
-  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/save-LandOwner`;
+  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/add-landOwner`;
   const navigate = useNavigate();
 
   const addLandOwner = (e) => {
@@ -40,11 +40,16 @@ const RecordUpload = () => {
     axios
       .post(url, details)
       .then((res) => {
+        console.log(res);
         setIsloading(false);
-        if (res.data.status == 'SE200') {
+        if (res.data.status == 200) {
           navigate('/admin');
         } else {
-          setError(res.data.message);
+          if (res.data.status == 302) {
+            setError(res.data.data);
+          } else {
+            setError(res.data.data);
+          }
         }
       })
       .catch((err) => {
