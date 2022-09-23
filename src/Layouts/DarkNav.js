@@ -43,6 +43,11 @@ const DarkNav = () => {
                   Transactions
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/donor/reviews">
+                  Reviews
+                </Link>
+              </li>
               {/* <li className="nav-item">
                 <Link className="nav-link" to="#">
                   Cards

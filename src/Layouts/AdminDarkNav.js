@@ -34,13 +34,18 @@ const AdminDarkNav = () => {
               className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
               style={{ '--bs-scroll-height': '100px' }}>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="#">
+                <Link className="nav-link active" aria-current="page" to="/admin">
                   My Account
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/donor">
                   Transactions
+                </Link>
+              </li> */}
+              <li className="nav-item">
+                <Link className="nav-link" to="/admin/review">
+                  Review
                 </Link>
               </li>
             </ul>

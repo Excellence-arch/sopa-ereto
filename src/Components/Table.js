@@ -5,16 +5,23 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import Rows from './Rows';
 
-const Table = () => {
-  const allUsers = useSelector((state) => state.allUsersReducer.users);
+// eslint-disable-next-line react/prop-types
+const Table = ({ dataset }) => {
+  const data = useSelector((state) => state.allUsersReducer);
   const [i, setI] = useState(0);
   const [disableNext, setDisableNext] = useState(false);
+  const [allUsers, setAllUsers] = useState('rangers');
   const [disablePrevious, setDisablePrevious] = useState(true);
   const [message, setMessage] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
-    if (allUsers.length == 0) {
-      setMessage('There are no beneficiaries yet');
+    if (dataset == 'rangers') {
+      setAllUsers(data.rangers);
+      if (allUsers.length == 0) {
+        setMessage('There are no beneficiaries yet');
+      }
+    } else {
+      setAllUsers(data.landOwners);
     }
   });
 

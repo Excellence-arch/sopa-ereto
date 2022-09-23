@@ -1,7 +1,7 @@
 // import michael from '../assets/avatar.png';
 
 const initState = {
-  users: [
+  rangers: [
     // {
     //   name: 'Oladipupo Oluwayimika',
     //   role: 'Ranger',
@@ -74,7 +74,8 @@ const initState = {
     //   img: michael,
     //   email: 'oladipopomichael9@gmail.com'
     // }
-  ]
+  ],
+  landOwners: []
 };
 
 const allUsers = (state = initState, action) => {
@@ -82,7 +83,12 @@ const allUsers = (state = initState, action) => {
     case 'DETAILS':
       return {
         ...state,
-        users: action.payload
+        rangers: action.payload
+      };
+    case 'LAND OWNERS':
+      return {
+        ...state,
+        landOwners: action.payload
       };
     default:
       return {

@@ -19,4 +19,11 @@ const getDetails = (data) => {
   };
 };
 
-export { login, logout, getDetails };
+const getLandOwners = (data) => {
+  return {
+    type: 'LAND OWNERS',
+    payload: data
+  };
+};
+
+export { login, logout, getDetails, getLandOwners };
