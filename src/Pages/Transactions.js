@@ -49,11 +49,13 @@ const Transactions = () => {
       ) : (
         <div>
           {message && <div className="alert alert-success text-success">{message}</div>}
-          <div className="col-lg-7 col-12">
-            <PaymentHistory />
-          </div>
-          <div className="col-lg-4 col-12 ms-5 mt-5">
-            <Donate />
+          <div className="row">
+            <div className="col-lg-7 col-12">
+              <PaymentHistory />
+            </div>
+            <div className="col-lg-4 col-12 ms-5 mt-5">
+              <Donate />
+            </div>
           </div>
         </div>
       )}

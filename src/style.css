@@ -12,7 +12,7 @@ p {
 }
 
 .colors {
-  background-color: #008971 !important;
+  background-color: #068374 !important;
 }
 
 .cursor {
@@ -41,30 +41,30 @@ p {
 
 .btn-color {
   color: #fff !important;
-  background-color: #3a88fb !important;
-  border-color: #3a88fb !important;
+  background-color: #068374 !important;
+  border-color: #068374 !important;
 }
 
 .btn-pink {
   color: #fff !important;
-  background-color: #3a88fb !important;
-  border-color: #3a88fb !important;
+  background-color: #068374 !important;
+  border-color: #068374 !important;
 }
 
 .btn-pink:hover {
   color: #fff !important;
-  background-color: #3a88fb !important;
-  border-color: #3a88fb !important;
+  background-color: #068374 !important;
+  border-color: #068374 !important;
 }
 
 /* 38AEFA */
 
 .new-color {
-  background-color: #3a88fb !important;
+  background-color: #068374 !important;
 }
 
 .text-blue {
-  color: #3a88fb !important;
+  color: #068374 !important;
 }
 
 .full-height {

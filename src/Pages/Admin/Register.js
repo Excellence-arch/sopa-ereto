@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // import MaterialIcon from 'react-google-material-icons';
 import logos from '../../assets/register.gif';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Input from '../../Components/Input';
 import Password from '../../Components/Password';
 import { useEffect } from 'react';
+import { loginAdmin } from '../../actions';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -16,7 +17,11 @@ const Register = () => {
   const [showPwd, setShowPwd] = useState(false);
   const [disabled, setDisabled] = useState(true);
   const [userError, setUserError] = useState(false);
-  const url = `${useSelector((state) => state.urlReducer.diam)}/add-donor`;
+  const [name, setName] = useState();
+  const [accountNumber, setAccountNumber] = useState();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/add-donor`;
   // const url = `${baseUrl}api/register`;
 
   // const handleRole = (e) => {
@@ -48,12 +53,18 @@ const Register = () => {
     e.preventDefault();
     setIsloading(true);
     setError(false);
-    const details = { email, _id: password };
+    const details = { email, _id: password, conservancy: name, accountNumber };
     axios
       .post(url, details)
       .then((res) => {
-        setIsloading(false);
-        console.log(res);
+        if (res.data.status !== 'SE200') {
+          setIsloading(false);
+          setError(res.data.error);
+        } else {
+          setIsloading(false);
+          dispatch(loginAdmin(res.data.data));
+          navigate('/admin');
+        }
       })
       .catch((err) => {
         setIsloading(false);
@@ -79,7 +90,19 @@ const Register = () => {
           </p>
           {error ? <div className="text-danger alert alert-danger">{error}</div> : null}
           <div className="w-75">
-            <label className="fonts text-blue">Organization Email</label>
+            <label className="fonts text-blue">Conservancy</label>
+            <Input
+              placeholder={'Enter conservancy name'}
+              value={name}
+              handleChange={(e) => setName(e.target.value)}
+            />
+            <label className="fonts text-blue">Account Number</label>
+            <Input
+              placeholder={`Enter the conservancy's account number`}
+              value={accountNumber}
+              handleChange={(e) => setAccountNumber(e)}
+            />
+            <label className="fonts text-blue">Conservancy Email</label>
             <Input
               placeholder={'abc@yahoo.com'}
               value={email}

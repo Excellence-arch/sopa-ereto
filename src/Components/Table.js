@@ -12,6 +12,8 @@ const Table = ({ allUsers, dataset }) => {
   useEffect(() => {
     if (allUsers.length == 0) {
       setMessage('There are no beneficiaries yet');
+    } else {
+      setMessage(false);
     }
   });
 

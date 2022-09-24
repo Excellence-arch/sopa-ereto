@@ -12,8 +12,7 @@ import NewNav from '../Layouts/NewNav';
 
 const Payment = () => {
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [cryptoShow, setCryptoShow] = useState(false);
   const [amount, setAmount] = useState('10');
   const [currency, setCurrency] = useState('USD');
   const [isloading, setIsloading] = useState(false);
@@ -27,8 +26,10 @@ const Payment = () => {
   const baseUrl = `${useSelector((state) => state.urlReducer.payments)}`;
   const navigate = useNavigate();
   const userDets = useSelector((state) => state.onlineReducer);
-  // const [walletAddress, setWalletAddress] = useState();
-
+  const [paymentMethod, setPaymentMethod] = useState('card');
+  const [walletAddress, setWalletAddress] = useState();
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const getKeys = () => {
     if (currency == '' || amount == '') {
       setError('All fields arre required');
@@ -37,9 +38,13 @@ const Payment = () => {
       axios
         .get(newUrl)
         .then((res) => {
-          console.log(res.data);
-          setKeys(res.data);
-          setShow(true);
+          if (paymentMethod == 'card') {
+            setKeys(res.data);
+            setShow(true);
+          } else {
+            setKeys(res.data);
+            setCryptoShow(true);
+          }
         })
         .catch((err) => {
           setNewError(err.message);
@@ -69,6 +74,10 @@ const Payment = () => {
         setIsloading(false);
         setNewError(err.message);
       });
+  };
+
+  const payCrypto = () => {
+    console.log('I want to pay with crypto');
   };
 
   return (
@@ -118,12 +127,25 @@ const Payment = () => {
           </select>
           <br />
           {/* <span> */}
-          <input type={'radio'} className="radios" name="payment" checked value={'card'} />
+          <input
+            type={'radio'}
+            className="radios"
+            onChange={(e) => setPaymentMethod(e.target.value)}
+            name="payment"
+            checked
+            value={'card'}
+          />
           <span className="fonts text-muted">&nbsp;Donate with Card</span>
           {/* </span> */}
           &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
           {/* <span> */}
-          <input type={'radio'} name="payment" value={'crypto'} className="radios" />
+          <input
+            type={'radio'}
+            name="payment"
+            onChange={(e) => setPaymentMethod(e.target.value)}
+            value={'crypto'}
+            className="radios"
+          />
           <span className="fonts text-muted">&nbsp;Donate with Crypto</span>
           {/* </span> */}
           <br />
@@ -148,11 +170,12 @@ const Payment = () => {
         handleShow={handleShow}
       />
       <CryptoModal
-        pay={pay}
-        // walletAdress={walletAddress}
+        pay={payCrypto}
+        walletAdress={walletAddress}
         isloading={isloading}
-        show={show}
-        handleClose={handleClose}
+        show={cryptoShow}
+        setWalletAddress={setWalletAddress}
+        handleClose={() => setCryptoShow(false)}
       />
     </div>
   );

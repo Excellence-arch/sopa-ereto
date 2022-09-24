@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 // import MaterialIcon from 'react-google-material-icons';
 import logos from '../../assets/register.gif';
 import { useDispatch, useSelector } from 'react-redux';
-import { login as logins } from '../../actions/index';
+import { loginAdmin } from '../../actions/index';
 import Input from '../../Components/Input';
 import Password from '../../Components/Password';
 
@@ -17,7 +17,7 @@ const Login = () => {
   const [isloading, setIsloading] = useState(false);
   const [disabled, setDisabled] = useState(true);
   const [userError, setUserError] = useState(false);
-  const url = `${useSelector((state) => state.urlReducer.baseUrl)}login-donor`;
+  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/login-donor`;
   // const url = `${baseUrl}api/login`;
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -55,7 +55,7 @@ const Login = () => {
           if (res.data.status !== 'SE200') {
             setError(res.data.error);
           } else {
-            dispatch(logins(res.data.data));
+            dispatch(loginAdmin(res.data.data[0]));
             navigate('/admin');
           }
         })

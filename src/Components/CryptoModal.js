@@ -8,12 +8,12 @@ const CryptoModal = ({ pay, walletAdress, setWalletAddress, isloading, show, han
     <>
       <Modal show={show} onHide={handleClose} className="mt-5">
         <Modal.Header closeButton className="new-color">
-          <Modal.Title>Enter your card details</Modal.Title>
+          <Modal.Title className="text-white">Enter Wallet Address</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form className="row">
             <div>
-              <label className="text-blue">Card Number</label>
+              <label className="text-blue">Wallet Address</label>
               <input
                 type={'text'}
                 value={walletAdress}

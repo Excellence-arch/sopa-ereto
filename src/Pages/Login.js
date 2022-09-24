@@ -57,7 +57,7 @@ const Login = () => {
           if (res.data.status !== 'SE200') {
             setError(res.data.error);
           } else {
-            dispatch(logins(res.data.data));
+            dispatch(logins(res.data.data[0]));
             navigate('/donor');
           }
         })

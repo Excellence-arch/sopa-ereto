@@ -2,9 +2,12 @@ import pix from '../assets/Michael.jpg';
 
 const initState = {
   status: false,
-  id: 5,
-  name: 'Michael Oladipupo',
-  pix
+  id: '',
+  email: '',
+  name: '',
+  userId: '',
+  pix,
+  accountNumber: ''
 };
 
 const admin = (state = initState, action) => {
@@ -13,8 +16,11 @@ const admin = (state = initState, action) => {
       return {
         ...state,
         status: true,
-        id: action.payload.idNumber,
-        email: action.payload.email
+        id: action.payload._id,
+        email: action.payload.email,
+        name: action.payload.conservancy,
+        userId: action.payload.userId,
+        accountNumber: action.payload.accountNumber
       };
     default:
       return {

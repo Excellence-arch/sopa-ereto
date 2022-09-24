@@ -111,8 +111,8 @@ const Register = () => {
             <Input placeholder={'Email'} value={email} handleChange={(e) => handleEmailChange(e)} />
             <label className="fonts text-blue">Phrase</label>
             <br />
-            <span className="text-info">Your phrase is a unique keyword special to you alone</span>
-            <div className="input-group mb-3 w-75">
+
+            <div className="input-group w-75">
               <input
                 type={showPwd ? 'text' : 'password'}
                 value={password}
@@ -126,6 +126,9 @@ const Register = () => {
                 <MaterialIcon icon={showPwd ? 'visibility_off' : 'visibility'} />
               </span>
             </div>
+            <p className="text-danger" style={{ fontSize: '10px', marginLeft: '140px' }}>
+              Your phrase is a unique keyword special to you alone
+            </p>
             <label className="fonts text-blue">Confirm Your phrase</label>
             <div className="input-group mb-3 w-75">
               <input
