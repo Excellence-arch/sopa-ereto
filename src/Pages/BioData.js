@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-// import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
 const BioData = () => {
   const [name, setName] = useState();
   const [location, setLocation] = useState();
   const [address, setAddress] = useState();
   const [phone, setPhone] = useState();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div className="bg-white">
       <div className="row">
@@ -20,7 +20,9 @@ const BioData = () => {
             <p className="text-ash mb-0">Must contain a lowercase letter</p>
             <p className="text-ash mb-0">Must contain a number</p>
             <p className="text-ash mb-0">Must contain a special character</p> */}
-            <button className="btn btn-pink mt-2">Skip</button>
+            <button className="btn btn-pink mt-2" onClick={() => navigate('/donor/payment')}>
+              Skip
+            </button>
           </div>
         </div>
         <form className="col-12 col-lg-6 mx-5 mt-5 pt-5 w-50 ms-6">

@@ -403,7 +403,7 @@ p {
 }
 
 .bg-maps {
-  background-image: url('./assets/map\ of\ the\ world.png');
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./assets/massai3.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;

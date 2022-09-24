@@ -5,9 +5,9 @@ import MaterialIcon from 'react-google-material-icons';
 import logos from '../assets/register.gif';
 // import { useSelector } from 'react-redux';
 import Input from '../Components/Input';
-import Password from '../Components/Password';
 import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../actions';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -20,11 +20,12 @@ const Register = () => {
   const [confPassword, setConfPassword] = useState();
   const [userError, setUserError] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   // const url = `${useSelector(
   //   (state) => state.urlReducer.baseUrl
   // )}-diam.herokuapp.com/mcs2/Add-Donor`;
   // const url = `https://7ccf-105-55-203-144.in.ngrok.io/mcs2/add-donor`;
-  const url = `${useSelector((state) => state.urlReducer.diam)}mcs2/Add-Donor`;
+  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/add-donor`;
 
   // const handleRole = (e) => {
   //   setRole(e.target.value);
@@ -64,18 +65,19 @@ const Register = () => {
         const details = {
           email,
           typeOf,
-          lastName: '',
-          firstName: '',
-          phone: '',
-          idNumber: '',
-          password
+          // lastName: '',
+          // firstName: '',
+          // phone: '',
+          // idNumber: '',
+          _id: password
         };
         axios
           .post(url, details)
           .then((res) => {
             setIsloading(false);
             if (res.data.status == 'SE200') {
-              navigate('/accounts/verify-email');
+              dispatch(login(res.data.data));
+              navigate('/accounts/bio-data');
             }
           })
           .catch((err) => {
@@ -109,21 +111,31 @@ const Register = () => {
           <div className="w-75">
             <label className="fonts text-blue">Email</label>
             <Input placeholder={'Email'} value={email} handleChange={(e) => handleEmailChange(e)} />
-            <label className="fonts text-blue">Password</label>
-            <Password
-              password={password}
-              handleChange={(e) => setPassword(e.target.value)}
-              showPwd={showPwd}
-              clicked={() => setShowPwd(!showPwd)}
-            />
-            <label className="fonts text-blue">Confirm Password</label>
+            <label className="fonts text-blue">Phrase</label>
+            <br />
+            <span className="text-info">Your phrase is a unique keyword special to you alone</span>
+            <div className="input-group mb-3 w-75">
+              <input
+                type={showPwd ? 'text' : 'password'}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="form-control border-0 checks check-weight"
+                placeholder="Set your phrase"
+              />
+              <span
+                className="input-group-text cursor-pointer border-0"
+                onClick={() => setShowPwd(!showPwd)}>
+                <MaterialIcon icon={showPwd ? 'visibility_off' : 'visibility'} />
+              </span>
+            </div>
+            <label className="fonts text-blue">Confirm Your phrase</label>
             <div className="input-group mb-3 w-75">
               <input
                 type={showPwd ? 'text' : 'password'}
                 value={confPassword}
                 onChange={(e) => setConfPassword(e.target.value)}
                 className="form-control border-0 checks check-weight"
-                placeholder="Confirm your password"
+                placeholder="Confirm your phrase"
               />
               <span
                 className="input-group-text cursor-pointer border-0"

@@ -1,6 +1,6 @@
 import React from 'react';
 import DarkNav from '../Layouts/DarkNav';
-import avatar from '../assets/avatar.png';
+import lions from '../assets/lions.jpg';
 import Comment from '../Components/Comment';
 import { useState } from 'react';
 
@@ -41,7 +41,7 @@ const Reviews = () => {
       <div className="d-flex flex-row">
         <div className="col-lg-3 col-12 bg-light">
           <div className="text-center">
-            <img src={avatar} alt={'Person'} width="100px" />
+            <img src={lions} alt={'Conservancy Image'} width="155px" />
           </div>
           <p className="fs-3 text-dark text-center">Name of conservancy</p>
           <p className="text-center">Name of the head of the conservancy</p>

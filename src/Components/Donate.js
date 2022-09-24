@@ -8,7 +8,7 @@ const Donate = () => {
         <img src={Lion} alt="Massai Lion" width={'100px'} />
       </div>
       <div className="text-center mt-3 pb-5">
-        <button className="btn btn-danger">SUBSCRIBE TO THE E-NEWS</button>
+        <button className="btn btn-danger px-4">VIEW TOURISM GALLERY</button>
         <p className="text-white">Search This Site</p>
         <input type={'text'} placeholder="Enter Keyword then press Enter" className="p-2 px-4" />
         <br />

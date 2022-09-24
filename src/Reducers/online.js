@@ -1,6 +1,8 @@
 const initState = {
-  status: true,
-  id: ''
+  status: false,
+  id: '',
+  email: '',
+  typeOf: ''
 };
 
 const online = (state = initState, action) => {
@@ -8,7 +10,10 @@ const online = (state = initState, action) => {
     case 'STATUS':
       return {
         ...state,
-        id: action.payload
+        id: action.payload.idNumber,
+        status: true,
+        email: action.payload.email,
+        typeOf: action.payload.typeOf
       };
     case 'LOGOUT':
       return {
