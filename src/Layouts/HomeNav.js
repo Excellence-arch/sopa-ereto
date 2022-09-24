@@ -26,8 +26,8 @@ const HomeNav = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-dark" to="/contact">
-                Contact
+              <Link className="nav-link text-dark" to="/transactions">
+                Transactions
               </Link>
             </li>
           </ul>

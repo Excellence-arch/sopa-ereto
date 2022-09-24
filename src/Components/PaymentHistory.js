@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import avatar from '../assets/avatar.png';
 
 const PaymentHistory = () => {
   const data = useSelector((state) => state.transactionReducer.recentActivities);
@@ -24,7 +25,7 @@ const PaymentHistory = () => {
             </div>
             <td>
               <p style={{ marginLeft: '-100px' }}>
-                <img src={val.img} width="50px" className="rounded-circle my-3 ms-3" />
+                <img src={avatar} width="50px" className="rounded-circle my-3 ms-3" />
               </p>
             </td>
             <td>
