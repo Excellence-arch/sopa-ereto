@@ -36,7 +36,7 @@ const Rows = ({ i, name, phone, click, isActive }) => {
               : 'bg-dark rounded-pill text-dark py-1 mt-3 showRole'
           }
           style={{ maxWidth: `max-content`, paddingLeft: '7px', paddingRight: '7px' }}>
-          {isActive.toString()}
+          {isActive ? 'Active' : 'Not Active'}
         </p>
       </td>
       <td>

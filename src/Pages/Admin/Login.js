@@ -17,7 +17,7 @@ const Login = () => {
   const [isloading, setIsloading] = useState(false);
   const [disabled, setDisabled] = useState(true);
   const [userError, setUserError] = useState(false);
-  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/login-donor`;
+  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/login-admin`;
   // const url = `${baseUrl}api/login`;
   const navigate = useNavigate();
   const dispatch = useDispatch();

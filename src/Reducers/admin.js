@@ -5,7 +5,6 @@ const initState = {
   id: '',
   email: '',
   name: '',
-  userId: '',
   pix,
   accountNumber: ''
 };
@@ -16,10 +15,9 @@ const admin = (state = initState, action) => {
       return {
         ...state,
         status: true,
-        id: action.payload._id,
         email: action.payload.email,
         name: action.payload.conservancy,
-        userId: action.payload.userId,
+        id: action.payload.userId,
         accountNumber: action.payload.accountNumber
       };
     default:

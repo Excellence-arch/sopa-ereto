@@ -21,7 +21,7 @@ const Register = () => {
   const [accountNumber, setAccountNumber] = useState();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/add-donor`;
+  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/create-admin`;
   // const url = `${baseUrl}api/register`;
 
   // const handleRole = (e) => {
@@ -100,7 +100,7 @@ const Register = () => {
             <Input
               placeholder={`Enter the conservancy's account number`}
               value={accountNumber}
-              handleChange={(e) => setAccountNumber(e)}
+              handleChange={(e) => setAccountNumber(e.target.value)}
             />
             <label className="fonts text-blue">Conservancy Email</label>
             <Input
