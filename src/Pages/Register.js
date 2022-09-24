@@ -93,7 +93,9 @@ const Register = () => {
     <div className="container-fluid bg-pays w-100 h-100">
       <div className="row">
         <div className="col-12 col-lg-4 new-color full-height">
-          <h4 className="h2 text-white container mt-5">Make your donation secure with using</h4>
+          <h4 className="h2 text-white container mt-5">
+            Make your donation secure with Sopa-Ereto
+          </h4>
           <img src={logos} alt="file" width={'400px'} className="w-100" />
         </div>
         <form className="col-12 col-lg-7 px-5 mt-4" style={{ marginLeft: '70px' }}>

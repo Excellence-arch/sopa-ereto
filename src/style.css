@@ -347,21 +347,13 @@ p {
   margin-left: 50px;
 }
 
-.role {
-  margin-left: 180px;
-}
+/* .action {
+  margin-left: 50px;
+} */
 
-.showRole {
-  margin-left: 180px;
-}
-
-.action {
-  margin-left: 500px;
-}
-
-.showAction {
+/* .showAction {
   margin-left: 430px;
-}
+} */
 
 .landing {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/animals.jpg') !important;
@@ -494,19 +486,4 @@ p {
   margin-left: 50px;
 }
 
-.role {
-  margin-left: 10px !important;
-}
-
-.showRole {
-  margin-left: 10px !important;
-}
-
-.action {
-  margin-left: 50px;
-}
-
-.showAction {
-  margin-left: 430px;
-}
 }

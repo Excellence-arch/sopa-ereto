@@ -4,7 +4,7 @@ import { FaLock, FaPen } from 'react-icons/fa';
 import img from '../assets/avatar.png';
 
 // eslint-disable-next-line react/prop-types
-const Rows = ({ i, name, phone, click, isActive }) => {
+const Rows = ({ i, name, phone, click }) => {
   return (
     // <div>
     <tr key={i} className="border-bottom cursor-pointer" onClick={click}>
@@ -27,20 +27,20 @@ const Rows = ({ i, name, phone, click, isActive }) => {
           {phone}
         </p>
       </td>
-      <td>
+      {/* <td>
         {' '}
         <p
           className={
             isActive
               ? 'bg-green rounded-pill py-1 mt-3 text-white showRole'
-              : 'bg-dark rounded-pill text-dark py-1 mt-3 showRole'
+              : 'bg-dark rounded-pill text-white py-1 mt-3 showRole'
           }
           style={{ maxWidth: `max-content`, paddingLeft: '7px', paddingRight: '7px' }}>
-          {isActive ? 'Active' : 'Not Active'}
+          {isActive ? 'Validated' : 'Not Validated'}
         </p>
-      </td>
+      </td> */}
       <td>
-        <p className="mt-3 showAction">
+        <p className="mt-3" style={{ marginLeft: '-40px' }}>
           <button className="btn btn-light rounded-pill text-muted mx-2">
             {' '}
             <span>

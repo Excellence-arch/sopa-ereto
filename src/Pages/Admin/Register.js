@@ -70,7 +70,7 @@ const Register = () => {
       <div className="row">
         <div className="col-12 col-lg-4 new-color full-height">
           <h4 className="h2 text-white container mt-5">
-            A few clicks away from creating your Lottery Display
+            Make your donation secure with Sopa-Ereto
           </h4>
           <img src={logos} alt="file" width={'400px'} className="w-100" />
         </div>
@@ -89,7 +89,7 @@ const Register = () => {
               value={name}
               handleChange={(e) => setName(e.target.value)}
             />
-            <label className="fonts text-blue">Account Number</label>
+            <label className="fonts text-blue">MPESA / Account Number</label>
             <Input
               placeholder={`Enter the conservancy's account number`}
               value={accountNumber}

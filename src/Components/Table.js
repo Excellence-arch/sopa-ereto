@@ -25,19 +25,15 @@ const Table = ({ allUsers, dataset }) => {
     }
   };
   return (
-    <div className="col-12 col-lg-11 mt-5" style={{ marginLeft: '50px' }}>
+    <div className="col-12 col-lg-11 mt-5">
       {message && <div className="alert alert-success text-success">{message}</div>}
-      <table className="bg-white table rounds-start rounds-end tables">
+      <table className="bg-white table rounds-start rounds-end">
         <tr className="border-bottom">
           <td className="p-3">
             <input type={'checkbox'} />
           </td>
           <td>
             <span className="name">Name</span>
-          </td>
-          <td>
-            {' '}
-            <span className="role">Beneficiary Status</span>
           </td>
           <td>
             <span className="action">Actions</span>
