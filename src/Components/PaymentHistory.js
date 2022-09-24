@@ -5,7 +5,7 @@ const PaymentHistory = () => {
   const data = useSelector((state) => state.transactionReducer.recentActivities);
   return (
     <div className="mt-5">
-      <p className="fs-2 text-center">Beneficiaries list</p>
+      <p className="fs-2 text-center">Beneficiaries</p>
       <div className="row starts col-8 bg-pays p-3 rounds-start rounds-end">
         <p className="col-4 text-dark">Recent Activity</p>
         <p className="btn text-danger" style={{ marginTop: '-39px', marginLeft: '230px' }}>

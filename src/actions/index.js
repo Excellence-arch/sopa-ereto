@@ -26,4 +26,11 @@ const getLandOwners = (data) => {
   };
 };
 
-export { login, logout, getDetails, getLandOwners };
+const loginAdmin = (data) => {
+  return {
+    type: 'LOGIN ADMIN',
+    payload: data
+  };
+};
+
+export { login, logout, getDetails, getLandOwners, loginAdmin };

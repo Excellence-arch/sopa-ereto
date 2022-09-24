@@ -1,13 +1,19 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import avatar from '../assets/avatar.png';
+import avatar from '../assets/massai5.jpg';
 
 const Comment = ({ message, name, key }) => {
   return (
     <div key={key}>
       <div className="d-flex">
         <div>
-          <img src={avatar} alt="profile picture" width={'30px'} className="rounded-circle" />
+          <img
+            src={avatar}
+            alt="profile picture"
+            width={'30px'}
+            height={'30px'}
+            className="rounded-circle"
+          />
         </div>
         <div className="ms-2">
           <p className="fw-bold text-dark" style={{ marginTop: '3px', fontSize: '10px' }}>

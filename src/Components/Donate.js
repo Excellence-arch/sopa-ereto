@@ -10,7 +10,13 @@ const Donate = () => {
         <img src={Lion} alt="Massai Lion" width={'100px'} />
       </div>
       <div className="text-center mt-3 pb-5">
-        <button className="btn btn-danger px-4">VIEW TOURISM GALLERY</button>
+        <a
+          className="btn btn-danger px-4"
+          href="https://isharaexperienceltd.pixieset.com/hackathon/"
+          target="_blank"
+          rel="noreferrer">
+          VIEW TOURISM GALLERY
+        </a>
         <p className="text-white">Search This Site</p>
         <input type={'text'} placeholder="Enter Keyword then press Enter" className="p-2 px-4" />
         <br />

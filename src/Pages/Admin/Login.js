@@ -49,14 +49,14 @@ const Login = () => {
       setError('All fields are required');
     } else {
       axios
-        .post(url, { email, password })
+        .post(url, { email, _id: password })
         .then((res) => {
           setIsloading(false);
-          if (res.data.status == 404) {
+          if (res.data.status !== 'SE200') {
             setError(res.data.error);
           } else {
-            dispatch(logins({ status: true, id: res.id }));
-            navigate('/home');
+            dispatch(logins(res.data.data));
+            navigate('/admin');
           }
         })
         .catch((err) => {

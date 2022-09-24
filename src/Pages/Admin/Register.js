@@ -16,7 +16,7 @@ const Register = () => {
   const [showPwd, setShowPwd] = useState(false);
   const [disabled, setDisabled] = useState(true);
   const [userError, setUserError] = useState(false);
-  const url = `${useSelector((state) => state.urlReducer.baseUrl)}register-donor`;
+  const url = `${useSelector((state) => state.urlReducer.diam)}/add-donor`;
   // const url = `${baseUrl}api/register`;
 
   // const handleRole = (e) => {
@@ -48,7 +48,7 @@ const Register = () => {
     e.preventDefault();
     setIsloading(true);
     setError(false);
-    const details = { email, password };
+    const details = { email, _id: password };
     axios
       .post(url, details)
       .then((res) => {

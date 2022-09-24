@@ -55,9 +55,9 @@ const Reviews = () => {
           <div className="text-center">
             <img src={lions} alt={'Conservancy Image'} width="155px" />
           </div>
-          <p className="fs-3 text-dark text-center">Name of conservancy</p>
-          <p className="text-center">Name of the head of the conservancy</p>
-          <p className="text-center">Phone number</p>
+          <p className="fs-3 text-dark text-center">Ishara Mara</p>
+          <p className="text-center">Fairman</p>
+          <p className="text-center">+254 813 565 4346</p>
           <div>
             <textarea disabled className="ms-4"></textarea>
             <textarea disabled className="ms-2"></textarea>
