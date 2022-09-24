@@ -2,9 +2,7 @@ import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import * as actions from '../../actions';
-// import { useSelector } from 'react-redux';
-// import AdminNav from '../../Layouts/AdminNav';
+import { getDetails, getLandOwners as getland } from '../../actions';
 import Table from '../../Components/Table';
 import UserManagement from '../../Components/UserManagement';
 import AdminDarkNav from '../../Layouts/AdminDarkNav';
@@ -25,8 +23,7 @@ const Dashboard = () => {
         setIsloading(false);
         setError(false);
         setData(res.data.data);
-        console.log(res.data);
-        dispatch(actions.getDetails(res.data.data));
+        dispatch(getDetails(res.data.data));
       })
       .catch((err) => {
         setIsloading(false);
@@ -41,7 +38,6 @@ const Dashboard = () => {
         setIsloading(false);
         setError(false);
         setData(res.data.data);
-        dispatch(actions.getDetails(res.data.data));
       })
       .catch((err) => {
         setIsloading(false);
@@ -56,7 +52,6 @@ const Dashboard = () => {
         setIsloading(false);
         setError(false);
         setData(res.data.data);
-        dispatch(actions.getDetails(res.data.data));
       })
       .catch((err) => {
         setIsloading(false);
@@ -83,7 +78,7 @@ const Dashboard = () => {
       .then((res) => {
         setIsloading(false);
         setData(res.data.data);
-        dispatch(actions.getLandOwners(res.data.value));
+        dispatch(getland(res.data.value));
       })
       .catch((err) => {
         setIsloading(false);

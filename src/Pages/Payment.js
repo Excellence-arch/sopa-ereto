@@ -93,15 +93,16 @@ const Payment = () => {
   const payCrypto = () => {
     setIsloading(true);
     axios
-      .post(`${baseUrl}/mcs3/createCard`, {
-        id: keys.keyId,
-        publicKey: keys.publicKey,
-        amount,
-        walletAddress: walletAddress.trim()
+      .post(`${baseUrl}/mcs3/swapPay`, {
+        // id: keys.keyId,
+        // publicKey: keys.publicKey,
+        sentAmount: amount,
+        walletAddress: walletAddress.trim(),
+        symbol: currency
       })
       .then((res) => {
         setIsloading(false);
-        if (res.data.data.status == 'pending') {
+        if (res.data.status == 'SE200') {
           navigate('/donor/success');
         }
       })

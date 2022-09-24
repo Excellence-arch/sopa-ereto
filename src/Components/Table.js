@@ -46,7 +46,7 @@ const Table = ({ allUsers, dataset }) => {
               name={val.firstName + ' ' + val.lastName}
               phone={val.phone}
               isActive={val.isActive}
-              click={() => profile(val.idNumber)}
+              click={() => profile(i)}
             />
           ))}
         </tbody>

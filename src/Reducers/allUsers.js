@@ -6,7 +6,7 @@ const initState = {
 };
 
 const allUsers = (state = initState, action) => {
-  switch (action.payload) {
+  switch (action.type) {
     case 'DETAILS':
       return {
         ...state,
