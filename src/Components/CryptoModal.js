@@ -3,19 +3,7 @@
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
-const CryptoModal = ({
-  pay,
-  cardNo,
-  cvv,
-  setCvv,
-  expDate,
-  setExpDate,
-  getYears,
-  setCardNo,
-  isloading,
-  show,
-  handleClose
-}) => {
+const CryptoModal = ({ pay, walletAdress, setWalletAddress, isloading, show, handleClose }) => {
   return (
     <>
       <Modal show={show} onHide={handleClose} className="mt-5">
@@ -28,30 +16,9 @@ const CryptoModal = ({
               <label className="text-blue">Card Number</label>
               <input
                 type={'text'}
-                value={cardNo}
+                value={walletAdress}
                 placeholder="1234 5678 9012 1234"
-                onChange={(e) => setCardNo(e.target.value)}
-                className="form-control"
-              />
-            </div>
-            <div className="col-6">
-              <label className="text-blue">CVV</label>
-              <input
-                type={'text'}
-                value={cvv}
-                onChange={(e) => setCvv(e.target.value)}
-                className="form-control"
-              />
-            </div>
-            <div className="col-6">
-              <label className="text-blue">Expiry Date</label>
-              <input
-                type={'month'}
-                value={expDate}
-                onChange={(e) => {
-                  getYears;
-                  setExpDate(e.target.value);
-                }}
+                onChange={(e) => setWalletAddress(e.target.value)}
                 className="form-control"
               />
             </div>

@@ -7,13 +7,13 @@ const Comment = ({ message, name, key }) => {
     <div key={key}>
       <div className="d-flex">
         <div>
-          <img src={avatar} alt="profile picture" width={'50px'} className="rounded-circle" />
+          <img src={avatar} alt="profile picture" width={'30px'} className="rounded-circle" />
         </div>
         <div className="ms-2">
-          <p className="fw-bold text-dark" style={{ marginTop: '15px' }}>
+          <p className="fw-bold text-dark" style={{ marginTop: '3px', fontSize: '10px' }}>
             {name}
           </p>
-          <p style={{ marginTop: '-12px' }}>
+          <p style={{ marginTop: '-15px' }}>
             {message.length > 23 ? `${message.slice(0, 23)}...` : message}
           </p>
         </div>

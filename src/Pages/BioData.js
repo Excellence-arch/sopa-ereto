@@ -20,7 +20,7 @@ const BioData = () => {
             <p className="text-ash mb-0">Must contain a lowercase letter</p>
             <p className="text-ash mb-0">Must contain a number</p>
             <p className="text-ash mb-0">Must contain a special character</p> */}
-            <button className="btn btn-pink mt-2" onClick={() => navigate('/donor/payment')}>
+            <button className="btn btn-pink mt-2" onClick={() => navigate('/donor')}>
               Skip
             </button>
           </div>

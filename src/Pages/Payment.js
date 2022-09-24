@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router';
 // import card from '../assets/card.png';
 // import circle from '../assets/circle.png';
 import cards from '../assets/Rectangle.png';
+import CryptoModal from '../Components/CryptoModal';
 import Modal from '../Components/Modal';
 import NewNav from '../Layouts/NewNav';
 
@@ -15,7 +16,6 @@ const Payment = () => {
   const handleShow = () => setShow(true);
   const [amount, setAmount] = useState('10');
   const [currency, setCurrency] = useState('USD');
-  const email = 'chinwenduiheanatu@gmail.com';
   const [isloading, setIsloading] = useState(false);
   // const [isLoadingCrypto, setIsLoadingCrypto] = useState(false);
   const [cardNo, setCardNo] = useState();
@@ -26,6 +26,8 @@ const Payment = () => {
   const [error, setError] = useState(false);
   const baseUrl = `${useSelector((state) => state.urlReducer.payments)}`;
   const navigate = useNavigate();
+  const userDets = useSelector((state) => state.onlineReducer);
+  // const [walletAddress, setWalletAddress] = useState();
 
   const getKeys = () => {
     if (currency == '' || amount == '') {
@@ -86,7 +88,7 @@ const Payment = () => {
           <input
             type="text"
             disabled
-            value={email}
+            value={userDets.email}
             className="form-control w-50 border-0 mb-3 check-weight py-2 text-muted"
           />
           <label className="fonts text-blue">Amount</label>
@@ -144,6 +146,13 @@ const Payment = () => {
         show={show}
         handleClose={handleClose}
         handleShow={handleShow}
+      />
+      <CryptoModal
+        pay={pay}
+        // walletAdress={walletAddress}
+        isloading={isloading}
+        show={show}
+        handleClose={handleClose}
       />
     </div>
   );

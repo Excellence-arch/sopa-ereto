@@ -22,7 +22,7 @@ const Transactions = () => {
         {/* <QuickTransactions /> */}
         <PaymentHistory />
       </div>
-      <div className="col-lg-4 col-12 ms-5">
+      <div className="col-lg-4 col-12 ms-5 mt-5">
         <Donate />
       </div>
     </div>

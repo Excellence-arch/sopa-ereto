@@ -18,7 +18,7 @@ const Login = () => {
   const [disabled, setDisabled] = useState(true);
   const [userError, setUserError] = useState(false);
   // const url = `https://7ccf-105-55-203-144.in.ngrok.io/mcs2/login-donor`;
-  const url = `${useSelector((state) => state.urlReducer.diam)}login-donor`;
+  const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/login-donor`;
   // const url = `${baseUrl}api/login`;
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -51,14 +51,13 @@ const Login = () => {
       setError('All fields are required');
     } else {
       axios
-        .post(url, { email, password })
+        .post(url, { email, _id: password })
         .then((res) => {
           setIsloading(false);
           if (res.data.status !== 'SE200') {
             setError(res.data.error);
           } else {
-            console.log(res.data);
-            dispatch(logins({ status: true, id: res.id }));
+            dispatch(logins(res.data.data));
             navigate('/donor');
           }
         })
@@ -75,7 +74,7 @@ const Login = () => {
         <div className="col-12 row">
           <div className="col-12 col-lg-4 new-color full-height">
             <p className="pt-4 text-white h2 col-10 container">
-              Make everything simple by using Sopa Ereto
+              Make your donation secure by using Sopa-Ereto{' '}
             </p>
             <img src={logos} alt="file" width={'300px'} className="w-100" />
           </div>

@@ -12,7 +12,7 @@ const User = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (status === false) {
-      navigate('/');
+      navigate('/accounts/login');
     }
   }, []);
   return (

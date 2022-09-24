@@ -7,28 +7,40 @@ import { useState } from 'react';
 const Reviews = () => {
   const data = [
     {
-      name: 'Michael Oladipupo',
+      name: 'Donor #1',
       message: 'This is my message'
     },
     {
-      name: 'Michael Oladipupo',
-      message: 'This is another message'
+      name: 'Beneficiary #1',
+      message: 'This is my message'
     },
     {
-      name: 'Michael Oladipupo',
-      message: 'this is to test the longest comment'
+      name: 'Donor #1',
+      message: 'This is my message'
     },
     {
-      name: 'Michael Oladipupo',
-      message: 'this is to test the longest comment'
+      name: 'Beneficiary #1',
+      message: 'This is my message'
     },
     {
-      name: 'Michael Oladipupo',
-      message: 'this is to test the longest comment'
+      name: 'Beneficiary #1',
+      message: 'This is my message'
     },
     {
-      name: 'Michael Oladipupo',
-      message: 'this is to test the longest comment'
+      name: 'Donor #1',
+      message: 'This is my message'
+    },
+    {
+      name: 'Beneficiary #1',
+      message: 'This is my message'
+    },
+    {
+      name: 'Beneficiary #1',
+      message: 'This is my message'
+    },
+    {
+      name: 'Donor #1',
+      message: 'This is my message'
     }
   ];
 

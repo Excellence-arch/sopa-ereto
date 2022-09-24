@@ -4,7 +4,7 @@ import { FaLock, FaPen } from 'react-icons/fa';
 import img from '../assets/avatar.png';
 
 // eslint-disable-next-line react/prop-types
-const Rows = ({ i, name, phone, gender, click }) => {
+const Rows = ({ i, name, phone, click, isActive }) => {
   return (
     // <div>
     <tr key={i} className="border-bottom cursor-pointer" onClick={click}>
@@ -31,12 +31,12 @@ const Rows = ({ i, name, phone, gender, click }) => {
         {' '}
         <p
           className={
-            gender == 'male'
-              ? 'bg-dark rounded-pill py-1 mt-3 text-white showRole'
-              : 'bg-green rounded-pill text-dark py-1 mt-3 showRole'
+            isActive
+              ? 'bg-green rounded-pill py-1 mt-3 text-white showRole'
+              : 'bg-dark rounded-pill text-dark py-1 mt-3 showRole'
           }
           style={{ maxWidth: `max-content`, paddingLeft: '7px', paddingRight: '7px' }}>
-          {gender}
+          {isActive}
         </p>
       </td>
       <td>
