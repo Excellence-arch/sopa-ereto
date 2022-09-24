@@ -27,7 +27,7 @@ const Table = ({ allUsers, dataset }) => {
   return (
     <div className="col-12 col-lg-11 mt-5" style={{ marginLeft: '50px' }}>
       {message && <div className="alert alert-success text-success">{message}</div>}
-      <table className="bg-white table rounds-start rounds-end">
+      <table className="bg-white table rounds-start rounds-end tables">
         <tr className="border-bottom">
           <td className="p-3">
             <input type={'checkbox'} />

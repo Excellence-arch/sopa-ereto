@@ -9,11 +9,11 @@ const RangersUpload = () => {
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const [middleName, setMiddleName] = useState();
-  // const [dateOfBirth, setDateOfBirth] = useState();
+  const [dateOfBirth, setDateOfBirth] = useState();
   // const [conservancy, setConservancy] = useState();
   const [salary, setSalary] = useState();
   const [userAddress, setUserAddress] = useState();
-  // const [gender, setGender] = useState();
+  const [gender, setGender] = useState();
   const [accountNumber, setAccountNumber] = useState();
   // const [isActive, setIsActive] = useState();
   const [phone, setPhone] = useState();
@@ -25,27 +25,27 @@ const RangersUpload = () => {
 
   const addRanger = (e) => {
     setIsloading(true);
+    setError(false);
     e.preventDefault();
     const details = {
       firstName,
       lastName,
       middleName,
-      // dateOfBirth,
+      dob: dateOfBirth,
       address: userAddress,
-      // gender,
+      gender,
       accountNumber,
       salary,
       // conservancy,
       phoneNumber: phone
       // isActive
     };
-    console.log(url);
     axios
       .post(url, details)
       .then((res) => {
         setIsloading(false);
-        if (res.data.status == 200) {
-          console.log(res.data);
+        console.log(res.data);
+        if (res.data.status == 'SE200') {
           navigate('/admin');
         } else {
           setError(res.data.data);
@@ -74,7 +74,13 @@ const RangersUpload = () => {
           <div className="mt-4">
             <p className="h3">Add Ranger</p>
           </div>
-          {error && <div className="text-danger text-center alert alert-danger">{error}</div>}
+          {error && (
+            <div
+              className="text-danger text-center alert alert-danger"
+              style={{ marginLeft: '-10px' }}>
+              {error}
+            </div>
+          )}
           <div className="col-md-6">
             <label className="fonts text-blue">First Name</label>
             <input
@@ -144,6 +150,29 @@ const RangersUpload = () => {
               onChange={(e) => setUserAddress(e.target.value)}
               className="form-control w-75 mb-3 check-weight py-2"
             />
+          </div>
+          <div className="col-md-6">
+            <label className="fonts text-blue">Date of birth</label>
+            <input
+              type="date"
+              placeholder={`Enter the ranger's salary`}
+              value={dateOfBirth}
+              onChange={(e) => setDateOfBirth(e.target.value)}
+              className="form-control w-75 mb-3 check-weight py-2"
+            />
+          </div>
+          <div className="col-md-6">
+            <label className="fonts text-blue">Gender</label>
+            <select
+              onChange={(e) => setGender(e.target.value)}
+              value={gender}
+              className="form-control w-75 mb-3 inputs check-weight py-2">
+              <option defaultValue={'Male'} selected disabled>
+                Select Gender
+              </option>
+              <option value={'Male'}>Male</option>
+              <option value={'Female'}>Female</option>
+            </select>
           </div>
           {/* <div className="col-md-6">
             <label className="fonts text-blue">Gender</label>

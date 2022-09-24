@@ -486,4 +486,27 @@ p {
 .hh-100 {
   height: max-content;
 }
+
+.tables {
+  width: 300px !important;
+}
+.name {
+  margin-left: 50px;
+}
+
+.role {
+  margin-left: 10px !important;
+}
+
+.showRole {
+  margin-left: 10px !important;
+}
+
+.action {
+  margin-left: 50px;
+}
+
+.showAction {
+  margin-left: 430px;
+}
 }

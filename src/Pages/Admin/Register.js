@@ -22,13 +22,6 @@ const Register = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const url = `${useSelector((state) => state.urlReducer.diam)}/mcs2/create-admin`;
-  // const url = `${baseUrl}api/register`;
-
-  // const handleRole = (e) => {
-  //   setRole(e.target.value);
-  //   if (e.target.value == 'donor') setValid(false);
-  //   else setValid(true);
-  // };
 
   useEffect(() => {
     if (isloading || userError) {
