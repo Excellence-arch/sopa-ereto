@@ -10,7 +10,7 @@ const RangersUpload = () => {
   const [lastName, setLastName] = useState();
   const [middleName, setMiddleName] = useState();
   const [dateOfBirth, setDateOfBirth] = useState();
-  // const [conservancy, setConservancy] = useState();
+  const [conservancy, setConservancy] = useState();
   const [salary, setSalary] = useState();
   const [userAddress, setUserAddress] = useState();
   const [gender, setGender] = useState();
@@ -36,7 +36,7 @@ const RangersUpload = () => {
       gender,
       accountNumber,
       salary,
-      // conservancy,
+      conservancy,
       phoneNumber: phone
       // isActive
     };
@@ -120,17 +120,17 @@ const RangersUpload = () => {
               onChange={(e) => setDateOfBirth(e.target.value)}
               className="form-control w-75 mb-3 check-weight py-2"
             />
-          </div>
+          </div> */}
           <div className="col-md-6">
             <label className="fonts text-blue">Conservancy</label>
             <input
               type="text"
-              placeholder={'Enter your Conservancy'}
+              placeholder={'Enter rangers Conservancy'}
               value={conservancy}
               onChange={(e) => setConservancy(e.target.value)}
               className="form-control w-75 mb-3 check-weight py-2"
             />
-          </div> */}
+          </div>
           <div className="col-md-6">
             <label className="fonts text-blue">Salary</label>
             <input

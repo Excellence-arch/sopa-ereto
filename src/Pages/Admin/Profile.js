@@ -23,7 +23,7 @@ const Profile = () => {
     }
   }, []);
   useEffect(() => {
-    if (me.rangers.length == 0) {
+    if (me.rangers.length == 0 || id.slice(1) >= me.rangers.length) {
       navigate('/admin');
     }
   });

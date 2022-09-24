@@ -1,7 +1,7 @@
 import pix from '../assets/Michael.jpg';
 
 const initState = {
-  status: true,
+  status: false,
   id: '',
   email: '',
   name: '',

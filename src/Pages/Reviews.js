@@ -59,8 +59,12 @@ const Reviews = () => {
           <p className="text-center">Fairman</p>
           <p className="text-center">+254 813 565 4346</p>
           <div>
-            <textarea disabled className="ms-4"></textarea>
-            <textarea disabled className="ms-2"></textarea>
+            <textarea disabled className="ms-4">
+              Achievements
+            </textarea>
+            <textarea disabled className="ms-2">
+              Budget proposal
+            </textarea>
           </div>
           <div style={{ overflowY: 'scroll', height: '41vh' }} className="mt-4 ms-4 mb-2">
             {data.map((comment, ind) => (
