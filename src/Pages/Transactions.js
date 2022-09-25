@@ -1,7 +1,5 @@
 // import axios from 'axios';
 import React from 'react';
-// import { useEffect } from 'react';
-// import { useSelector } from 'react-redux';
 // import { useNavigate } from 'react-router';
 import Donate from '../Components/Donate';
 // import QuickTransactions from '../Components/QuickTransactions';
@@ -10,7 +8,6 @@ import PaymentHistory from './../Components/PaymentHistory';
 // import { useState } from 'react';
 const Transactions = () => {
   // const navigate = useNavigate();
-  // const status = useSelector((state) => state.onlineReducer.status);
   // const url = `${useSelector((state) => state.urlReducer.payment)}/mcs2`;
   // const [data, setData] = useState([]);
   // const [message, setMessage] = useState(false);

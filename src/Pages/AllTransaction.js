@@ -3,15 +3,17 @@ import NavBar from '../Layouts/NavBar';
 import MaterialIcon from 'react-google-material-icons';
 import TotalCard from '../Components/TotalCard';
 import LatestTransactions from '../Components/LatestTransactions';
+import { useSelector } from 'react-redux';
 import LatestBlocks from '../Components/LatestBlocks';
 import Graph from '../Components/Graph';
 import '../assets/Styles/Home.css';
+import DarkNav from '../Layouts/DarkNav';
 
 const AllTransaction = () => {
-  // const status = useSelector((state) => state.onlineReducer.status);
+  const status = useSelector((state) => state.onlineReducer.status);
   return (
     <div className="bg-pays">
-      <NavBar />
+      {status == true ? <DarkNav /> : <NavBar />}
       <div className="height w-100 bg-pa container-fluid">
         <div className="input-group ms-3 pt-5 pb-3 w-50 w-lg-50 rounds">
           <input
