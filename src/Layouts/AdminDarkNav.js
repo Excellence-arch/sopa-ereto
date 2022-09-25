@@ -1,13 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import MaterialIcon from 'react-google-material-icons';
 import logo from '../assets/logo.png';
 import { useDispatch } from 'react-redux';
-import { logout } from '../actions/index';
+import { logoutAdmin } from '../actions/index';
 import '../assets/Styles/Navbar.css';
 
 const AdminDarkNav = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -79,7 +80,10 @@ const AdminDarkNav = () => {
             <p
               className="text-decoration-none text-dark cursor-pointer mt-3"
               title="logout?"
-              onClick={() => dispatch(logout({ status: false, id: '' }))}>
+              onClick={() => {
+                navigate('/admin/login');
+                dispatch(logoutAdmin());
+              }}>
               {' '}
               <MaterialIcon icon="logout" />{' '}
             </p>

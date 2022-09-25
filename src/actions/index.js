@@ -33,4 +33,10 @@ const loginAdmin = (data) => {
   };
 };
 
-export { login, logout, getDetails, getLandOwners, loginAdmin };
+const logoutAdmin = () => {
+  return {
+    type: 'LOGOUT ADMIN'
+  };
+};
+
+export { login, logout, getDetails, getLandOwners, loginAdmin, logoutAdmin };

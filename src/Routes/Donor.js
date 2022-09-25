@@ -12,6 +12,7 @@ const User = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (status === false) {
+      console.log(status);
       navigate('/accounts/login');
     }
   }, []);
