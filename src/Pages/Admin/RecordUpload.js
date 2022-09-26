@@ -33,7 +33,7 @@ const RecordUpload = () => {
       address: userAddress,
       gender,
       accountNumber,
-      acreSize: landAcreSize,
+      landSize: landAcreSize,
       conservancy,
       leaseFee,
       phone,
