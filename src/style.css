@@ -93,8 +93,8 @@ p {
 }
 
 .new-start {
-  margin-left: 82px;
-  width: 550px;
+  margin-left: 82px !important;
+  width: 550px !important;
 }
 
 .month select,
