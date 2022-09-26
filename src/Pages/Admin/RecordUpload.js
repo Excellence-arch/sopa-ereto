@@ -44,7 +44,7 @@ const RecordUpload = () => {
       .then((res) => {
         console.log(res);
         setIsloading(false);
-        if (res.data.status == 200) {
+        if (res.data.status == 'SE200') {
           navigate('/admin');
         } else {
           if (res.data.status == 302) {
