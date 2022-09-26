@@ -14,7 +14,6 @@ const RecordUpload = () => {
   const [userAddress, setUserAddress] = useState();
   const [gender, setGender] = useState();
   const [accountNumber, setAccountNumber] = useState();
-  const [isActive, setIsActive] = useState();
   const [phone, setPhone] = useState();
   const [error, setError] = useState(false);
   const [isloading, setIsloading] = useState(false);
@@ -36,8 +35,7 @@ const RecordUpload = () => {
       landSize: landAcreSize,
       conservancy,
       leaseFee,
-      phone,
-      isActive
+      phone
     };
     axios
       .post(url, details)
@@ -157,7 +155,7 @@ const RecordUpload = () => {
             className="form-control w-75 inputs mb-3 check-weight py-2"
           />
 
-          <label className="fonts text-blue">Active</label>
+          {/* <label className="fonts text-blue">Active</label>
           <br />
           <select
             onChange={(e) => setIsActive(e.target.value)}
@@ -168,7 +166,7 @@ const RecordUpload = () => {
             </option>
             <option value={true}>Active</option>
             <option value={false}>Inactive</option>
-          </select>
+          </select> */}
 
           <label className="fonts text-blue">Phone Number</label>
           <input
