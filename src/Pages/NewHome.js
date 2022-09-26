@@ -60,7 +60,7 @@ const NewHome = () => {
             <p>
               <img src={padlock} alt="Security" width={'20px'} />
             </p>
-            <p className="text-dark fw-bold mb-0 text-blue">Security</p>
+            <p className="fw-bold mb-0 text-blue">Security</p>
             <p>
               Your donations are securely disbursed to intended beneficiaries. No breach in records
               that hold all beneficiaries.
@@ -68,7 +68,7 @@ const NewHome = () => {
           </div>
           <div className="col-lg-3 col-5 mx-4">
             <img src={wallet} alt="Payment" width={'20px'} className="mb-3" />
-            <p className="text-dark fw-bold mb-0 text-blue">Diverse Payment Methods</p>
+            <p className="fw-bold mb-0 text-blue">Diverse Payment Methods</p>
             <p>
               You don&rsquo;t have to be limited by a payment method. Your donations can come in
               your local currencies or cryptocurrencies.
