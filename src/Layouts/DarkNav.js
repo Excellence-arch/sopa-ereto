@@ -35,7 +35,7 @@ const DarkNav = () => {
               className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
               style={{ '--bs-scroll-height': '100px' }}>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="#">
+                <Link className="nav-link active" aria-current="page" to="/donor">
                   My Account
                 </Link>
               </li>
