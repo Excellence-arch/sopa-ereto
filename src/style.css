@@ -423,8 +423,8 @@ p {
   }
 
   .starts {
-    margin-left: 20px;
-    width: 370px;
+    margin-left: 20px !important;
+    width: 370px !important;
   }
 
   .resp-width {
