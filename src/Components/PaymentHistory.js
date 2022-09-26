@@ -7,14 +7,14 @@ const PaymentHistory = () => {
   return (
     <div className="mt-5">
       <p className="fs-2 text-center">Beneficiaries</p>
-      <div className="row starts col-8 bg-pays p-3 rounds-start rounds-end">
+      <div className="row new-start col-8 bg-pays p-3 rounds-start rounds-end">
         <p className="col-4 text-dark">Recent Activity</p>
         <p className="btn text-danger" style={{ marginTop: '-39px', marginLeft: '230px' }}>
           Show All
         </p>
       </div>
       <table
-        className="col-8 starts bg-pays rounds-start rounds-end"
+        className="col-8 new-start bg-pays rounds-start rounds-end"
         style={{ marginTop: '-10px' }}>
         {data.map((val, i) => (
           <tr key={i}>

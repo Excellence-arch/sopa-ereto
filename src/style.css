@@ -92,6 +92,11 @@ p {
   width: 550px;
 }
 
+.new-start {
+  margin-left: 82px;
+  width: 550px;
+}
+
 .month select,
 .year select {
   width: 145px !important;
